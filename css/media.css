@@ -1,0 +1,19 @@
+@media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  
+  :target {
+    scroll-margin-top: 71px;
+  }
+
+  /* menu mobile */
+@media screen and (min-width: 600px) {
+  header nav{
+      display: block;
+  }
+  .menu-icon,#menuMobile{
+      display: none  !important ;
+  }
+}
