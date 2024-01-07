@@ -100,9 +100,10 @@ header #buttonDarkMode {
 
     overflow: hidden;
     z-index: 1;
-    transition: all .5s ;
+    transition: all .5s;
 }
-#menuMobile.hide{
+
+#menuMobile.hide {
     width: 0;
 }
 
@@ -132,9 +133,10 @@ header #buttonDarkMode {
     color: #fff;
 }
 
-main{
+main {
     margin-bottom: 20px;
 }
+
 #landing-page {
     display: flex;
     justify-content: center;
@@ -149,7 +151,6 @@ main{
 
     height: calc(100vh);
     box-shadow: inset 0px -5px 20px #00000056;
-
 }
 
 .dark #landing-page {
@@ -177,6 +178,8 @@ main{
     background-image: linear-gradient(-45deg, #ff1cc0, #b131fa, #e2006a, #2b1cff);
     background-size: 400% 400%;
     background-clip: text;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
 
     animation: 10s textAnimation ease infinite;
 }
@@ -193,6 +196,13 @@ main{
     100% {
         background-position: 0% 50%;
     }
+}
+
+#landing-page .icon-down {
+    position: absolute;
+    bottom: 25px;
+
+    font-size: 1.3em;
 }
 
 #redesSociais {
@@ -218,6 +228,10 @@ main{
 }
 
 #sobre {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 100vh;
     padding: 35px;
 }
 
@@ -324,7 +338,7 @@ main{
     font-size: 2rem;
 }
 
-#portfolio h2 {
+#projetos h2 {
     font-size: 3rem;
     text-align: center;
     font-family: var(--fontTitulo);
