@@ -86,7 +86,7 @@ header nav a {
 
 header #buttonDarkMode {
     cursor: pointer;
-    padding: 5px;
+    font-size: 1.3rem;
 }
 
 #menuMobile {
@@ -146,7 +146,7 @@ main {
     background-image: linear-gradient(90deg, #ffffffb4 75%, #ffffff34), url("../imagens/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: center center;
     background-attachment: fixed;
 
     height: calc(100vh);
@@ -201,6 +201,8 @@ main {
 #landing-page .icon-down {
     position: absolute;
     bottom: 25px;
+    left: 50%;
+    transform: translate(-50%);
 
     font-size: 1.3em;
 }
