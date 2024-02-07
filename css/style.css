@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Merriweather:wght@900&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Ultra&display=swap');
 
 :root {
     --corFundo: #ecf5fb;
@@ -12,7 +14,8 @@
 
     --fontPadrao: 'Roboto', sans-serif;
     --fontTitulo: 'Merriweather', serif;
-    --fontFront: 'Alfa Slab One', serif;
+    --fontFront: "Ultra", serif;
+    --fontCursiva: "Alex Brush", cursive;
 }
 
 * {
@@ -31,7 +34,7 @@ body {
 
 body.dark {
     background-color: var(--corFundoDark);
-    color: #fff;
+    color: #ffffffd2;
 }
 
 header {
@@ -40,12 +43,14 @@ header {
     align-items: center;
 
     border-bottom: 1px solid #fff;
-    background-color: #0000009c;
+    background-color: #0d0d0da8;
 
     backdrop-filter: blur(20px);
     color: #fff;
     padding: 20px 40px;
     width: 100vw;
+
+    box-shadow: inset 0px 0px 10px 1px #00000045;
 
     position: fixed;
     top: 0;
@@ -53,7 +58,7 @@ header {
 }
 
 .dark header {
-    background-color: #818181bb;
+    background-color: #2b2b2b2b;
     color: #fff;
 }
 
@@ -91,7 +96,7 @@ header #buttonDarkMode {
 
 #menuMobile {
     position: fixed;
-    top: 71px;
+    top: 72px;
 
     width: 70vw;
     height: calc(100vh - 70px);
@@ -100,7 +105,7 @@ header #buttonDarkMode {
 
     overflow: hidden;
     z-index: 1;
-    transition: all .5s;
+    transition: all ease .3s;
 }
 
 #menuMobile.hide {
@@ -127,6 +132,11 @@ header #buttonDarkMode {
     color: #000;
 
     border-bottom: 2px solid #0000001f;
+    transition: .2s;
+}
+
+#menuMobile ul a:hover {
+    backdrop-filter: brightness(.9);
 }
 
 .dark #menuMobile ul a {
@@ -170,12 +180,13 @@ main {
     color: #fff;
 }
 
-#landing-page article span {
+#landing-page article h2 {
+    position: relative;
     font-family: var(--fontFront);
-    font-size: 5.3rem;
+    font-size: 2.5em;
     color: transparent;
 
-    background-image: linear-gradient(-45deg, #ff1cc0, #b131fa, #e2006a, #2b1cff);
+    background-image: linear-gradient(-45deg, #ff1cc0, #7c1bb4, #e2006a, #2b1cff);
     background-size: 400% 400%;
     background-clip: text;
     -moz-background-clip: text;
@@ -198,12 +209,19 @@ main {
     }
 }
 
+#landing-page article h2#devTitulo {
+    margin-block-end: -.5em;
+    font-size: 2.5em;
+    font-family: var(--fontCursiva);
+}
+
 #landing-page .icon-down {
     position: absolute;
     bottom: 25px;
     left: 50%;
     transform: translate(-50%);
 
+    opacity: .5;
     font-size: 1.3em;
 }
 
@@ -226,7 +244,7 @@ main {
 }
 
 .dark #redesSociais a {
-    color: #ffffff;
+    color: #ffffffd5;
 }
 
 #sobre {
@@ -255,10 +273,11 @@ main {
 #sobre #apresentacao h2 {
     font-size: 2.5rem;
     font-family: var(--fontTitulo);
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 #sobre #apresentacao span {
+    line-height: 1.5em;
     text-indent: 15px;
     text-align: center;
     width: min(600px, 100%);
