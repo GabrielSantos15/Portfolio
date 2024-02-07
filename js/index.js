@@ -34,3 +34,10 @@ function menu() {
     ? menuMobile.classList.remove("hide")
     : menuMobile.classList.add("hide");
 }
+
+// scrool
+window.sr = ScrollReveal({reset:true})
+
+sr.reveal('#apresentacao',{distance: '100px',duration: 1500})
+sr.reveal('.containerHabilidades',{ distance: '100px',duration: 1500})
+sr.reveal('#projetos',{duration: 1500})
