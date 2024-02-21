@@ -377,7 +377,7 @@ main {
     border-radius: 15px;
 
     background-color: var(--corCard);
-    box-shadow: 5px 5px 10px #00000063, -5px -5px 10px #ffffff77;
+    box-shadow: 5px 5px 10px #0000002d, -5px -5px 10px #ffffff2d;
 
     overflow: hidden;
 }
@@ -388,7 +388,8 @@ main {
 }
 
 #containerProjetos .projeto img {
-    height: 50%;
+    width: 100%;
+    height: 250px;
     object-fit: cover;
     object-position: center center;
 }
