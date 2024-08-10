@@ -10,6 +10,9 @@
 
   /* menu mobile */
 @media screen and (min-width: 600px) {
+  header{
+    flex-direction: row;
+  }
   header nav{
       display: block;
   }
