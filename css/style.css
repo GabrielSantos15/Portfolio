@@ -172,7 +172,7 @@ main {
     align-items: center;
 
     background-color: var(--corFundo);
-    background-image: linear-gradient( #ffffffbf 75%, var(--corFundo)), url("../imagens/background.jpg");
+    background-image: linear-gradient( #ffffffdc 75%, var(--corFundo)), url("../imagens/whiteBackground.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -182,7 +182,7 @@ main {
 
 .dark #landing-page {
     background-color: var(--corFundoDark);
-    background-image: linear-gradient( #000000b4 60%,var(--corFundoDark)), url("../imagens/background.jpg");
+    background-image: linear-gradient( #000000b4 60%,var(--corFundoDark)), url("../imagens/Background.jpg");
 }
 
 #landing-page article {
