@@ -9,8 +9,8 @@
     --corFundoDark: #14212A;
     --corCardDark: #2A3F52;
 
-    --corTema: #852ee7;
-    --corTemaDark: #bb86fc;
+    --corTema: #7460e7;
+    --corTemaDark: #9286fc;
 
     --fontPadrao: 'Roboto', sans-serif;
     --fontTitulo: 'Merriweather', serif;
@@ -63,8 +63,13 @@ header {
     color: #fff;
 }
 
+.icon {
+    width: 1em;
+    font-size: 1.3rem;
+    aspect-ratio: 1;
+}
+
 .menu-icon {
-    padding: 5px;
     cursor: pointer;
 }
 
@@ -92,7 +97,6 @@ header nav a {
 
 header #buttonDarkMode {
     cursor: pointer;
-    font-size: 1.3rem;
 }
 
 #menuMobile {
@@ -143,7 +147,7 @@ header #buttonDarkMode {
     backdrop-filter: brightness(.9);
 }
 
-#menuMobile a#cv{
+#menuMobile a#cv {
     all: unset;
     display: block;
 
@@ -173,7 +177,7 @@ main {
     align-items: center;
 
     background-color: var(--corFundo);
-    background-image: linear-gradient( #ffffffdc 75%, var(--corFundo)), url("../imagens/whiteBackground.jpg");
+    background-image: linear-gradient(#ffffffdc 75%, var(--corFundo)), url("../imagens/Background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -183,7 +187,7 @@ main {
 
 .dark #landing-page {
     background-color: var(--corFundoDark);
-    background-image: linear-gradient( #0000006c 60%,var(--corFundoDark)), url("../imagens/Background.jpg");
+    background-image: linear-gradient(#0000006c 60%, var(--corFundoDark)), url("../imagens/BackgroundDark.jpg");
 }
 
 #landing-page article {
@@ -201,21 +205,21 @@ main {
 #landing-page article h2 {
     position: relative;
     font-family: var(--fontFront);
-    font-size: 2.5em;
     color: transparent;
+    font-size: 1.7em;
 
-    background-image: linear-gradient(-45deg,#3a9ad9, #3a80d9, #266dd3, #1e5bb5);;
+    background-image: linear-gradient(-45deg, #03337a,#6bbdcc, #a552dd, #3368b8, #03337a);
+    ;
     background-size: 300% 300%;
     background-clip: text;
     -moz-background-clip: text;
     -webkit-background-clip: text;
 
-    animation: 5s textAnimation ease-in-out infinite;
+    animation: 5s textAnimation ease  infinite;
 }
-.dark #landing-page article h2{
-    background-image: linear-gradient(-45deg, #9eeaff, #a747e7, #3684c4, #377be2
 
-    );
+.dark #landing-page article h2 {
+    background-image: linear-gradient(-45deg, #377be2,#9eeaff, #a747e7, #3684c4, #377be2);
 }
 
 @keyframes textAnimation {
@@ -237,6 +241,7 @@ main {
     font-size: 2.5em;
     font-family: var(--fontCursiva);
 }
+
 
 #landing-page .icon-down {
     position: absolute;
@@ -312,13 +317,12 @@ main {
     object-fit: cover;
     object-position: center center;
 
-    box-shadow: 0px 0px  5px  #7954fd46,0px 0px
-     15px  #7954fd;
+    box-shadow: 0px 0px 5px #7460e746, 0px 0px 15px #7460e7fd;
 }
-.dark #sobre #apresentacao img{
+
+.dark #sobre #apresentacao img {
     border: 7px solid var(--corTemaDark);
-    box-shadow: 0px 0px  10px  #bb86fcd7,0px 0px
-     25px  #7954fdc0;
+    box-shadow: 0px 0px 10px #9286fcd7, 0px 0px 25px #9286fcd0;
 }
 
 .containerHabilidades {
@@ -462,13 +466,14 @@ main {
     cursor: pointer;
 }
 
-.dark #containerProjetos .projeto div a{
-    
+.dark #containerProjetos .projeto div a {
     background-color: var(--corTemaDark);
 }
 
 /* efeito scroll */
 
-#apresentacao,.containerHabilidades,#projetos{
+#apresentacao,
+.containerHabilidades,
+#projetos {
     visibility: hidden;
 }
