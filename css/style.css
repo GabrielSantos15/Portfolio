@@ -6,8 +6,8 @@
     --corFundo: #ecf5fb;
     --corCard: #f0f8ff;
 
-    --corFundoDark: #14212A;
-    --corCardDark: #2A3F52;
+    --corFundoDark: #17142a;
+    --corCardDark: #2a3352;
 
     --corTema: #7460e7;
     --corTemaDark: #9286fc;
@@ -177,7 +177,7 @@ main {
     align-items: center;
 
     background-color: var(--corFundo);
-    background-image: linear-gradient(#ffffffdc 75%, var(--corFundo)), url("../imagens/Background.jpg");
+    background-image: linear-gradient(#ffffffdc 75%, var(--corFundo)), url("../imagens/WhiteBackground.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -187,7 +187,7 @@ main {
 
 .dark #landing-page {
     background-color: var(--corFundoDark);
-    background-image: linear-gradient(#0000006c 60%, var(--corFundoDark)), url("../imagens/BackgroundDark.jpg");
+    background-image: linear-gradient(#0000006c 60%, var(--corFundoDark)), url("../imagens/DarkBackground.jpg");
 }
 
 #landing-page article {
