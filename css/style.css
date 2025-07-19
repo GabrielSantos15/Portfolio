@@ -401,15 +401,19 @@ main {
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 20px;
+
+    margin: auto;
     padding: 20px;
 }
 
 #containerProjetos .projeto {
+    position: relative;
+
     display: flex;
     flex-direction: column;
 
-    width: min(350px, 100%);
-    height: 500px;
+    width: min(500px, 100%);
+    height: 300px;
 
     border-radius: 15px;
 
@@ -417,6 +421,7 @@ main {
     box-shadow: 5px 5px 10px #0000002d, -5px -5px 10px #ffffff2d;
 
     overflow: hidden;
+    aspect-ratio: 16/9;
 }
 
 .dark #containerProjetos .projeto {
@@ -426,18 +431,34 @@ main {
 
 #containerProjetos .projeto img {
     width: 100%;
-    height: 250px;
+    height: 300px;
     object-fit: cover;
     object-position: center center;
 }
 
 #containerProjetos .projeto div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background-color: #00000071;
+    color: #fff;
+    backdrop-filter: blur(10px);
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
+    width: 100%;
+    height: 0;
+    transition: .5s linear;
+    padding: 30px;
+    opacity: 0;
+}
+
+#containerProjetos .projeto:hover div{
+    opacity: 1;
     height: 100%;
-    padding: 15px;
 }
 
 #containerProjetos .projeto div h3 {
