@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Ultra&display=swap');
 
 :root {
-    --corFundo: #ecf5fb;
+    --corFundo: #f5f5f5;
     --corCard: #f0f8ff;
 
     --corFundoDark: #17142a;
@@ -275,15 +275,9 @@ main {
     color: #ffffffd5;
 }
 
-#sobre {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    min-height: 100vh;
-    padding: 35px;
-}
 
-#sobre #apresentacao {
+#sobre {
+    margin-top: 2em;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -291,13 +285,14 @@ main {
     gap: 35px;
 }
 
-#sobre #apresentacao h2 {
+
+#sobre article h2 {
     font-size: 2.5rem;
     font-family: var(--fontTitulo);
     margin-bottom: 24px;
 }
 
-#sobre #apresentacao span {
+#sobre article {
     line-height: 1.5em;
     text-indent: 15px;
     text-align: center;
@@ -308,8 +303,12 @@ main {
     margin-top: 15px;
 }
 
-#sobre #apresentacao img {
-    width: min(350px, 100%);
+#sobre figure{
+    width: min(450px, 100%);
+}
+
+#fotoPessoal{
+    width: 100%;
     border-radius: 50%;
     border: 7px solid var(--corTema);
 
@@ -352,7 +351,7 @@ main {
     font-size: 2rem;
 }
 
-.containerTecnologias {
+.containerHabilidades {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -362,7 +361,7 @@ main {
     margin-top: 20px;
 }
 
-.containerTecnologias span {
+.containerHabilidades span {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -373,17 +372,17 @@ main {
     transition: all .5s;
 }
 
-.containerTecnologias span:hover {
+.containerHabilidades span:hover {
     filter: grayscale(0) opacity(1);
 }
 
-.containerTecnologias span img {
+.containerHabilidades span img {
     width: 100px;
     aspect-ratio: 1/1;
     object-fit: contain;
 }
 
-.containerTecnologias span h3 {
+.containerHabilidades span h3 {
     font-size: 2rem;
 }
 
