@@ -26,8 +26,8 @@
 
 body {
     font-family: var(--fontPadrao);
-    transition: all .2s;
-
+    overflow-x: hidden;
+    transition: all .5s;
     background-color: var(--corFundo);
     color: #000;
 }
@@ -167,8 +167,8 @@ header #buttonDarkMode {
     color: #fff;
 }
 
-main {
-    margin-bottom: 20px;
+section {
+    padding: 2em;
 }
 
 #landing-page {
@@ -182,7 +182,7 @@ main {
     background-repeat: no-repeat;
     background-position: center center;
 
-    height: calc(100vh);
+    min-height: 100dvh;
 }
 
 .dark #landing-page {
@@ -199,27 +199,26 @@ main {
 }
 
 .dark #landing-page article {
-    color: #fff;
+    color: #ffffffe8;
 }
 
 #landing-page article h2 {
-    position: relative;
     font-family: var(--fontFront);
     color: transparent;
     font-size: 1.7em;
 
-    background-image: linear-gradient(-45deg, #03337a,#6bbdcc, #a552dd, #3368b8, #03337a);
+    background-image: linear-gradient(-45deg, #03337a, #6bbdcc, #a552dd, #3368b8, #03337a);
     ;
     background-size: 300% 300%;
     background-clip: text;
     -moz-background-clip: text;
     -webkit-background-clip: text;
 
-    animation: 5s textAnimation ease  infinite;
+    animation: 5s textAnimation ease infinite;
 }
 
 .dark #landing-page article h2 {
-    background-image: linear-gradient(-45deg, #377be2,#9eeaff, #a747e7, #3684c4, #377be2);
+    background-image: linear-gradient(-45deg, #377be2, #9eeaff, #a747e7, #3684c4, #377be2);
 }
 
 @keyframes textAnimation {
@@ -277,12 +276,11 @@ main {
 
 
 #sobre {
-    margin-top: 2em;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    gap: 35px;
+    gap: 2em;
 }
 
 
@@ -299,15 +297,15 @@ main {
     width: min(600px, 100%);
 }
 
-#sobre #apresentacao span p:last-child {
+#sobre #apresentacao p:last-child {
     margin-top: 15px;
 }
 
-#sobre figure{
+#sobre figure {
     width: min(450px, 100%);
 }
 
-#fotoPessoal{
+#sobre figure img {
     width: 100%;
     border-radius: 50%;
     border: 7px solid var(--corTema);
@@ -324,68 +322,67 @@ main {
     box-shadow: 0px 0px 10px #9286fcd7, 0px 0px 25px #9286fcd0;
 }
 
-.containerHabilidades {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 25px;
-    margin: 55px;
+#habilidades {
+    padding: 0;
 }
 
-.containerHabilidades>div {
-    padding: 15px;
-    border-radius: 15px;
-    background-color: var(--corCard);
-    box-shadow: 5px 5px 10px #0000002a, -5px -5px 10px #ffffff83;
-}
-
-.dark .containerHabilidades>div {
-    background-color: var(--corCardDark);
-    box-shadow: 5px 5px 10px #00000042;
-}
-
-
-.containerHabilidades h2 {
+#habilidades h2 {
     text-align: center;
     font-family: var(--fontTitulo);
     font-size: 2rem;
 }
 
-.containerHabilidades {
+#containerHabilidades {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 25px;
-    flex-grow: 1;
 
     margin-top: 20px;
+    animation: marquee infinite 50s linear;
+    padding: 1em;
 }
 
-.containerHabilidades span {
+
+#containerHabilidades span {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     gap: 5px;
 
-    filter: grayscale(100) opacity(.5);
+    border: 1px solid #ddd;
+    padding: 5px 15px;
+    border-radius: 20px;
+
     transition: all .5s;
 }
 
-.containerHabilidades span:hover {
-    filter: grayscale(0) opacity(1);
-}
-
-.containerHabilidades span img {
-    width: 100px;
+#containerHabilidades span img {
+    width: 30px;
     aspect-ratio: 1/1;
     object-fit: contain;
 }
 
-.containerHabilidades span h3 {
-    font-size: 2rem;
+.dark #containerHabilidades span {
+    border: 1px solid var(--corCardDark);
 }
 
+#containerHabilidades span:hover {
+    box-shadow: 0 0 5px var(--corTema), 0 0 10px var(--corTema);
+    border-color: var(--corTema);
+    scale: 1.1;
+}
+
+
+.dark #containerHabilidades span:hover {
+    box-shadow: 0 0 5px var(--corTemaDark), 0 0 10px var(--corTemaDark);
+}
+
+#containerHabilidades span.clone{
+    /* remove o clone dos elementos no mobile */
+    display: none;
+}
 
 #projetos h2 {
     font-size: 3rem;
@@ -412,14 +409,13 @@ main {
     flex-direction: column;
 
     width: min(500px, 100%);
-    height: 300px;
+    aspect-ratio: 16/9;
 
     border-radius: 15px;
 
     background-color: var(--corCard);
     box-shadow: 5px 5px 10px #0000002d, -5px -5px 10px #ffffff2d;
 
-    overflow: hidden;
     aspect-ratio: 16/9;
 }
 
@@ -430,7 +426,7 @@ main {
 
 #containerProjetos .projeto img {
     width: 100%;
-    height: 300px;
+    height: 100%;
     object-fit: cover;
     object-position: center center;
 }
@@ -455,7 +451,7 @@ main {
     opacity: 0;
 }
 
-#containerProjetos .projeto:hover div{
+#containerProjetos .projeto:hover div {
     opacity: 1;
     height: 100%;
 }
@@ -492,8 +488,6 @@ main {
 
 /* efeito scroll */
 
-#apresentacao,
-.containerHabilidades,
-#projetos {
+section:not(#landing-page) {
     visibility: hidden;
 }

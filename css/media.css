@@ -1,28 +1,123 @@
 @media (prefers-reduced-motion: no-preference) {
-    html {
-      scroll-behavior: smooth;
-    }
+  html {
+    scroll-behavior: smooth;
   }
-  
-  :target {
-    scroll-margin-top: 71px;
-  }
+}
 
-  /* menu mobile */
+:target {
+  scroll-margin-top: 71px;
+}
+
+/* menu mobile */
 @media screen and (min-width: 600px) {
-  header{
+  header {
     flex-direction: row;
   }
-  header nav{
-      display: block;
+
+  header nav {
+    display: block;
   }
-  .menu-icon,#menuMobile{
-      display: none  !important ;
+
+  .menu-icon,
+  #menuMobile {
+    display: none !important;
   }
 
 
   #landing-page article h2 {
     font-size: 2.5em;
-}
+  }
 
+  /* marquee */
+
+
+  #containerHabilidades {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    gap: 25px;
+    flex-grow: 1;
+    width: 200vw;
+
+    margin-top: 20px;
+    animation: marquee infinite 50s linear;
+  }
+
+  
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  #containerHabilidades span {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    
+    filter: grayscale(0) opacity(.5);
+    transition: all .5s;
+    border: none;
+  }
+  
+  .dark #containerHabilidades span {
+    border: none;
+  }
+  
+  #containerHabilidades span.clone {
+    display: flex;
+  }
+  #containerHabilidades span:hover {
+    filter: grayscale(0) opacity(1);
+    box-shadow: none;
+  }
+
+  .dark #containerHabilidades span:hover {
+    box-shadow: none;
+  }
+
+  #containerHabilidades span img {
+    width: 100px;
+  }
+
+  #habilidades::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 5%;
+    z-index: 1;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, var(--corFundo) 40%, transparent);
+  }
+
+  #habilidades::after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 5%;
+    z-index: 1;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to left, var(--corFundo) 40%, transparent);
+  }
+
+  .dark #habilidades::after {
+    background: linear-gradient(to left, var(--corFundoDark) 40%, transparent);
+  }
+
+  .dark #habilidades::before {
+    background: linear-gradient(to right, var(--corFundoDark) 40%, transparent);
+  }
 }

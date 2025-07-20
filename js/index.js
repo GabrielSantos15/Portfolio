@@ -35,9 +35,21 @@ function menu() {
     : menuMobile.classList.add("hide");
 }
 
-// scrool
-window.sr = ScrollReveal({reset:true})
+document.querySelector("main").addEventListener("click", () => {
+  if (!document.querySelector("#menuMobile").classList.contains("hide")) menu();
+});
 
-sr.reveal('#apresentacao',{distance: '100px',duration: 1500})
-sr.reveal('.containerHabilidades',{ distance: '100px',duration: 1500})
-sr.reveal('#projetos',{duration: 1500})
+// scrool
+window.sr = ScrollReveal({ reset: true });
+
+sr.reveal("section:not(#landing-page)", { distance: "100px", duration: 3000 });
+
+
+// Duplica a linha de tecnologias para mander o looping
+const container = document.getElementById("containerHabilidades");
+
+if (window.innerWidth >= 768) {
+  const clone = container.cloneNode(true);
+  clone.querySelectorAll("span").forEach(el => el.classList.add("clone"));
+  container.append(...clone.children); // adiciona só os filhos do clone
+}
