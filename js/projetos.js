@@ -1,4 +1,4 @@
-const tecnologiasLista = [
+const projetosLista = [
   { nome: "HTML", imagem: "imagens/linguagens/HTML.png" },
   { nome: "CSS", imagem: "imagens/linguagens/CSS.png" },
   { nome: "JS", imagem: "imagens/linguagens/JavaScript.png" },

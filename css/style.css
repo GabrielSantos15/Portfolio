@@ -379,10 +379,12 @@ section {
     box-shadow: 0 0 5px var(--corTemaDark), 0 0 10px var(--corTemaDark);
 }
 
-#containerHabilidades span.clone{
+#containerHabilidades span.clone {
     /* remove o clone dos elementos no mobile */
     display: none;
 }
+
+/* =========================================== SESSÃO PROJETOS =================================== */
 
 #projetos h2 {
     font-size: 3rem;
@@ -394,7 +396,8 @@ section {
 
 #containerProjetos {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: start;
     flex-wrap: wrap;
     gap: 20px;
 
@@ -403,25 +406,29 @@ section {
 }
 
 #containerProjetos .projeto {
-    position: relative;
-
+    margin: auto;
     display: flex;
     flex-direction: column;
-
     width: min(500px, 100%);
-    aspect-ratio: 16/9;
-
-    border-radius: 15px;
+    height: fit-content;
+    overflow: hidden;
+    gap: 0;
 
     background-color: var(--corCard);
     box-shadow: 5px 5px 10px #0000002d, -5px -5px 10px #ffffff2d;
-
-    aspect-ratio: 16/9;
+    border-radius: 10px;
 }
+
+
 
 .dark #containerProjetos .projeto {
     background-color: var(--corCardDark);
     box-shadow: 2px 2px 10px #0000006c;
+}
+
+#containerProjetos .projeto figure {
+    height: 250px;
+    overflow: hidden;
 }
 
 #containerProjetos .projeto img {
@@ -432,59 +439,9 @@ section {
 }
 
 #containerProjetos .projeto div {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    background-color: #00000071;
-    color: #fff;
-    backdrop-filter: blur(10px);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    width: 100%;
-    height: 0;
-    transition: .5s linear;
-    padding: 30px;
-    opacity: 0;
-}
-
-#containerProjetos .projeto:hover div {
-    opacity: 1;
-    height: 100%;
-}
-
-#containerProjetos .projeto div h3 {
-    font-size: 2.3rem;
     text-align: center;
 }
 
-#containerProjetos .projeto div p {
-    text-indent: 15px;
-}
-
-#containerProjetos .projeto div a {
-    all: unset;
-
-    width: 100%;
-    padding: 10px 0;
-
-    background-color: var(--corTema);
-    color: #fff;
-
-    border-radius: 10px;
-    text-align: center;
-    font-family: var(--fontTitulo);
-    font-weight: bolder;
-
-    cursor: pointer;
-}
-
-.dark #containerProjetos .projeto div a {
-    background-color: var(--corTemaDark);
-}
 
 /* efeito scroll */
 
