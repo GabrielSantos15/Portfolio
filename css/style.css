@@ -55,7 +55,7 @@ header {
 
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .dark header {
@@ -103,6 +103,7 @@ header #buttonDarkMode {
     position: fixed;
     top: 72px;
     right: 0;
+    z-index: 2;
 
     width: 70vw;
     height: calc(100vh - 70px);
@@ -110,7 +111,6 @@ header #buttonDarkMode {
     box-shadow: -11px 0px 20px 4px #00000036;
 
     overflow: hidden;
-    z-index: 1;
     transition: all ease .3s;
 }
 
@@ -165,6 +165,16 @@ header #buttonDarkMode {
 
 .dark #menuMobile ul a {
     color: #fff;
+}
+
+#overlay{
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    background-color: #00000088;
+}
+#menuMobile.hide ~ #overlay{
+    display: none;
 }
 
 section {
@@ -279,7 +289,7 @@ section {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     gap: 2em;
 }
 
@@ -339,7 +349,6 @@ section {
     gap: 25px;
 
     margin-top: 20px;
-    animation: marquee infinite 50s linear;
     padding: 1em;
 }
 

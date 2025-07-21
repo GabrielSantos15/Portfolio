@@ -35,7 +35,7 @@ function menu() {
     : menuMobile.classList.add("hide");
 }
 
-document.querySelector("main").addEventListener("click", () => {
+document.querySelector("#overlay").addEventListener("click", () => {
   if (!document.querySelector("#menuMobile").classList.contains("hide")) menu();
 });
 
