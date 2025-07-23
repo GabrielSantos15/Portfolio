@@ -39,10 +39,6 @@ document.querySelector("#overlay").addEventListener("click", () => {
   if (!document.querySelector("#menuMobile").classList.contains("hide")) menu();
 });
 
-// scrool
-window.sr = ScrollReveal({ reset: true });
-
-sr.reveal("section:not(#landing-page)", { distance: "100px", duration: 3000 });
 
 // Duplica a linha de tecnologias para mander o looping
 const container = document.getElementById("containerHabilidades");
@@ -98,6 +94,10 @@ window.addEventListener("load", () => {
 let autoScroll;
 
 function detalhar(i) {
+  const carrossel = document.getElementById("carrossel");
+  const nextBtn = document.getElementById("nextBtn");
+  const prevBtn = document.getElementById("prevBtn");
+
   document.querySelector("#containerTextosDetalhe h3").innerHTML =
     projetos[i].nome;
   document.querySelector("#containerTextosDetalhe p").innerHTML =
@@ -109,7 +109,7 @@ function detalhar(i) {
     .join("");
   document.querySelector("#ropositorioLink").href = projetos[i].linkRepositorio;
   document.querySelector("#projetoLink").href = projetos[i].linkProjeto;
-  document.querySelector("#carrossel").innerHTML = projetos[i].imagens
+  carrossel.innerHTML = projetos[i].imagens
     .map(
       (img, i) =>
         `<img src="${img}" alt="Imagem ${i + 1} do projeto ${
@@ -120,10 +120,6 @@ function detalhar(i) {
 
   projetosContainer.style.display = "none";
   document.querySelector("#detalhesProjeto").style.display = "flex";
-
-  const carrossel = document.getElementById("carrossel");
-  const nextBtn = document.getElementById("nextBtn");
-  const prevBtn = document.getElementById("prevBtn");
 
   nextBtn.addEventListener("click", () => {
     carrossel.scrollBy({ left: carrossel.clientWidth, behavior: "smooth" });
@@ -136,7 +132,7 @@ function detalhar(i) {
   const iniciarAutoScroll = () => {
     autoScroll = setInterval(() => {
       carrossel.scrollBy({ left: carrossel.clientWidth, behavior: "smooth" });
-    }, 5000); 
+    }, 5000);
   };
 
   const pararAutoScroll = () => {
@@ -145,8 +141,12 @@ function detalhar(i) {
 
   iniciarAutoScroll();
 
-  carrossel.addEventListener("mouseenter", pararAutoScroll);
-  carrossel.addEventListener("mouseleave", iniciarAutoScroll);
+  document
+    .querySelector("#containerFotosDetalhe nav")
+    .addEventListener("mouseenter", pararAutoScroll);
+  document
+    .querySelector("#containerFotosDetalhe nav")
+    .addEventListener("mouseleave", iniciarAutoScroll);
 }
 
 function esconderDetalhes() {
@@ -154,3 +154,8 @@ function esconderDetalhes() {
   document.querySelector("#detalhesProjeto").style.display = "none";
   clearInterval(autoScroll);
 }
+
+// scrool
+window.sr = ScrollReveal({ reset: false });
+
+sr.reveal("section:not(#landing-page)", { distance: "100px",  origin: "bottom", duration: 2000 });

@@ -301,6 +301,12 @@ section {
 }
 
 
+main h2:not(#landing-page h2) {
+    font-size: 2.5rem;
+    font-family: var(--fontTitulo);
+    margin-bottom: 24px;
+}
+
 #sobre {
     display: flex;
     justify-content: space-evenly;
@@ -309,12 +315,6 @@ section {
     gap: 2em;
 }
 
-
-#sobre article h2 {
-    font-size: 2.5rem;
-    font-family: var(--fontTitulo);
-    margin-bottom: 24px;
-}
 
 #sobre article {
     line-height: 1.5em;
@@ -493,7 +493,7 @@ section {
 
 
 #detalhesProjeto {
-    display: flex;
+    display: none;
     justify-content: center;
     flex-wrap: wrap;
     gap: 1em;
@@ -599,6 +599,46 @@ section {
     padding: 5px 10px;
     margin-top: 1em;
 }
+
+.linhaDoTempo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.linhaDoTempo article{
+    width: min(700px,100%);
+    border-left: 3px solid #000;
+    text-align: left;
+    padding-left: 1em;
+}
+.linhaDoTempo article::before{
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    translate: calc(-50% - 1.5px - 1em) 0;
+    width: 15px;
+    height: 15px;
+    background-color: #000;
+}
+
+.linhaDoTempo article span{
+    display: flex;
+    align-items: center;
+}
+.linhaDoTempo article img{
+    width: 35px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+.linhaDoTempo article h4{
+    font-weight: normal;
+}
+
 
 /* efeito scroll */
 
