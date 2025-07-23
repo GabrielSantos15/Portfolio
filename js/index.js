@@ -44,12 +44,113 @@ window.sr = ScrollReveal({ reset: true });
 
 sr.reveal("section:not(#landing-page)", { distance: "100px", duration: 3000 });
 
-
 // Duplica a linha de tecnologias para mander o looping
 const container = document.getElementById("containerHabilidades");
 
 if (window.innerWidth >= 768) {
   const clone = container.cloneNode(true);
-  clone.querySelectorAll("span").forEach(el => el.classList.add("clone"));
+  clone.querySelectorAll("span").forEach((el) => el.classList.add("clone"));
   container.append(...clone.children); // adiciona só os filhos do clone
+}
+
+// mostrar os porjetos
+
+const projetosContainer = document.querySelector("#containerProjetos");
+
+window.addEventListener("load", () => {
+  let html = "";
+  projetos.forEach((projeto, i) => {
+    html += `
+        <article class="projeto card" Onclick = "detalhar(${i})">
+          <figure>
+              <img src="${projeto.imagens[0]}" alt="foto do projeto ${
+      projeto.nome
+    }">
+          </figure>
+          <div>
+              <h3>${projeto.nome}</h3>
+              <p>${projeto.descricao}</p>
+              <div class="tecnologiasProjetos">
+                 ${
+                   projeto.tecnologias.length
+                     ? (() => {
+                         const primeiras = projeto.tecnologias
+                           .slice(0, 3)
+                           .map((tec) => `<span>${tec}</span>`)
+                           .join("");
+                         const extras =
+                           projeto.tecnologias.length > 3
+                             ? `<span>${projeto.tecnologias.length - 3}+</span>`
+                             : "";
+                         return primeiras + extras;
+                       })()
+                     : ""
+                 }
+
+              </div>
+          </div>
+         </article>
+    `;
+    projetosContainer.innerHTML = html;
+  });
+});
+
+let autoScroll;
+
+function detalhar(i) {
+  document.querySelector("#containerTextosDetalhe h3").innerHTML =
+    projetos[i].nome;
+  document.querySelector("#containerTextosDetalhe p").innerHTML =
+    projetos[i].descricao;
+  document.querySelector(
+    "#containerTextosDetalhe .tecnologiasProjetos"
+  ).innerHTML = projetos[i].tecnologias
+    .map((tec) => `<span>${tec}</span>`)
+    .join("");
+  document.querySelector("#ropositorioLink").href = projetos[i].linkRepositorio;
+  document.querySelector("#projetoLink").href = projetos[i].linkProjeto;
+  document.querySelector("#carrossel").innerHTML = projetos[i].imagens
+    .map(
+      (img, i) =>
+        `<img src="${img}" alt="Imagem ${i + 1} do projeto ${
+          projetos[i].nome
+        }">`
+    )
+    .join("");
+
+  projetosContainer.style.display = "none";
+  document.querySelector("#detalhesProjeto").style.display = "flex";
+
+  const carrossel = document.getElementById("carrossel");
+  const nextBtn = document.getElementById("nextBtn");
+  const prevBtn = document.getElementById("prevBtn");
+
+  nextBtn.addEventListener("click", () => {
+    carrossel.scrollBy({ left: carrossel.clientWidth, behavior: "smooth" });
+  });
+
+  prevBtn.addEventListener("click", () => {
+    carrossel.scrollBy({ left: -carrossel.clientWidth, behavior: "smooth" });
+  });
+
+  const iniciarAutoScroll = () => {
+    autoScroll = setInterval(() => {
+      carrossel.scrollBy({ left: carrossel.clientWidth, behavior: "smooth" });
+    }, 5000); 
+  };
+
+  const pararAutoScroll = () => {
+    clearInterval(autoScroll);
+  };
+
+  iniciarAutoScroll();
+
+  carrossel.addEventListener("mouseenter", pararAutoScroll);
+  carrossel.addEventListener("mouseleave", iniciarAutoScroll);
+}
+
+function esconderDetalhes() {
+  projetosContainer.style.display = "flex";
+  document.querySelector("#detalhesProjeto").style.display = "none";
+  clearInterval(autoScroll);
 }

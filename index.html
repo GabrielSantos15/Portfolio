@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/projetos.js" defer></script>
     <script src="js/index.js" defer></script>
     <title>Portfolio</title>
 </head>
@@ -79,7 +80,7 @@
             </article>
         </section>
         <section id="habilidades">
-            <h2>Tecnologias</h2>
+            <!-- <h2>Tecnologias</h2> -->
             <article id="containerHabilidades">
                 <span>
                     <figure>
@@ -159,11 +160,11 @@
                     </figure>
                     <div>
                         <h3>Pizzaria</h3>
-                        <p>Pizzaria fictícia feita para demonstrar minhas habilidades de dretretesenvolvimento web. lorem</p>
-                        <div>
-                            <a href="">Github</a>
-                            <a href="https://gabrielsantos15.github.io/Site-de-pizzaria/" target="_blank">Ver
-                                projeto</a>
+                        <p>Pizzaria fictícia feita para demonstrar minhas habilidades de dretretesenvolvimento web</p>
+                        <div class="tecnologiasProjetos">
+                            <span>Html</span>
+                            <span>CSS</span>
+                            <span>JS</span>
                         </div>
                     </div>
                 </article>
@@ -178,7 +179,8 @@
                 </article>
 
                 <article class="projeto">
-                    <figure><img src="imagens/projetos/listaDeTarefas.png" alt="foto do projeto lista de tarefas"></figure>
+                    <figure><img src="imagens/projetos/listaDeTarefas.png" alt="foto do projeto lista de tarefas">
+                    </figure>
                     <div>
                         <h3>Lista de tarefas</h3>
                         <p>Lista de tarefas simples usando a função localstorage do javascript.</p>
@@ -217,6 +219,39 @@
                     </div>
                 </article>
             </div>
+            <article id="detalhesProjeto">
+                <button onclick="esconderDetalhes()"><i class="fa-solid fa-arrow-left"></i> Retornar aos Projetos</button>
+
+                <div id="containerFotosDetalhe">
+                    <figure id="carrossel">
+                        <img id="imagemPrincipal" src="imagens/projetos/calculadora.png" alt="Imagem principal">
+                        <img src="imagens/projetos/sorveteria.png" alt="miniatura 2">
+                        <img src="imagens/projetos/listaDeTarefas.png" alt="miniatura 3">
+                    </figure>
+                    <nav>
+                        <button id="prevBtn" class="navBtn"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button id="nextBtn" class="navBtn"><i class="fa-solid fa-chevron-right"></i></button>
+                    </nav>
+                </div>
+
+                <div id="containerTextosDetalhe" class="card">
+                    <h3>Calculadora</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad maiores voluptates esse deleniti
+                        animi eum vel explicabo quae quos earum reiciendis quas laudantium quaerat quia distinctio,
+                        culpa ullam placeat autem.</p>
+                    <hr>
+                    <h4>Tecnologias</h4>
+                    <div class="tecnologiasProjetos">
+                        <span>Html</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                    </div>
+                    <nav>
+                        <a id="ropositorioLink" target="_blank"><i class="fa-brands fa-github"></i> Ver código</a>
+                        <a id="projetoLink" target="_blank><i class="fa-solid fa-link"></i> Ver projeto</a>
+                    </nav>
+                </div>
+            </article>
         </section>
         <section id="experiencia">
 

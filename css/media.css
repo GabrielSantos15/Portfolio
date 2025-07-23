@@ -62,7 +62,7 @@
     align-items: center;
     gap: 5px;
     
-    filter: grayscale(0) opacity(.5);
+    filter: grayscale(1) opacity(.5);
     transition: all .5s;
     border: none;
   }
