@@ -66,7 +66,7 @@ window.addEventListener("load", () => {
           <div>
               <h3>${projeto.nome}</h3>
               <p>${projeto.descricao}</p>
-              <div class="tecnologiasProjetos">
+              <div class="tecnologiasContainer">
                  ${
                    projeto.tecnologias.length
                      ? (() => {
@@ -129,24 +129,6 @@ function detalhar(i) {
     carrossel.scrollBy({ left: -carrossel.clientWidth, behavior: "smooth" });
   });
 
-  const iniciarAutoScroll = () => {
-    autoScroll = setInterval(() => {
-      carrossel.scrollBy({ left: carrossel.clientWidth, behavior: "smooth" });
-    }, 5000);
-  };
-
-  const pararAutoScroll = () => {
-    clearInterval(autoScroll);
-  };
-
-  iniciarAutoScroll();
-
-  document
-    .querySelector("#containerFotosDetalhe nav")
-    .addEventListener("mouseenter", pararAutoScroll);
-  document
-    .querySelector("#containerFotosDetalhe nav")
-    .addEventListener("mouseleave", iniciarAutoScroll);
 }
 
 function esconderDetalhes() {

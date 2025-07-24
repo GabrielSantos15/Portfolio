@@ -35,7 +35,11 @@ body {
 
 body.dark {
     background-color: var(--corFundoDark);
-    color: #ffffffd2;
+    color: #ffffff;
+}
+
+.dark p {
+    color: #cacaca;
 }
 
 header {
@@ -474,13 +478,21 @@ main h2:not(#landing-page h2) {
     text-transform: capitalize;
 }
 
-.tecnologiasProjetos {
+.footerLinha{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tecnologiasContainer {
     display: flex;
     justify-content: start;
     gap: 5px;
 }
 
-.tecnologiasProjetos span {
+.tecnologiasContainer span {
     align-items: center;
 
     border: 1px solid #ddd;
@@ -550,6 +562,7 @@ main h2:not(#landing-page h2) {
     padding: 0;
     transition: .5s;
 }
+
 #detalhesProjeto #containerFotosDetalhe nav:hover {
     opacity: 1;
 }
@@ -600,45 +613,100 @@ main h2:not(#landing-page h2) {
     margin-top: 1em;
 }
 
-.linhaDoTempo{
+.linhaDoTempo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 10px;
 }
 
-.linhaDoTempo article{
-    width: min(700px,100%);
-    border-left: 3px solid #000;
+.linhaDoTempo article {
+    width: min(700px, 100%);
     text-align: left;
-    padding-left: 1em;
+    padding: 1em;
+    background-color: var(--corCard);
+
+    border-radius: 5px;
+    position: relative;
 }
-.linhaDoTempo article::before{
+
+.dark .linhaDoTempo article {
+    background-color: var(--corCardDark);
+}
+
+.linhaDoTempo article::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0;
+    border-radius: 50%;
+    translate: calc(-50% + 1.5px) 0;
+    width: 15px;
+    height: 15px;
+    background-color: var(--corTema);
+}
+
+.linhaDoTempo article::after {
+    position: absolute;
     display: block;
     content: "";
     top: 0;
     left: 0;
-    border-radius: 50%;
-    translate: calc(-50% - 1.5px - 1em) 0;
-    width: 15px;
-    height: 15px;
-    background-color: #000;
+    width: 3px;
+    height: calc(100% + 10px);
+    background-color: var(--corTema);
 }
 
-.linhaDoTempo article span{
+
+.linhaDoTempo .tituloLinha {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
-.linhaDoTempo article img{
+
+.linhaDoTempo .tituloLinha .instituicaoLinha {
+    display: flex;
+    align-items: start;
+    align-items: center;
+    text-transform: capitalize;
+    gap: 10px;
+}
+
+.linhaDoTempo .tituloLinha img {
+    border-radius: 50%;
     width: 35px;
     aspect-ratio: 1/1;
     object-fit: contain;
 }
-.linhaDoTempo article h4{
+
+.linhaDoTempo .descLinha h4 {
     font-weight: normal;
 }
 
+.linhaDoTempo .descLinha p {
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+.linhaDoTempo .navLinha {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.linhaDoTempo .navLinha a {
+    all: unset;
+    color: #000;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.dark .linhaDoTempo .navLinha a {
+    color: #fff;
+}
 
 /* efeito scroll */
 

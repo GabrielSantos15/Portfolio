@@ -44,36 +44,37 @@
     animation: marquee infinite 50s linear;
   }
 
-  
-  
+
+
   @keyframes marquee {
     0% {
       transform: translateX(0);
     }
-    
+
     100% {
       transform: translateX(-50%);
     }
   }
-  
+
   #containerHabilidades span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 5px;
-    
+
     filter: grayscale(1) opacity(.5);
     transition: all .5s;
     border: none;
   }
-  
+
   .dark #containerHabilidades span {
     border: none;
   }
-  
+
   #containerHabilidades span.clone {
     display: flex;
   }
+
   #containerHabilidades span:hover {
     filter: grayscale(0) opacity(1);
     box-shadow: none;
@@ -119,5 +120,24 @@
 
   .dark #habilidades::before {
     background: linear-gradient(to right, var(--corFundoDark) 40%, transparent);
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .linhaDoTempo article {
+    translate: 50% 0;
+  }
+
+  .linhaDoTempo article:nth-child(2n) {
+    translate: -50% 0;
+  }
+  .linhaDoTempo article:nth-child(2n)::before, .linhaDoTempo article:nth-child(2n)::after{
+    left: auto;
+    right: 0;
+  }
+  .linhaDoTempo article:nth-child(2n)::before{
+    translate: calc(50% - 1.5px) 0;
+    left: auto;
+    right: 0;
   }
 }
