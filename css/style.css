@@ -7,14 +7,14 @@
     --corFundo: #eee;
     --corCard: #f5f5f5;
 
-    --corFundoDark: #131725;
-    --corCardDark: #1b223a;
+    --corFundoDark: #121212;
+    --corCardDark: #1f1b24;
 
     --corTema: #7460e7;
     --corTemaDark: #9286fc;
 
     --fontPadrao: 'Poppins', sans-serif;
-    --fontTitulo: 'Merriweather', serif;
+    --fontTitulo: 'Poppins', serif;
     --fontFront: "Ultra", serif;
     --fontCursiva: "Alex Brush", cursive;
 }
@@ -53,7 +53,7 @@ header {
 
     backdrop-filter: blur(20px);
     color: #fff;
-    padding: 20px 40px;
+    padding: 10px 40px;
     width: 100vw;
 
     box-shadow: inset 0px 0px 10px 1px #00000045;
@@ -207,7 +207,8 @@ section {
     align-items: center;
 
     background-color: var(--corFundo);
-    background-image: linear-gradient(#ffffffc4 75%, var(--corFundo)), url("../imagens/WhiteBackground.jpg");
+    background-image: radial-gradient(#eeeeee, #eeeeeeac), url("../imagens/WhiteBackground.jpg");
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -217,7 +218,7 @@ section {
 
 .dark #landing-page {
     background-color: var(--corFundoDark);
-    background-image: linear-gradient(#0000006c 60%, var(--corFundoDark)), url("../imagens/DarkBackground.jpg");
+    background-image: radial-gradient(#0000006c, #000000), url("../imagens/DarkBackground.jpg");
 }
 
 #landing-page article {
@@ -273,13 +274,21 @@ section {
 
 
 #landing-page .icon-down {
-    position: absolute;
-    bottom: 25px;
-    left: 50%;
     transform: translate(-50%);
-
+    
     opacity: .5;
     font-size: 1.3em;
+    width: 100%;
+    background-color: var(--corTemaDark);
+}
+
+#teste{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 30px;
+    width: 100%;
+    background-color: var(--corTemaDark);
 }
 
 #redesSociais {
@@ -347,7 +356,7 @@ main h2:not(#landing-page h2) {
     box-shadow: 0px 0px 5px #7460e746, 0px 0px 15px #7460e7fd;
 }
 
-.dark #sobre #apresentacao img {
+.dark #sobre figure img {
     border: 7px solid var(--corTemaDark);
     box-shadow: 0px 0px 10px #9286fcd7, 0px 0px 25px #9286fcd0;
 }

@@ -85,8 +85,9 @@ window.addEventListener("load", () => {
           </div>
          </article>
     `;
-    projetosContainer.innerHTML = html;
   });
+  projetosContainer.innerHTML = html;
+  scrollEfect()
 });
 
 let autoScroll;
@@ -132,10 +133,9 @@ function detalhar(i) {
 function esconderDetalhes() {
   projetosContainer.style.display = "flex";
   document.querySelector("#detalhesProjeto").style.display = "none";
-  clearInterval(autoScroll);
 }
 
-// scrool
-window.sr = ScrollReveal({ reset: false });
-
-sr.reveal("section:not(#landing-page)", { distance: "100px", origin: "bottom", duration: 2000 });
+function scrollEfect() {
+  window.sr = ScrollReveal({ reset: false });
+  sr.reveal("section:not(#landing-page)", { distance: "100px", origin: "bottom", duration: 3500 });
+}
