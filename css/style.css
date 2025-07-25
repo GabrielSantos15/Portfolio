@@ -434,8 +434,12 @@ main h2:not(#landing-page h2) {
     padding: 20px;
 }
 
+#containerProjetos.hide{
+    display: none;
+}
+
 #containerProjetos .projeto {
-    margin: auto;
+    /* margin: auto; */
     display: flex;
     flex-direction: column;
     width: min(500px, 100%);
@@ -478,7 +482,7 @@ main h2:not(#landing-page h2) {
     text-transform: capitalize;
 }
 
-.footerLinha{
+.footerLinha {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -619,31 +623,38 @@ main h2:not(#landing-page h2) {
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 10px;
+    gap: 1em;
 }
 
 .linhaDoTempo article {
-    width: min(700px, 100%);
+    width: min(650px, 100%);
     text-align: left;
     padding: 1em;
-    background-color: var(--corCard);
-
+    background-color: transparent;
+    border: 2px solid var(--corCard);
+    background-image: linear-gradient(-45deg, #7460e775, var(--corCard));
+    
     border-radius: 5px;
     position: relative;
+    box-shadow: 5px 5px 10px #00000018;
+    transition: all .5s;
 }
 
 .dark .linhaDoTempo article {
-    background-color: var(--corCardDark);
+    background-color:  transparent;
+    border: 2px solid var(--corCardDark);
+    background-image: linear-gradient(-45deg, #9286fc7c, transparent); 
+    
 }
 
 .linhaDoTempo article::before {
     display: block;
     content: "";
     position: absolute;
-    top: 0%;
-    left: 0;
+    top: 0;
+    left: 1.5px;
     border-radius: 50%;
-    translate: calc(-50% + 1.5px) 0;
+    translate: -50% -50%;
     width: 15px;
     height: 15px;
     background-color: var(--corTema);
@@ -657,9 +668,9 @@ main h2:not(#landing-page h2) {
     left: 0;
     width: 3px;
     height: calc(100% + 10px);
-    background-color: var(--corTema);
+    
+    background-image: linear-gradient(var(--corTema), transparent);
 }
-
 
 .linhaDoTempo .tituloLinha {
     display: flex;

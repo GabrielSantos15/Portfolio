@@ -59,29 +59,27 @@ window.addEventListener("load", () => {
     html += `
         <article class="projeto card" Onclick = "detalhar(${i})">
           <figure>
-              <img src="${projeto.imagens[0]}" alt="foto do projeto ${
-      projeto.nome
-    }">
+              <img src="${projeto.imagens[0]}" alt="foto do projeto ${projeto.nome
+      }">
           </figure>
           <div>
               <h3>${projeto.nome}</h3>
               <p>${projeto.descricao}</p>
               <div class="tecnologiasContainer">
-                 ${
-                   projeto.tecnologias.length
-                     ? (() => {
-                         const primeiras = projeto.tecnologias
-                           .slice(0, 3)
-                           .map((tec) => `<span>${tec}</span>`)
-                           .join("");
-                         const extras =
-                           projeto.tecnologias.length > 3
-                             ? `<span>${projeto.tecnologias.length - 3}+</span>`
-                             : "";
-                         return primeiras + extras;
-                       })()
-                     : ""
-                 }
+                 ${projeto.tecnologias.length
+        ? (() => {
+          const primeiras = projeto.tecnologias
+            .slice(0, 3)
+            .map((tec) => `<span>${tec}</span>`)
+            .join("");
+          const extras =
+            projeto.tecnologias.length > 3
+              ? `<span>${projeto.tecnologias.length - 3}+</span>`
+              : "";
+          return primeiras + extras;
+        })()
+        : ""
+      }
 
               </div>
           </div>
@@ -112,14 +110,14 @@ function detalhar(i) {
   carrossel.innerHTML = projetos[i].imagens
     .map(
       (img, i) =>
-        `<img src="${img}" alt="Imagem ${i + 1} do projeto ${
-          projetos[i].nome
+        `<img src="${img}" alt="Imagem ${i + 1} do projeto ${projetos[i].nome
         }">`
     )
     .join("");
 
   projetosContainer.style.display = "none";
   document.querySelector("#detalhesProjeto").style.display = "flex";
+  document.querySelector("#projetos").scrollIntoView({ behavior: "smooth" });
 
   nextBtn.addEventListener("click", () => {
     carrossel.scrollBy({ left: carrossel.clientWidth, behavior: "smooth" });
@@ -140,4 +138,4 @@ function esconderDetalhes() {
 // scrool
 window.sr = ScrollReveal({ reset: false });
 
-sr.reveal("section:not(#landing-page)", { distance: "100px",  origin: "bottom", duration: 2000 });
+sr.reveal("section:not(#landing-page)", { distance: "100px", origin: "bottom", duration: 2000 });

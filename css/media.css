@@ -5,7 +5,7 @@
 }
 
 :target {
-  scroll-margin-top: 71px;
+  scroll-margin-top: 70px;
 }
 
 /* menu mobile */
@@ -124,20 +124,26 @@
 }
 
 @media screen and (min-width: 1500px) {
+  .linhaDoTempo {
+    gap: 0;
+  }
+
   .linhaDoTempo article {
-    translate: 50% 0;
+    translate: calc(50% - 1.5px) 0;
   }
 
   .linhaDoTempo article:nth-child(2n) {
-    translate: -50% 0;
+    translate: calc(-50% + 1.5px) 0;
   }
-  .linhaDoTempo article:nth-child(2n)::before, .linhaDoTempo article:nth-child(2n)::after{
+
+  .linhaDoTempo article:nth-child(2n)::after {
     left: auto;
     right: 0;
   }
-  .linhaDoTempo article:nth-child(2n)::before{
-    translate: calc(50% - 1.5px) 0;
+
+  .linhaDoTempo article:nth-child(2n)::before {
+    translate: 50% -50%;
     left: auto;
-    right: 0;
+    right: 1.5px;
   }
 }
