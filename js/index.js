@@ -1,3 +1,5 @@
+let darkModeStatus = false
+
 function recuperarDarkMode() {
   const storageDark = localStorage.getItem("dark");
   if (storageDark) darkMode();
@@ -12,11 +14,13 @@ function darkMode() {
   localStorage.clear();
 
   if (body.classList.contains("dark")) {
+    darkModeStatus = false
     body.classList.remove("dark");
 
     buttonDarkMode.classList.remove("fa-moon");
     buttonDarkMode.classList.add("fa-sun");
   } else {
+    darkModeStatus = true
     body.classList.add("dark");
     localStorage.setItem("dark", 1);
 

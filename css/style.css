@@ -227,6 +227,7 @@ section {
 }
 
 #landing-page article {
+    z-index: 1;
     font-size: 2rem;
     text-align: center;
 
@@ -281,6 +282,7 @@ section {
     position: absolute;
     bottom: 0;
     left: 0;
+        z-index: 1;
     height: 30px;
     width: 100%;
     background-color: var(--corTemaDark);
@@ -306,6 +308,15 @@ section {
 
 .dark #redesSociais a {
     color: #ffffffd5;
+}
+
+#landing-page canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100dvw;
+    height: 100dvh;
+    z-index: 0;
 }
 
 
@@ -365,8 +376,9 @@ main h2:not(#landing-page h2) {
     font-family: var(--fontTitulo);
     font-size: 1.5rem;
 }
-#habilidades p{
-    width: min(500px,100%);
+
+#habilidades p {
+    width: min(500px, 100%);
 }
 
 #containerHabilidades {
@@ -430,10 +442,10 @@ main h2:not(#landing-page h2) {
     margin: 25px;
 }
 
-#projetos p{
+#projetos p {
     margin: auto;
     text-align: center;
-    width: min(700px,100%);
+    width: min(700px, 100%);
 }
 
 #containerProjetos {
@@ -740,8 +752,8 @@ main h2:not(#landing-page h2) {
     text-align: center;
 }
 
-#contatoContainer h3{
-    width: min(600px,100%);
+#contatoContainer h3 {
+    width: min(600px, 100%);
     font-size: 2em;
 }
 
@@ -763,21 +775,23 @@ main h2:not(#landing-page h2) {
     background-color: var(--corTemaDark);
 }
 
-#contatoContainer a:hover{
+#contatoContainer a:hover {
     scale: 1.1;
     color: #fff;
-    box-shadow: 0 0 5px var(--corTema), 0 0 10px var(--corTema),0 0 15px  var(--corTema);
-}
-.dark #contatoContainer a:hover{
-    box-shadow: 0 0 5px var(--corTemaDark), 0 0 10px var(--corTemaDark),0 0 15px  var(--corTemaDark);
+    box-shadow: 0 0 5px var(--corTema), 0 0 10px var(--corTema), 0 0 15px var(--corTema);
 }
 
-footer{
+.dark #contatoContainer a:hover {
+    box-shadow: 0 0 5px var(--corTemaDark), 0 0 10px var(--corTemaDark), 0 0 15px var(--corTemaDark);
+}
+
+footer {
     opacity: .7;
     padding: 1em;
     font-size: .8em;
     text-align: right;
 }
+
 /* efeito scroll */
 
 .leftSr,
