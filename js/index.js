@@ -57,7 +57,7 @@ window.addEventListener("load", () => {
   let html = "";
   projetos.forEach((projeto, i) => {
     html += `
-        <article class="projeto card" Onclick = "detalhar(${i})">
+        <article class="projeto card bottomSr" Onclick = "detalhar(${i})">
           <figure>
               <img src="${projeto.imagens[0]}" alt="foto do projeto ${projeto.nome
       }">
@@ -136,6 +136,9 @@ function esconderDetalhes() {
 }
 
 function scrollEfect() {
-  window.sr = ScrollReveal({ reset: false });
-  sr.reveal("section:not(#landing-page)", { distance: "100px", origin: "bottom", duration: 3500 });
+  window.sr = ScrollReveal({ reset: true });
+  // sr.reveal("section:not(#landing-page)", { distance: "100px", origin: "bottom", duration: 3500 });
+  sr.reveal(".leftSr", { distance: "200px", origin: "left", duration: 2000 });
+  sr.reveal(".rightSr", { distance: "200px", origin: "right", duration: 2000 });
+  sr.reveal(".bottomSr", { distance: "200px", origin: "bottom", duration: 3000 });
 }

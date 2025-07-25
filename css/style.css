@@ -7,7 +7,7 @@
     --corFundo: #eee;
     --corCard: #f5f5f5;
 
-    --corFundoDark: #121212;
+    --corFundoDark: #07090E;
     --corCardDark: #1f1b24;
 
     --corTema: #7460e7;
@@ -42,41 +42,42 @@ body.dark {
     color: #cacaca;
 }
 
+section{
+    place-content: center;
+    min-height: 100dvh;
+}
+
 header {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-
-    border-bottom: 1px solid #fff;
-    background-color: #0d0d0da8;
-
-    backdrop-filter: blur(20px);
-    color: #fff;
-    padding: 10px 40px;
-    width: 100vw;
-
-    box-shadow: inset 0px 0px 10px 1px #00000045;
-
     position: fixed;
-    top: 0;
-    z-index: 2;
+    top: 1em;
+    right: 1em;
+
+    display: grid;
+    place-content: center;
+    
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #ffffff6b;
+    border-left: 2px solid #fff;
+    color: #000000;
+    backdrop-filter: blur(10px);
+    z-index: 3;
+    
+    cursor: pointer;
 }
 
 .dark header {
-    background-color: #2b2b2b2b;
+    border-left: 2px solid #ffffff53;
+    background-color: #a0a0a018;
     color: #fff;
 }
 
 .icon {
     width: 1em;
     font-size: 1.3rem;
-    aspect-ratio: 1;
 }
 
-.menu-icon {
-    cursor: pointer;
-}
 
 .card {
     background-color: var(--corCard);
@@ -120,21 +121,25 @@ header #buttonDarkMode {
 
 #menuMobile {
     position: fixed;
-    top: 72px;
-    right: 0;
-    z-index: 2;
+    top: 75px;
+    right: 1em;
+    z-index: 3;
 
-    width: 70vw;
-    height: calc(100vh - 70px);
+    width: min(300px,100%);
+    height: 250px;
+
     background-color: var(--corCard);
     box-shadow: -11px 0px 20px 4px #00000036;
+    border-radius: 10px;
 
     overflow: hidden;
-    transition: all ease .3s;
+    transition: all ease-in .3s;
 }
 
 #menuMobile.hide {
     width: 0;
+    height: 0;
+    opacity: 0;
 }
 
 .dark #menuMobile {
@@ -163,7 +168,7 @@ header #buttonDarkMode {
 }
 
 #menuMobile ul a:hover {
-    backdrop-filter: brightness(.9);
+    color: var(--corTema);
 }
 
 #menuMobile a#cv {
@@ -189,7 +194,7 @@ header #buttonDarkMode {
 #overlay {
     position: fixed;
     inset: 0;
-    z-index: 1;
+    z-index: 2;
     background-color: #00000088;
 }
 
@@ -270,16 +275,6 @@ section {
     margin-block-end: -.5em;
     font-size: 2.5em;
     font-family: var(--fontCursiva);
-}
-
-
-#landing-page .icon-down {
-    transform: translate(-50%);
-    
-    opacity: .5;
-    font-size: 1.3em;
-    width: 100%;
-    background-color: var(--corTemaDark);
 }
 
 #teste{
@@ -730,6 +725,6 @@ main h2:not(#landing-page h2) {
 
 /* efeito scroll */
 
-section:not(#landing-page) {
+.leftSr,.rightSr,.bottomSr{
     visibility: hidden;
 }

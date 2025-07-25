@@ -20,20 +20,11 @@
 </head>
 
 <body>
-    <header>
-        <i class="fa-solid fa-bars menu-icon icon" onclick="menu()"></i>
-
-        <h2 id="logo"><i class="fa-solid fa-code icon"></i></h2>
-        <nav>
-            <ul>
-                <li><a href="#landing-page">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-            </ul>
-        </nav>
-        <i class="fa-solid fa-sun icon" id="buttonDarkMode" onclick="darkMode()"></i>
+    <header onclick="menu()">
+        <i class="fa-solid fa-bars menu-icon icon"></i>
     </header>
     <nav id="menuMobile" class="hide">
+        <i class="fa-solid fa-sun icon" id="buttonDarkMode" onclick="darkMode()"></i>
         <ul>
             <li><a href="#landing-page">Início</a></li>
             <li><a href="#sobre">Sobre</a></li>
@@ -62,10 +53,10 @@
         </section>
 
         <section id="sobre">
-            <figure>
+            <figure class="leftSr">
                 <img src="imagens/3.png" width="350" alt="Foto">
             </figure>
-            <article id="apresentacao">
+            <article id="apresentacao" class="rightSr">
                 <h2>Sobre</h2>
                 <p>Meu nome é Gabriel e tenho 18 anos. Desde criança, sou apaixonado por tecnologia e sempre busquei
                     aprender mais sobre esse universo. Ao longo da minha trajetória, desenvolvi diversas habilidades e
@@ -188,7 +179,7 @@
         </section>
         <section id="experiencia" class="linhaDoTempo">
             <h2>Experiência</h2>
-            <article>
+            <article class="rightSr">
                 <div class="tituloLinha">
                     <span class="instituicaoLinha">
                         <img src="https://media.licdn.com/dms/image/v2/C4D0BAQGLjRxxls5A8g/company-logo_200_200/company-logo_200_200/0/1630525432124/grupo_petropolis_logo?e=1756339200&v=beta&t=UrjR2BLzIfS2HSzZkDqaarA3HyiYEVg4LqqiDSLu2y4"
@@ -225,7 +216,7 @@
         </section>
         <section class="linhaDoTempo">
             <h2>Formação</h2>
-            <article>
+            <article class="rightSr">
                 <div class="tituloLinha">
                     <span class="instituicaoLinha">
                         <img src="https://media.licdn.com/dms/image/v2/D4D0BAQGWrQt1XOEiPw/company-logo_200_200/B4DZbGkZaBGwAI-/0/1747088152588/fiap_logo?e=1756339200&v=beta&t=ZhDJKtwIhlCLyHDIhNFxWt6aFH9il0bW1kzcqv4QMC8"
@@ -259,7 +250,7 @@
                     </nav>
                 </div>
             </article>
-            <article>
+            <article class="rightSr">
                 <div class="tituloLinha">
                     <span class="instituicaoLinha">
                         <img src="https://media.licdn.com/dms/image/v2/D4D0BAQH8sYk9lMG8Jg/company-logo_200_200/B4DZfF0kX3H4AI-/0/1751370581854/senaisp_logo?e=1756339200&v=beta&t=t6v2XZN-yE1K619E1lIMWqIXl7R5ucNyUTsbTKE4b30"
@@ -293,7 +284,7 @@
                     </nav>
                 </div>
             </article>
-            <article>
+            <article class="rightSr">
                 <div class="tituloLinha">
                     <span class="instituicaoLinha">
                         <img src="https://media.licdn.com/dms/image/v2/C560BAQETQJlgswgptg/company-logo_200_200/company-logo_200_200/0/1630614053046/instituto_federal_de_educao_cincia_e_tecnologia_de_so_paulo___ifsp_logo?e=1756339200&v=beta&t=n4rPwnLQxRLcLCMUzipg_fPpte9qeuMCAzAg0hLBVHs"
@@ -334,6 +325,7 @@
                 </div>
             </article>
         </section>
+        <a href="mailto:gs303291@gmail.com?subject=Assunto do Email&body=Corpo da mensagem">Enviar Email</a>
     </main>
 </body>
 

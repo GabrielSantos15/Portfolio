@@ -10,19 +10,6 @@
 
 /* menu mobile */
 @media screen and (min-width: 600px) {
-  header {
-    flex-direction: row;
-  }
-
-  header nav {
-    display: block;
-  }
-
-  .menu-icon,
-  #menuMobile {
-    display: none !important;
-  }
-
 
   #landing-page article h2 {
     font-size: 2.5em;
@@ -32,7 +19,6 @@
 
 
   #containerHabilidades {
-    position: relative;
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
@@ -86,6 +72,10 @@
 
   #containerHabilidades span img {
     width: 100px;
+  }
+
+  #habilidades{
+    position: relative;
   }
 
   #habilidades::before {
