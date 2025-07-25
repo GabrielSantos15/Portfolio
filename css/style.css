@@ -42,7 +42,7 @@ body.dark {
     color: #cacaca;
 }
 
-section{
+section {
     place-content: center;
     min-height: 100dvh;
 }
@@ -54,7 +54,7 @@ header {
 
     display: grid;
     place-content: center;
-    
+
     aspect-ratio: 1/1;
     border-radius: 50%;
     padding: 10px;
@@ -63,7 +63,7 @@ header {
     color: #000000;
     backdrop-filter: blur(10px);
     z-index: 3;
-    
+
     cursor: pointer;
 }
 
@@ -125,7 +125,7 @@ header #buttonDarkMode {
     right: 1em;
     z-index: 3;
 
-    width: min(300px,100%);
+    width: min(300px, 100%);
     height: 250px;
 
     background-color: var(--corCard);
@@ -277,7 +277,7 @@ section {
     font-family: var(--fontCursiva);
 }
 
-#teste{
+#teste {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -357,13 +357,16 @@ main h2:not(#landing-page h2) {
 }
 
 #habilidades {
-    padding: 0;
+    /* padding: 0; */
 }
 
 #habilidades h2 {
-    text-align: center;
+    text-align: left;
     font-family: var(--fontTitulo);
-    font-size: 2rem;
+    font-size: 1.5rem;
+}
+#habilidades p{
+    width: min(500px,100%);
 }
 
 #containerHabilidades {
@@ -427,6 +430,12 @@ main h2:not(#landing-page h2) {
     margin: 25px;
 }
 
+#projetos p{
+    margin: auto;
+    text-align: center;
+    width: min(700px,100%);
+}
+
 #containerProjetos {
     display: flex;
     justify-content: center;
@@ -438,7 +447,7 @@ main h2:not(#landing-page h2) {
     padding: 20px;
 }
 
-#containerProjetos.hide{
+#containerProjetos.hide {
     display: none;
 }
 
@@ -637,7 +646,7 @@ main h2:not(#landing-page h2) {
     background-color: transparent;
     border: 2px solid var(--corCard);
     background-image: linear-gradient(-45deg, #7460e775, var(--corCard));
-    
+
     border-radius: 5px;
     position: relative;
     box-shadow: 5px 5px 10px #00000018;
@@ -645,10 +654,10 @@ main h2:not(#landing-page h2) {
 }
 
 .dark .linhaDoTempo article {
-    background-color:  transparent;
+    background-color: transparent;
     border: 2px solid var(--corCardDark);
-    background-image: linear-gradient(-45deg, #9286fc7c, transparent); 
-    
+    background-image: linear-gradient(-45deg, #9286fc7c, transparent);
+
 }
 
 .linhaDoTempo article::before {
@@ -672,7 +681,7 @@ main h2:not(#landing-page h2) {
     left: 0;
     width: 3px;
     height: calc(100% + 10px);
-    
+
     background-image: linear-gradient(var(--corTema), transparent);
 }
 
@@ -723,8 +732,56 @@ main h2:not(#landing-page h2) {
     color: #fff;
 }
 
+#contatoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    text-align: center;
+}
+
+#contatoContainer h3{
+    width: min(600px,100%);
+    font-size: 2em;
+}
+
+#contatoContainer a {
+    all: unset;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: capitalize;
+
+    background-color: var(--corTema);
+    color: #000;
+    padding: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.dark #contatoContainer a {
+    background-color: var(--corTemaDark);
+}
+
+#contatoContainer a:hover{
+    scale: 1.1;
+    color: #fff;
+    box-shadow: 0 0 5px var(--corTema), 0 0 10px var(--corTema),0 0 15px  var(--corTema);
+}
+.dark #contatoContainer a:hover{
+    box-shadow: 0 0 5px var(--corTemaDark), 0 0 10px var(--corTemaDark),0 0 15px  var(--corTemaDark);
+}
+
+footer{
+    opacity: .7;
+    padding: 1em;
+    font-size: .8em;
+    text-align: right;
+}
 /* efeito scroll */
 
-.leftSr,.rightSr,.bottomSr{
+.leftSr,
+.rightSr,
+.bottomSr {
     visibility: hidden;
 }

@@ -74,41 +74,45 @@
     width: 100px;
   }
 
-  #habilidades{
+  #habilidades {
     position: relative;
   }
 
-  #habilidades::before {
+  .fogEfect{
+    position: relative;
+  }
+
+  .fogEfect::before {
     content: "";
     display: block;
     height: 100%;
-    width: 5%;
+    width: 10%;
     z-index: 1;
 
     position: absolute;
     top: 0;
-    left: 0;
+    left: -2em;
     background: linear-gradient(to right, var(--corFundo) 40%, transparent);
   }
 
-  #habilidades::after {
+  .fogEfect::after {
     content: "";
     display: block;
     height: 100%;
-    width: 5%;
+    width: 10%;
     z-index: 1;
 
     position: absolute;
     top: 0;
-    right: 0;
+    right: -2em;
     background: linear-gradient(to left, var(--corFundo) 40%, transparent);
   }
 
-  .dark #habilidades::after {
+  .dark .fogEfect::after {
     background: linear-gradient(to left, var(--corFundoDark) 40%, transparent);
   }
 
-  .dark #habilidades::before {
+  .dark .fogEfect::before {
     background: linear-gradient(to right, var(--corFundoDark) 40%, transparent);
   }
 }
