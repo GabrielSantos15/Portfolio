@@ -34,7 +34,7 @@
         <!-- <a href="#" id="cv">Download CV</a> -->
     </nav>
 
-    <div id="overlay" aria-hidden="true"></div>
+    <div class="overlay" id="overlayMenu" aria-hidden="true"></div>
 
     <main>
         <section id="landing-page">
@@ -156,7 +156,7 @@
                 <!-- Os projetos são mostrados aqui -->
             </div>
 
-            <article id="detalhesProjeto">
+            <article id="detalhesProjeto" class="hidden">
                 <button onclick="esconderDetalhes()"><i class="fa-solid fa-arrow-left"></i> Retornar aos
                     Projetos</button>
 
@@ -170,12 +170,12 @@
                     </nav>
                 </div>
 
-                <div id="containerTextosDetalhe" class="card">
+                <div id="containerTextosDetalhe" class="card ">
                     <h3><!-- Nome--></h3>
                     <p><!-- Descrição --></p>
                     <hr>
                     <h4>Tecnologias</h4>
-                    <div class="tecnologiasProjetos">
+                    <div class="tecnologiasContainer">
                         <!-- Tecnologias -->
                     </div>
                     <nav>
@@ -184,6 +184,7 @@
                     </nav>
                 </div>
             </article>
+            <div class="overlay" id="overlayDetalhes" aria-hidden="true"></div>
         </section>
         <section id="experiencia" class="linhaDoTempo">
             <h2>Experiência</h2>

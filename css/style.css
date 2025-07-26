@@ -33,6 +33,10 @@ body {
     color: #000;
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
 body.dark {
     background-color: var(--corFundoDark);
     color: #ffffff;
@@ -62,7 +66,7 @@ header {
     border-left: 2px solid #fff;
     color: #000000;
     backdrop-filter: blur(10px);
-    z-index: 3;
+    z-index: 10;
 
     cursor: pointer;
 }
@@ -123,7 +127,7 @@ header #buttonDarkMode {
     position: fixed;
     top: 75px;
     right: 1em;
-    z-index: 3;
+    z-index: 9;
 
     width: min(300px, 100%);
     height: 250px;
@@ -191,14 +195,17 @@ header #buttonDarkMode {
     color: #fff;
 }
 
-#overlay {
+#overlayMenu {
+    z-index: 6;
+}
+
+.overlay {
     position: fixed;
     inset: 0;
-    z-index: 2;
     background-color: #00000088;
 }
 
-#menuMobile.hide~#overlay {
+#menuMobile.hide~#overlayMenu {
     display: none;
 }
 
@@ -282,7 +289,7 @@ section {
     position: absolute;
     bottom: 0;
     left: 0;
-        z-index: 1;
+    z-index: 1;
     height: 30px;
     width: 100%;
     background-color: var(--corTemaDark);
@@ -365,10 +372,6 @@ main h2:not(#landing-page h2) {
 .dark #sobre figure img {
     border: 7px solid var(--corTemaDark);
     box-shadow: 0px 0px 10px #9286fcd7, 0px 0px 25px #9286fcd0;
-}
-
-#habilidades {
-    /* padding: 0; */
 }
 
 #habilidades h2 {
@@ -459,10 +462,6 @@ main h2:not(#landing-page h2) {
     padding: 20px;
 }
 
-#containerProjetos.hide {
-    display: none;
-}
-
 #containerProjetos .projeto {
     /* margin: auto; */
     display: flex;
@@ -476,7 +475,7 @@ main h2:not(#landing-page h2) {
 }
 
 #containerProjetos .projeto:hover {
-    scale: 1.05;
+    scale: 1.03;
 }
 
 
@@ -490,7 +489,7 @@ main h2:not(#landing-page h2) {
     height: 100%;
     object-fit: cover;
     object-position: center center;
-    transition: .5s;
+    transition: all .5s;
 }
 
 #containerProjetos .projeto>div {
@@ -534,17 +533,46 @@ main h2:not(#landing-page h2) {
 
 
 #detalhesProjeto {
-    display: none;
-    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 90dvw;
+    height: 90dvh;
+    z-index: 5;
+
+    display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 1em;
+    border-radius: 10px;
+    padding: 2em;
+
+    background-color: var(--corCard);
+    overflow-y: auto;
+}
+
+.dark #detalhesProjeto{
+    background-color: var(--corCardDark);
+}
+
+#detalhesProjeto.hidden {
+   display: none;
+}
+
+#overlayDetalhes {
+    z-index: 4;
+}
+
+#detalhesProjeto.hidden~#overlayDetalhes {
+    display: none;
 }
 
 #detalhesProjeto>button {
     all: unset;
     display: block;
     flex-basis: 100%;
-    text-align: center;
+    text-align: left;
     cursor: pointer;
 }
 

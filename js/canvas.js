@@ -3,7 +3,7 @@ const ctx = canvas.getContext("2d");
 
 let particles = [];
 const particleCount = 20;
-const maxDistance = 100;
+const maxDistance = 150;
 
 let animationRunning = false; 
 
@@ -21,7 +21,7 @@ class Particle {
     this.y = Math.random() * canvas.height;
     this.vx = (Math.random() - 0.5) * 0.5;
     this.vy = (Math.random() - 0.5) * 0.5;
-    this.radius = Math.random() * 3 + 1;
+    this.radius = Math.random() * 2 + 1;
   }
 
   move() {

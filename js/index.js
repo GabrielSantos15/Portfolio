@@ -39,7 +39,7 @@ function menu() {
     : menuMobile.classList.add("hide");
 }
 
-document.querySelector("#overlay").addEventListener("click", () => {
+document.querySelector("#overlayMenu").addEventListener("click", () => {
   if (!document.querySelector("#menuMobile").classList.contains("hide")) menu();
 });
 
@@ -94,8 +94,6 @@ window.addEventListener("load", () => {
   scrollEfect()
 });
 
-let autoScroll;
-
 function detalhar(i) {
   const carrossel = document.getElementById("carrossel");
   const nextBtn = document.getElementById("nextBtn");
@@ -106,7 +104,7 @@ function detalhar(i) {
   document.querySelector("#containerTextosDetalhe p").innerHTML =
     projetos[i].descricao;
   document.querySelector(
-    "#containerTextosDetalhe .tecnologiasProjetos"
+    "#containerTextosDetalhe .tecnologiasContainer"
   ).innerHTML = projetos[i].tecnologias
     .map((tec) => `<span>${tec}</span>`)
     .join("");
@@ -120,9 +118,8 @@ function detalhar(i) {
     )
     .join("");
 
-  projetosContainer.style.display = "none";
-  document.querySelector("#detalhesProjeto").style.display = "flex";
-  document.querySelector("#projetos").scrollIntoView({ behavior: "smooth" });
+  document.querySelector("#detalhesProjeto").classList.remove("hidden");
+  document.body.classList.add("no-scroll");
 
   nextBtn.addEventListener("click", () => {
     carrossel.scrollBy({ left: carrossel.clientWidth, behavior: "smooth" });
@@ -131,15 +128,19 @@ function detalhar(i) {
   prevBtn.addEventListener("click", () => {
     carrossel.scrollBy({ left: -carrossel.clientWidth, behavior: "smooth" });
   });
-
 }
 
 function esconderDetalhes() {
-  projetosContainer.style.display = "flex";
-  document.querySelector("#detalhesProjeto").style.display = "none";
+  document.querySelector("#detalhesProjeto").classList.add("hidden");
+  document.body.classList.remove("no-scroll");
 }
 
+document.querySelector("#overlayDetalhes").addEventListener("click",()=>{
+  esconderDetalhes()
+})
+
 function scrollEfect() {
+
   window.sr = ScrollReveal({ reset: true });
   // sr.reveal("section:not(#landing-page)", { distance: "100px", origin: "bottom", duration: 3500 });
   sr.reveal(".leftSr", { distance: "200px", origin: "left", duration: 2000 });
