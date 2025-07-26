@@ -11,7 +11,7 @@ function darkMode() {
   const body = document.querySelector("body");
   const buttonDarkMode = document.querySelector("#buttonDarkMode");
 
-  localStorage.clear();
+  localStorage.removeItem("dark");
 
   if (body.classList.contains("dark")) {
     darkModeStatus = false
@@ -34,9 +34,7 @@ function darkMode() {
 function menu() {
   const menuMobile = document.querySelector("#menuMobile");
 
-  menuMobile.classList.contains("hide")
-    ? menuMobile.classList.remove("hide")
-    : menuMobile.classList.add("hide");
+  menuMobile.classList.toggle("hide")
 }
 
 document.querySelector("#overlayMenu").addEventListener("click", () => {
@@ -47,18 +45,29 @@ document.querySelector("#overlayMenu").addEventListener("click", () => {
 // Duplica a linha de tecnologias para mander o looping
 const container = document.getElementById("containerHabilidades");
 
-if (window.innerWidth >= 768) {
-  const clone = container.cloneNode(true);
-  clone.querySelectorAll("span").forEach((el) => el.classList.add("clone"));
-  container.append(...clone.children); // adiciona só os filhos do clone
-}
-
 // mostrar os porjetos
 
 const projetosContainer = document.querySelector("#containerProjetos");
+const tecnologiaContainer = document.querySelector("#containerHabilidades");
 
 window.addEventListener("load", () => {
   let html = "";
+
+  const allTechs = tecnologias.concat(tecnologias);
+
+  html = allTechs.map((tecnologia, i) => `
+  <span ${i >= tecnologias.length ? ' class="clone"' : ''} style="--cor-bg: ${tecnologia.cor}">
+    <figure>
+      <img src="${tecnologia.imagem}">
+    </figure>
+    <h3>${tecnologia.nome}</h3>
+  </span>
+`).join("");
+  tecnologiaContainer.innerHTML = html;
+
+  tecnologiaContainer.innerHTML = html;
+  html = ""
+
   projetos.forEach((projeto, i) => {
     html += `
         <article class="projeto card bottomSr" Onclick = "detalhar(${i})">
@@ -135,13 +144,13 @@ function esconderDetalhes() {
   document.body.classList.remove("no-scroll");
 }
 
-document.querySelector("#overlayDetalhes").addEventListener("click",()=>{
+document.querySelector("#overlayDetalhes").addEventListener("click", () => {
   esconderDetalhes()
 })
 
 function scrollEfect() {
 
-  window.sr = ScrollReveal({ reset: true });
+  window.sr = ScrollReveal({ reset: false });
   // sr.reveal("section:not(#landing-page)", { distance: "100px", origin: "bottom", duration: 3500 });
   sr.reveal(".leftSr", { distance: "200px", origin: "left", duration: 2000 });
   sr.reveal(".rightSr", { distance: "200px", origin: "right", duration: 2000 });

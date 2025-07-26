@@ -1,3 +1,18 @@
+const tecnologias = [
+  { nome: "HTML", imagem: "imagens/linguagens/HTML.png", cor: "#e34c26" },
+  { nome: "CSS", imagem: "imagens/linguagens/CSS.png", cor: "#264de4" },
+  { nome: "JS", imagem: "imagens/linguagens/JavaScript.png", cor: "#f0db4f" },
+  { nome: "GIT", imagem: "imagens/linguagens/GIT.png", cor: "#f05032" },
+  { nome: "React", imagem: "imagens/linguagens/React.png", cor: "#61dafb" },
+  { nome: "Bootstrap", imagem: "imagens/linguagens/Bootstrap.png", cor: "#6d0bc2ff" },
+  { nome: "Power Bi", imagem: "imagens/linguagens/powerBi.webp", cor: "#f2c811" },
+  { nome: "Power Automate", imagem: "imagens/linguagens/PowerAutomate.png", cor: "#0066ff" },
+  // { nome: "Pacote Office", imagem: "imagens/linguagens/Office.png", cor: "#ea3e23" },
+  { nome: "PHP", imagem: "imagens/linguagens/php.png", cor: "#6548c2ff" },
+  { nome: "MySql", imagem: "imagens/linguagens/mysql.png", cor: "#0f6dcbff" }
+];
+
+
 const projetos = [
   {
     nome: "Pizzaria",

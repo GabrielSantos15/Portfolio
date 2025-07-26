@@ -328,7 +328,7 @@ section {
 
 
 main h2:not(#landing-page h2) {
-    font-size: 2.5rem;
+    font-size: clamp(1.3rem, 5vw, 3rem);
     font-family: var(--fontTitulo);
     margin-bottom: 24px;
 }
@@ -375,9 +375,8 @@ main h2:not(#landing-page h2) {
 }
 
 #habilidades h2 {
-    text-align: left;
+    text-align: center;
     font-family: var(--fontTitulo);
-    font-size: 1.5rem;
 }
 
 #habilidades p {
@@ -394,41 +393,49 @@ main h2:not(#landing-page h2) {
     padding: 1em;
 }
 
+#containerHabilidades figure {
+    width: 100%;
+}
 
 #containerHabilidades span {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: start;
     align-items: center;
+    text-align: center;
     gap: 5px;
 
-    border: 1px solid #ddd;
-    padding: 5px 15px;
-    border-radius: 20px;
+    width: min(100px, 100%);
 
+    filter: grayscale(1) opacity(.5);
     transition: all .5s;
+    border: none;
 }
 
 #containerHabilidades span img {
-    width: 30px;
+    width: 100%;
     aspect-ratio: 1/1;
     object-fit: contain;
-}
-
-.dark #containerHabilidades span {
-    border: 1px solid var(--corCardDark);
+    object-position: center center;
 }
 
 #containerHabilidades span:hover {
-    box-shadow: 0 0 5px var(--corTema), 0 0 10px var(--corTema);
-    border-color: var(--corTema);
+    filter: grayscale(0) opacity(1);
     scale: 1.1;
 }
 
-
-.dark #containerHabilidades span:hover {
-    box-shadow: 0 0 5px var(--corTemaDark), 0 0 10px var(--corTemaDark);
+#containerHabilidades span h3 {
+    opacity: 0;
+    transition: all .5s;
 }
+
+#containerHabilidades span:hover h3 {
+    opacity: 1;
+}
+
+#containerHabilidades span:hover img {
+    filter: drop-shadow(0 0 15px var(--cor-bg));
+}
+
 
 #containerHabilidades span.clone {
     /* remove o clone dos elementos no mobile */
@@ -438,7 +445,6 @@ main h2:not(#landing-page h2) {
 /* =========================================== SESSÃO PROJETOS =================================== */
 
 #projetos h2 {
-    font-size: 3rem;
     text-align: center;
     font-family: var(--fontTitulo);
 
@@ -503,7 +509,16 @@ main h2:not(#landing-page h2) {
 
 #containerProjetos .projeto>div h3 {
     font-size: 1.5em;
-    text-transform: capitalize;
+}
+
+#containerProjetos .projeto>div p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    text-align: left;
 }
 
 .footerLinha {
@@ -552,12 +567,12 @@ main h2:not(#landing-page h2) {
     overflow-y: auto;
 }
 
-.dark #detalhesProjeto{
+.dark #detalhesProjeto {
     background-color: var(--corCardDark);
 }
 
 #detalhesProjeto.hidden {
-   display: none;
+    display: none;
 }
 
 #overlayDetalhes {
@@ -648,6 +663,9 @@ main h2:not(#landing-page h2) {
     width: min(400px, 100%);
     height: fit-content;
     padding: 1em;
+}
+
+#detalhesProjeto #containerTextosDetalhe p{
     text-align: justify;
 }
 

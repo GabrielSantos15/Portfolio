@@ -9,7 +9,7 @@
 }
 
 /* menu mobile */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1200px) {
 
   #landing-page article h2 {
     font-size: 2.5em;
@@ -17,6 +17,9 @@
 
   /* marquee */
 
+  #habilidades h2 {
+    text-align: left;
+  }
 
   #containerHabilidades {
     display: flex;
@@ -42,44 +45,13 @@
     }
   }
 
-  #containerHabilidades span {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-
-    filter: grayscale(1) opacity(.5);
-    transition: all .5s;
-    border: none;
-  }
-
-  .dark #containerHabilidades span {
-    border: none;
-  }
-
   #containerHabilidades span.clone {
     display: flex;
   }
 
-  #containerHabilidades span:hover {
-    filter: grayscale(0) opacity(1);
-    box-shadow: none;
-  }
-
-  .dark #containerHabilidades span:hover {
-    box-shadow: none;
-  }
-
-  #containerHabilidades span img {
-    width: 100px;
-  }
-
-  #habilidades {
+  .fogEfect {
     position: relative;
-  }
-
-  .fogEfect{
-    position: relative;
+    overflow: hidden;
   }
 
   .fogEfect::before {
