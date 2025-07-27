@@ -16,36 +16,46 @@ const tecnologias = [
 const projetos = [
   {
     nome: "Calculadora",
-    imagens: ["imagens/projetos/calculadora.png"],
+    imagens: ["imagens/projetos/calculadora/calculadora.png","imagens/projetos/calculadora/calculadoraMobile.png"],
     descricao: "Projeto simples e funcional desenvolvido com React. A calculadora realiza operações básicas (adição, subtração, multiplicação e divisão) com uma interface responsiva e intuitiva. O foco foi aplicar conceitos como componentes reutilizáveis, estados (useState) e manipulação de eventos no React.",
     tecnologias: ["React", "Firebase", "HTML", "CSS", "JS"],
     linkRepositorio: "https://github.com/GabrielSantos15/Calculadora-React",
     linkProjeto: "https://calculadora-react-db34e.web.app/"
   },
-    {
+  {
     nome: "Lista de tarefas",
-    imagens: ["imagens/projetos/listaDeTarefas.png"],
+    imagens: ["imagens/projetos/listaTarefas/listaTarefas.png"],
     descricao:
-      "Aplicação desenvolvida com JavaScript puro que permite adicionar, marcar e remover tarefas, com suporte a data e nível de importância. As informações são salvas no LocalStorage, garantindo que as tarefas permaneçam mesmo após fechar o navegador. Interface simples, prática e funcional, pensada para organização pessoal.",
+    "Aplicação desenvolvida com JavaScript puro que permite adicionar, marcar e remover tarefas, com suporte a data e nível de importância. As informações são salvas no LocalStorage, garantindo que as tarefas permaneçam mesmo após fechar o navegador. Interface simples, prática e funcional, pensada para organização pessoal.",
     tecnologias: ["HTML", "CSS", "JS"],
-    linkRepositorio: "https://gabrielsantos15.github.io/lista-de-tarefas/",
+    linkRepositorio: "https://github.com/GabrielSantos15/lista-de-tarefas",
+    linkProjeto: "https://gabrielsantos15.github.io/lista-de-tarefas/"
   },
   {
-    nome: "Pizzaria",
-    imagens: ["imagens/projetos/pizzaria/pizzaria.png", "imagens/projetos/pizzaria/fotoMobile.png"],
+    nome: "Santos Wine",
+    imagens: ["imagens/projetos/santosWine/santosWine.png", "imagens/projetos/santosWine/santosWineMobile.png"],
     descricao:
-      "Pizzaria fictícia feita para demonstrar minhas habilidades de desenvolvimento web",
+      "Projeto desenvolvido como trabalho de encerramento de semestre no SENAI, com a proposta de criar uma empresa fictícia do zero. A Santos Wine é uma vinícola criada especialmente para esse projeto, e a landing page apresenta a identidade visual da marca e informações da empresa. O site foi desenvolvido com foco em apresentação clara, visual atrativo e navegação intuitiva, representando de forma completa o conceito da empresa.",
     tecnologias: ["HTML", "CSS", "JS"],
-    linkRepositorio: "https://github.com/GabrielSantos15/Site-de-pizzaria",
-    linkProjeto: "https://gabrielsantos15.github.io/Site-de-pizzaria/"
+    linkRepositorio: "https://github.com/GabrielSantos15/Santos-Wine",
+    linkProjeto: "https://gabrielsantos15.github.io/Santos-Wine/"
+  },
+  {
+    nome: "UrbanFlow",
+    imagens: ["imagens/projetos/UrbanFlow/UrbanFlow.png", "imagens/projetos/UrbanFlow/UrbanFlowProdutos.png","imagens/projetos/UrbanFlow/UrbanFlowSobre.png"],
+    descricao:
+      "Projeto desenvolvido para o IFSP, simula uma loja online de materiais de arte com foco em latas de spray. O site possui um sistema de carrinho de compras funcional com LocalStorage, permitindo adicionar e remover itens com persistência de dados. Conta também com uma seção de pagamento simulada, projetada apenas para fins visuais. O layout é responsivo e pensado para destacar produtos de forma criativa e organizada, oferecendo uma experiência realista de navegação e compra.",
+    tecnologias: ["HTML", "CSS", "JS"],
+    linkRepositorio: "https://github.com/GabrielSantos15/DesenvolvimentoProjeto",
+    linkProjeto: "https://gabrielsantos15.github.io/Santos-Wine/"
   },
   {
     nome: "Api GitHub",
     imagens: ["imagens/projetos/githubApi.png"],
     descricao:
-      "Projeto de pesquisa de usuário, construído com base na API do GitHub.",
+      "Aplicação desenvolvida com base na API pública do GitHub, que permite buscar perfis de usuários e exibir informações como avatar, bio, repositórios, localização e seguidores. O site foi criado com foco em responsividade, design limpo e consumo eficiente de API, oferecendo uma navegação fluida e uma experiência intuitiva para quem deseja explorar perfis na plataforma.",
     tecnologias: ["HTML", "CSS", "JS"],
-    linkRepositorio: "https://gabrielsantos15.github.io/GitHub-API/",
+    linkRepositorio: "https://github.com/GabrielSantos15/GitHub-API/",
     linkProjeto: "https://gabrielsantos15.github.io/GitHub-API/",
   },
   {

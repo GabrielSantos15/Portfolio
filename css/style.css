@@ -554,12 +554,15 @@ main h2:not(#landing-page h2) {
     left: 50%;
     translate: -50% -50%;
     width: 90dvw;
-    height: 90dvh;
+    max-height: 90dvh;
     z-index: 5;
 
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "voltar"
+        "foto"
+        "texto";
     gap: 1em;
     border-radius: 10px;
     padding: 2em;
@@ -586,6 +589,7 @@ main h2:not(#landing-page h2) {
 
 #detalhesProjeto>button {
     all: unset;
+    grid-area: voltar;
     display: block;
     flex-basis: 100%;
     text-align: left;
@@ -599,16 +603,19 @@ main h2:not(#landing-page h2) {
 }
 
 #detalhesProjeto #containerFotosDetalhe {
+    grid-area: foto;
+    /* width: min(850px, 100%); */
     position: relative;
-    width: min(850px, 100%);
+    aspect-ratio: 16/9;
+    height: fit-content;
 }
 
 #detalhesProjeto #containerFotosDetalhe figure {
+    height: 100%;
     display: flex;
     scroll-behavior: smooth;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    aspect-ratio: 16/9;
     border-radius: 5px;
     overflow: hidden;
 }
@@ -634,6 +641,7 @@ main h2:not(#landing-page h2) {
     padding: 0;
     padding: 0;
     transition: .5s;
+    mix-blend-mode: difference;
 }
 
 #detalhesProjeto #containerFotosDetalhe nav:hover {
@@ -656,17 +664,19 @@ main h2:not(#landing-page h2) {
 }
 
 #detalhesProjeto #containerTextosDetalhe {
+    grid-area: texto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: .5em;
     border-radius: 5px;
-    width: min(400px, 100%);
+
     height: fit-content;
     padding: 1em;
 }
 
 #detalhesProjeto #containerTextosDetalhe p {
+    width: 100%;
     text-align: justify;
 }
 
@@ -687,6 +697,7 @@ main h2:not(#landing-page h2) {
     border-radius: 5px;
     padding: 5px 10px;
     margin-top: 1em;
+    cursor: pointer;
 }
 
 .linhaDoTempo {

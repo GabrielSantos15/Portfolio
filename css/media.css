@@ -76,6 +76,13 @@
   .dark .fogEfect::before {
     background: linear-gradient(to right, var(--corFundoDark) 40%, transparent);
   }
+
+  #detalhesProjeto {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "voltar voltar"
+      "foto texto";
+  }
 }
 
 @media screen and (min-width: 1500px) {
