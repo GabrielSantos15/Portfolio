@@ -15,8 +15,24 @@ const tecnologias = [
 
 const projetos = [
   {
+    nome: "Calculadora",
+    imagens: ["imagens/projetos/calculadora.png"],
+    descricao: "Projeto simples e funcional desenvolvido com React. A calculadora realiza operações básicas (adição, subtração, multiplicação e divisão) com uma interface responsiva e intuitiva. O foco foi aplicar conceitos como componentes reutilizáveis, estados (useState) e manipulação de eventos no React.",
+    tecnologias: ["React", "Firebase", "HTML", "CSS", "JS"],
+    linkRepositorio: "https://github.com/GabrielSantos15/Calculadora-React",
+    linkProjeto: "https://calculadora-react-db34e.web.app/"
+  },
+    {
+    nome: "Lista de tarefas",
+    imagens: ["imagens/projetos/listaDeTarefas.png"],
+    descricao:
+      "Aplicação desenvolvida com JavaScript puro que permite adicionar, marcar e remover tarefas, com suporte a data e nível de importância. As informações são salvas no LocalStorage, garantindo que as tarefas permaneçam mesmo após fechar o navegador. Interface simples, prática e funcional, pensada para organização pessoal.",
+    tecnologias: ["HTML", "CSS", "JS"],
+    linkRepositorio: "https://gabrielsantos15.github.io/lista-de-tarefas/",
+  },
+  {
     nome: "Pizzaria",
-    imagens: ["imagens/projetos/pizzaria/pizzaria.png","imagens/projetos/pizzaria/fotoMobile.png"],
+    imagens: ["imagens/projetos/pizzaria/pizzaria.png", "imagens/projetos/pizzaria/fotoMobile.png"],
     descricao:
       "Pizzaria fictícia feita para demonstrar minhas habilidades de desenvolvimento web",
     tecnologias: ["HTML", "CSS", "JS"],
@@ -33,14 +49,6 @@ const projetos = [
     linkProjeto: "https://gabrielsantos15.github.io/GitHub-API/",
   },
   {
-    nome: "Lista de tarefas",
-    imagens: ["imagens/projetos/listaDeTarefas.png"],
-    descricao:
-      "Lista de tarefas simples usando a função localstorage do javascript.",
-    tecnologias: ["HTML", "CSS", "JS"],
-    linkRepositorio: "https://gabrielsantos15.github.io/lista-de-tarefas/",
-  },
-  {
     nome: "Login e Cadastro",
     imagens: ["imagens/projetos/login-cadastro.png"],
     descricao: "Projeto simples de login e cadastro",
@@ -54,12 +62,5 @@ const projetos = [
       "Desenvolvimento de uma landing page para uma sorveteria fictícia.",
     tecnologias: ["HTML", "CSS", "JS"],
     linkRepositorio: "https://gabrielsantos15.github.io/Sorveteria/",
-  },
-  {
-    nome: "Calculadora",
-    imagens: ["imagens/projetos/calculadora.png"],
-    descricao: "Calculadora feita com React",
-    tecnologias: ["React", "Firebase", "HTML", "CSS", "JS"],
-    linkRepositorio: "https://calculadora-react-db34e.web.app/",
-  },
+  }
 ];

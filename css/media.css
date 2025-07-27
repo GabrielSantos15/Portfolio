@@ -23,26 +23,15 @@
 
   #containerHabilidades {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: nowrap;
     gap: 2em;
+    padding: 0 2em;
     flex-grow: 1;
     width: 200vw;
 
-    margin-top: 20px;
-    animation: marquee infinite 50s linear;
-  }
-
-
-
-  @keyframes marquee {
-    0% {
-      transform: translateX(0);
-    }
-
-    100% {
-      transform: translateX(-50%);
-    }
+    margin: 20px 0;
+    animation: marquee infinite 35s linear;
   }
 
   #containerHabilidades span.clone {
