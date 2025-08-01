@@ -47,7 +47,16 @@ const projetos = [
       "Projeto desenvolvido para o IFSP, simula uma loja online de materiais de arte com foco em latas de spray. O site possui um sistema de carrinho de compras funcional com LocalStorage, permitindo adicionar e remover itens com persistência de dados. Conta também com uma seção de pagamento simulada, projetada apenas para fins visuais. O layout é responsivo e pensado para destacar produtos de forma criativa e organizada, oferecendo uma experiência realista de navegação e compra.",
     tecnologias: ["HTML", "CSS", "JS"],
     linkRepositorio: "https://github.com/GabrielSantos15/DesenvolvimentoProjeto",
-    linkProjeto: "https://gabrielsantos15.github.io/Santos-Wine/"
+    linkProjeto: "https://gabrielsantos15.github.io/DesenvolvimentoProjeto/"
+  },
+  {
+    nome: "Quiz",
+    imagens: ["imagens/projetos/Quiz/quizInicio.png","imagens/projetos/Quiz/quizPergunta.png","imagens/projetos/Quiz/quizResultado.png"],
+    descricao:
+      "Teste interativo com perguntas sobre o universo da tecnologia, ideal para quem quer desafiar seus conhecimentos de forma leve e divertida. O quiz aborda temas como história da computação, linguagens de programação, internet e inovação, com feedback imediato ao final de cada resposta. Um projeto focado em aprendizado, interatividade e design intuitivo.",
+    tecnologias: ["HTML", "CSS", "JS"],
+    linkRepositorio: "https://github.com/GabrielSantos15/Quiz/",
+    linkProjeto: "https://gabrielsantos15.github.io/Quiz/",
   },
   {
     nome: "Api GitHub",
@@ -63,14 +72,16 @@ const projetos = [
     imagens: ["imagens/projetos/login-cadastro.png"],
     descricao: "Projeto simples de login e cadastro",
     tecnologias: ["HTML", "CSS", "JS"],
-    linkRepositorio: "https://gabrielsantos15.github.io/Login-e-Cadastro/",
+    linkRepositorio: "https://github.com/GabrielSantos15/Login-e-Cadastro/",
+    linkProjeto: "https://gabrielsantos15.github.io/Jogos-Menu/"
   },
   {
-    nome: "Sorveteria",
-    imagens: ["imagens/projetos/sorveteria.png"],
+    nome: "Jogos",
+    imagens: ["imagens/projetos/jogos/Games.png","imagens/projetos/jogos/portasAbertas.png","imagens/projetos/jogos/portasAbertas2.png"],
     descricao:
-      "Desenvolvimento de uma landing page para uma sorveteria fictícia.",
+    "Projeto apresentado no evento IFSP Portas Abertas, reúne uma série de jogos desenvolvidos com JavaScript e a API Canvas. Cada jogo foi criado com foco em interatividade, lógica de programação e experiência visual, demonstrando o potencial do JS puro em projetos criativos. A coletânea inclui diferentes estilos de jogos e foi pensada para entreter, inspirar e mostrar, na prática, o que é possível construir com código e dedicação.",
     tecnologias: ["HTML", "CSS", "JS"],
-    linkRepositorio: "https://gabrielsantos15.github.io/Sorveteria/",
+    linkRepositorio: "https://github.com/GabrielSantos15/Jogos-Menu/",
+    linkProjeto: "https://gabrielsantos15.github.io/Jogos-Menu/",
   }
 ];
