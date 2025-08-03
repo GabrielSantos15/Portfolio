@@ -8,6 +8,17 @@
   scroll-margin-top: 70px;
 }
 
+@media (min-width: 768px) {
+
+  #detalhesProjeto {
+    width: 90dvw;
+    height: fit-content;
+    max-height: 90dvh;
+    border-radius: 10px;
+  }
+
+}
+
 /* menu mobile */
 @media screen and (min-width: 1200px) {
 
@@ -108,4 +119,9 @@
     left: auto;
     right: 1.5px;
   }
+
+  .linhaDoTempo .descLinha p {
+    text-align: left;
+  }
+
 }

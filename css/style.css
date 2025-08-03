@@ -57,16 +57,18 @@ header {
     aspect-ratio: 1/1;
     border-radius: 50%;
     padding: 10px;
-    background-color: #ffffff6b;
+    background-color: #d3d3d36c;
+    box-shadow: inset -2px -2px 10px #00000038;
     border-left: 2px solid #fff;
     color: #000000;
     backdrop-filter: blur(10px);
     z-index: 10;
-
+    
     cursor: pointer;
 }
 
 .dark header {
+    box-shadow: inset -2px -2px 10px #000000da;
     border-left: 2px solid #ffffff53;
     background-color: #a0a0a018;
     color: #fff;
@@ -100,7 +102,7 @@ header {
     z-index: 9;
 
     width: min(300px, 100%);
-    height: 250px;
+    min-height: 250px;
     padding: 1em;
     text-align: end;
 
@@ -188,7 +190,7 @@ header {
 section {
     place-content: center;
     min-height: 100dvh;
-    padding: 2em;
+    padding: min(2em, 5%);
 }
 
 #landing-page {
@@ -216,7 +218,6 @@ section {
     font-size: 2rem;
     text-align: center;
 
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #303030;
 }
 
@@ -224,10 +225,14 @@ section {
     color: #ffffffe8;
 }
 
+#landing-page article h1{
+    font-size: clamp(1rem, 7vw, 2rem);
+}
+
 #landing-page article h2 {
     font-family: var(--fontFront);
     color: transparent;
-    font-size: 1.7em;
+    font-size: clamp(3.3rem, 10vw, 5rem);
 
     background-image: linear-gradient(-45deg, #03337a, #6bbdcc, #a552dd, #3368b8, #03337a);
     ;
@@ -240,7 +245,7 @@ section {
 }
 
 .dark #landing-page article h2 {
-    background-image: linear-gradient(-45deg, #377be2, #9eeaff, #a747e7, #3684c4, #377be2);
+    background-image: linear-gradient(-45deg, #377be2, #9eeaff, #a747e7, #56ade7, #377be2);
 }
 
 @keyframes textAnimation {
@@ -259,7 +264,9 @@ section {
 
 #landing-page article h2#devTitulo {
     margin-block-end: -.5em;
-    font-size: 2.5em;
+
+    font-size: clamp(3.3rem, 15vw, 5rem);
+
     font-family: var(--fontCursiva);
 }
 
@@ -268,7 +275,8 @@ section {
     bottom: 0;
     left: 0;
     z-index: 1;
-    width: 100%;
+    width: 100vw;
+    overflow-x: hidden;
     background-color: var(--corTema);
 }
 
@@ -318,7 +326,7 @@ section {
 
 
 main h2:not(#landing-page h2) {
-    font-size: clamp(1.3rem, 5vw, 2.5rem);
+    font-size: clamp(2rem, 5vw, 2.5rem);
     font-family: var(--fontTitulo);
     margin-bottom: 24px;
 }
@@ -376,7 +384,7 @@ main h2:not(#landing-page h2) {
 }
 
 #habilidades h2 {
-    text-align: center;
+    text-align: left;
     font-family: var(--fontTitulo);
 }
 
@@ -386,12 +394,12 @@ main h2:not(#landing-page h2) {
 
 #containerHabilidades {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 25px;
 
     margin-top: 20px;
-    padding: 1em;
+    padding: min(2em, 5%);
 }
 
 #containerHabilidades figure {
@@ -463,10 +471,10 @@ main h2:not(#landing-page h2) {
     justify-content: center;
     align-items: start;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 1em;
 
     margin: auto;
-    padding: 20px;
+    margin-top: 2em;
 }
 
 #containerProjetos .projeto {
@@ -503,7 +511,7 @@ main h2:not(#landing-page h2) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 10px 25px;
+    padding: 1em;
     height: 150px;
     text-align: left;
 }
@@ -553,8 +561,8 @@ main h2:not(#landing-page h2) {
     top: 50%;
     left: 50%;
     translate: -50% -50%;
-    width: 90dvw;
-    max-height: 90dvh;
+    width: 100dvw;
+    height: 100dvh;
     z-index: 5;
 
     display: grid;
@@ -564,8 +572,8 @@ main h2:not(#landing-page h2) {
         "foto"
         "texto";
     gap: 1em;
-    border-radius: 10px;
-    padding: 2em;
+    padding: min(2em, 3%);
+    ;
 
     background-color: var(--corCard);
     overflow-y: auto;
@@ -776,13 +784,20 @@ main h2:not(#landing-page h2) {
     object-fit: contain;
 }
 
+.linhaDoTempo .tempLinha {
+    text-align: right;
+}
+
 .linhaDoTempo .descLinha h4 {
-    font-weight: normal;
+    /* font-weight: normal; */
+    /* color: var(--corTemaDark); */
+    margin-top: 10px;
 }
 
 .linhaDoTempo .descLinha p {
     margin-top: 10px;
     font-weight: normal;
+    text-align: justify;
 }
 
 .linhaDoTempo .navLinha {
@@ -800,6 +815,11 @@ main h2:not(#landing-page h2) {
 
 .dark .linhaDoTempo .navLinha a {
     color: #fff;
+}
+
+.linhaDoTempo .footerLinha,
+.linhaDoTempo .tecnologiasContainer {
+    flex-wrap: wrap;
 }
 
 #contatoContainer {

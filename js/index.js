@@ -150,9 +150,9 @@ document.querySelector("#overlayDetalhes").addEventListener("click", () => {
 
 function scrollEfect() {
 
-  window.sr = ScrollReveal({ reset: false });
+  window.sr = ScrollReveal({ reset: true });
   // sr.reveal("section:not(#landing-page)", { distance: "100px", origin: "bottom", duration: 3500 });
   sr.reveal(".leftSr", { distance: "200px", origin: "left", duration: 2000 });
   sr.reveal(".rightSr", { distance: "200px", origin: "right", duration: 2000 });
-  sr.reveal(".bottomSr", { distance: "200px", origin: "bottom", duration: 3000 });
+  sr.reveal(".bottomSr", { distance: "200px", origin: "bottom", duration: 3000, reset: false});
 }
