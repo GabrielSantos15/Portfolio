@@ -25,7 +25,23 @@
         <i class="fa-solid fa-bars menu-icon icon"></i>
     </header>
     <nav id="menuMobile" class="hide">
-        <i class="fa-solid fa-sun icon" id="buttonDarkMode" onclick="darkMode()"></i>
+        <div id="menuDarkMode">
+            <input type="radio" name="theme" id="LightMode">
+            <label for="LightMode">
+                <i class="fa-solid fa-sun icon"></i> Light
+            </label>
+
+            <input type="radio" name="theme" id="DarkMode">
+            <label for="DarkMode">
+                <i class="fa-solid fa-moon icon"></i> Dark
+            </label>
+
+            <input type="radio" name="theme" id="SystemMode" checked>
+            <label for="SystemMode">
+                <i class="fa-solid fa-desktop icon"></i> System
+            </label>
+        </div>
+        <!-- <i class="fa-solid fa-sun icon" id="buttonDarkMode" onclick="darkMode()"></i> -->
         <ul>
             <li><a href="#landing-page">Início</a></li>
             <li><a href="#sobre">Sobre</a></li>
@@ -123,7 +139,7 @@
                     </div>
                     <nav>
                         <a id="ropositorioLink" target="_blank"><i class="fa-brands fa-github"></i> Ver código</a>
-                        <a id="projetoLink" target="_blank><i class=" fa-solid fa-link"></i> Ver projeto</a>
+                        <a id="projetoLink" target="_blank"><i class=" fa-solid fa-globe"></i> Ver projeto</a>
                     </nav>
                 </div>
             </article>
@@ -160,8 +176,10 @@
                         </span>
                     </div>
                     <nav class="navLinha">
-                        <a href="https://www.grupopetropolis.com.br/" target="_blank"><i class="fa-solid fa-globe"></i></a>
-                        <a href="https://www.linkedin.com/company/grupopetropolis/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.grupopetropolis.com.br/" target="_blank"><i
+                                class="fa-solid fa-globe"></i></a>
+                        <a href="https://www.linkedin.com/company/grupopetropolis/" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
                     </nav>
                 </div>
             </article>
@@ -194,8 +212,10 @@
                         </span>
                     </div>
                     <nav class="navLinha">
-                        <a href="https://www.fiap.com.br/graduacao/" target="_blank"><i class="fa-solid fa-globe"></i></a>
-                        <a href="https://www.linkedin.com/school/fiap/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.fiap.com.br/graduacao/" target="_blank"><i
+                                class="fa-solid fa-globe"></i></a>
+                        <a href="https://www.linkedin.com/school/fiap/" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
                     </nav>
                 </div>
             </article>
@@ -231,7 +251,8 @@
                     </div>
                     <nav class="navLinha">
                         <a href="https://www.sp.senai.br/" target="_blank"><i class="fa-solid fa-globe"></i></a>
-                        <a href="https://www.linkedin.com/school/senaisp/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/school/senaisp/" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
                     </nav>
                 </div>
             </article>
@@ -264,7 +285,8 @@
                     </div>
                     <nav class="navLinha">
                         <a href="https://btv.ifsp.edu.br/" target="_blank"><i class="fa-solid fa-globe"></i></a>
-                        <a href="https://www.linkedin.com/school/ifspoficial/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/school/ifspoficial/" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
                     </nav>
                 </div>
             </article>

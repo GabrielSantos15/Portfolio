@@ -1,31 +1,52 @@
-let darkModeStatus = false
+// Verifica o tema salvo no localStorage e aplica ao carregar a página
+function aplicarTemaSalvo() {
+  const temaSalvo = localStorage.getItem("tema");
 
-function recuperarDarkMode() {
-  const storageDark = localStorage.getItem("dark");
-  if (storageDark) darkMode();
+  if (temaSalvo === "dark") {
+    ativarModoEscuro();
+    document.getElementById("DarkMode").checked = true;
+  } else if (temaSalvo === "light") {
+    desativarModoEscuro();
+    document.getElementById("LightMode").checked = true;
+  } else {
+    // modo sistema
+    aplicarTemaDoSistema();
+    document.getElementById("SystemMode").checked = true;
+  }
 }
 
-recuperarDarkMode();
+aplicarTemaSalvo();
 
-function darkMode() {
-  const body = document.querySelector("body");
-  const buttonDarkMode = document.querySelector("#buttonDarkMode");
+// Listener para os radios
+document.querySelectorAll('input[name="theme"]').forEach((el) => {
+  el.addEventListener('change', () => {
+    if (el.id === 'LightMode') {
+      desativarModoEscuro();
+      localStorage.setItem("tema", "light");
+    } else if (el.id === 'DarkMode') {
+      ativarModoEscuro();
+      localStorage.setItem("tema", "dark");
+    } else if (el.id === 'SystemMode') {
+      aplicarTemaDoSistema();
+      localStorage.setItem("tema", "system");
+    }
+  });
+});
 
-  localStorage.removeItem("dark");
+// Funções
+function ativarModoEscuro() {
+  document.body.classList.add("dark");
+}
 
-  if (body.classList.contains("dark")) {
-    darkModeStatus = false
-    body.classList.remove("dark");
+function desativarModoEscuro() {
+  document.body.classList.remove("dark");
+}
 
-    buttonDarkMode.classList.remove("fa-moon");
-    buttonDarkMode.classList.add("fa-sun");
+function aplicarTemaDoSistema() {
+  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    ativarModoEscuro();
   } else {
-    darkModeStatus = true
-    body.classList.add("dark");
-    localStorage.setItem("dark", 1);
-
-    buttonDarkMode.classList.remove("fa-sun");
-    buttonDarkMode.classList.add("fa-moon");
+    desativarModoEscuro();
   }
 }
 

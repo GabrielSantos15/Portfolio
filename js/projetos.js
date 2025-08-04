@@ -24,7 +24,7 @@ const projetos = [
   },
   {
     nome: "Lista de tarefas",
-    imagens: ["imagens/projetos/listaTarefas/listaTarefas.png"],
+    imagens: ["imagens/projetos/listaTarefas/listaDeTarefas.png","imagens/projetos/listaTarefas/listaDeTarefas2.png"],
     descricao:
     "Aplicação desenvolvida com JavaScript puro que permite adicionar, marcar e remover tarefas, com suporte a data e nível de importância. As informações são salvas no LocalStorage, garantindo que as tarefas permaneçam mesmo após fechar o navegador. Interface simples, prática e funcional, pensada para organização pessoal.",
     tecnologias: ["HTML", "CSS", "JS"],
@@ -60,7 +60,7 @@ const projetos = [
   },
   {
     nome: "Api GitHub",
-    imagens: ["imagens/projetos/githubApi.png"],
+    imagens: ["imagens/projetos/githubApi/githubApi.png","imagens/projetos/githubApi/repositorios.png"],
     descricao:
       "Aplicação desenvolvida com base na API pública do GitHub, que permite buscar perfis de usuários e exibir informações como avatar, bio, repositórios, localização e seguidores. O site foi criado com foco em responsividade, design limpo e consumo eficiente de API, oferecendo uma navegação fluida e uma experiência intuitiva para quem deseja explorar perfis na plataforma.",
     tecnologias: ["HTML", "CSS", "JS"],
@@ -69,11 +69,11 @@ const projetos = [
   },
   {
     nome: "Login e Cadastro",
-    imagens: ["imagens/projetos/login-cadastro.png"],
-    descricao: "Projeto simples de login e cadastro",
+    imagens: ["imagens/projetos/login-cadastro/login.png","imagens/projetos/login-cadastro/cadastro.png"],
+    descricao: "Interface desenvolvida com foco em design moderno, responsividade e usabilidade. Apesar de não estar conectada a um sistema real, a página simula o fluxo de autenticação com campos de entrada, validação visual e navegação entre login e registro. Um exercício de front-end voltado para experiências realistas de uso.",
     tecnologias: ["HTML", "CSS", "JS"],
     linkRepositorio: "https://github.com/GabrielSantos15/Login-e-Cadastro/",
-    linkProjeto: "https://gabrielsantos15.github.io/Jogos-Menu/"
+    linkProjeto: "https://gabrielsantos15.github.io/Login-e-Cadastro/"
   },
   {
     nome: "Jogos",
