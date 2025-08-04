@@ -142,8 +142,8 @@ function detalhar(i) {
   document.querySelector("#projetoLink").href = projetos[i].linkProjeto;
   carrossel.innerHTML = projetos[i].imagens
     .map(
-      (img, i) =>
-        `<img src="${img}" alt="Imagem ${i + 1} do projeto ${projetos[i].nome
+      (img, indexFoto) =>
+        `<img src="${img}" alt="Imagem ${indexFoto + 1} do projeto ${projetos[i].nome
         }">`
     )
     .join("");

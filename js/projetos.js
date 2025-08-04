@@ -33,7 +33,7 @@ const projetos = [
   },
   {
     nome: "Santos Wine",
-    imagens: ["imagens/projetos/santosWine/santosWine.png", "imagens/projetos/santosWine/santosWineMobile.png"],
+    imagens: ["imagens/projetos/SantosWine/SantosWine.png", "imagens/projetos/SantosWine/SantosWineMobile.png"],
     descricao:
       "Projeto desenvolvido como trabalho de encerramento de semestre no SENAI, com a proposta de criar uma empresa fictícia do zero. A Santos Wine é uma vinícola criada especialmente para esse projeto, e a landing page apresenta a identidade visual da marca e informações da empresa. O site foi desenvolvido com foco em apresentação clara, visual atrativo e navegação intuitiva, representando de forma completa o conceito da empresa.",
     tecnologias: ["HTML", "CSS", "JS"],
@@ -42,7 +42,7 @@ const projetos = [
   },
   {
     nome: "UrbanFlow",
-    imagens: ["imagens/projetos/UrbanFlow/UrbanFlow.png", "imagens/projetos/UrbanFlow/UrbanFlowProdutos.png","imagens/projetos/UrbanFlow/UrbanFlowSobre.png"],
+    imagens: ["imagens/projetos/UrbanFlow/urbanFlow.png", "imagens/projetos/UrbanFlow/urbanFlowProdutos.png","imagens/projetos/UrbanFlow/urbanFlowSobre.png"],
     descricao:
       "Projeto desenvolvido para o IFSP, simula uma loja online de materiais de arte com foco em latas de spray. O site possui um sistema de carrinho de compras funcional com LocalStorage, permitindo adicionar e remover itens com persistência de dados. Conta também com uma seção de pagamento simulada, projetada apenas para fins visuais. O layout é responsivo e pensado para destacar produtos de forma criativa e organizada, oferecendo uma experiência realista de navegação e compra.",
     tecnologias: ["HTML", "CSS", "JS"],
@@ -77,7 +77,7 @@ const projetos = [
   },
   {
     nome: "Jogos",
-    imagens: ["imagens/projetos/jogos/Games.png","imagens/projetos/jogos/portasAbertas.png","imagens/projetos/jogos/portasAbertas2.png"],
+    imagens: ["imagens/projetos/Jogos/Games.png","imagens/projetos/Jogos/portasAbertas.png","imagens/projetos/Jogos/portasAbertas2.png"],
     descricao:
     "Projeto apresentado no evento IFSP Portas Abertas, reúne uma série de jogos desenvolvidos com JavaScript e a API Canvas. Cada jogo foi criado com foco em interatividade, lógica de programação e experiência visual, demonstrando o potencial do JS puro em projetos criativos. A coletânea inclui diferentes estilos de jogos e foi pensada para entreter, inspirar e mostrar, na prática, o que é possível construir com código e dedicação.",
     tecnologias: ["HTML", "CSS", "JS"],

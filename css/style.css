@@ -32,6 +32,9 @@ body {
     background-color: var(--corFundo);
     color: #000;
 }
+main{
+    overflow-x: hidden;
+}
 
 body.no-scroll {
     overflow: hidden;
