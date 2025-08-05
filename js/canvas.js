@@ -5,7 +5,7 @@ let particles = [];
 const particleCount = 20;
 const maxDistance = 150;
 
-let animationRunning = false; 
+let animationRunning = false;
 
 function resizeCanvas() {
   canvas.width = window.innerWidth;
@@ -35,7 +35,7 @@ class Particle {
   draw() {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-    darkModeStatus ? ctx.fillStyle = "#ffffff99" :  ctx.fillStyle = "#7460e758";
+    document.querySelector("body").classList.contains("dark") ? ctx.fillStyle = "#ffffff99" : ctx.fillStyle = "#7460e758";
     ctx.fill();
   }
 }

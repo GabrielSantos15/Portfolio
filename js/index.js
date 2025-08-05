@@ -151,13 +151,29 @@ function detalhar(i) {
   document.querySelector("#detalhesProjeto").classList.remove("hidden");
   document.body.classList.add("no-scroll");
 
-  nextBtn.addEventListener("click", () => {
-    carrossel.scrollBy({ left: carrossel.clientWidth, behavior: "smooth" });
+  requestAnimationFrame(() => {
+    carrossel.scrollTo({ left: 0 , behavior: "auto"});
   });
 
-  prevBtn.addEventListener("click", () => {
-    carrossel.scrollBy({ left: -carrossel.clientWidth, behavior: "smooth" });
-  });
+  nextBtn.onclick = () => {
+    if (
+      carrossel.scrollLeft + carrossel.clientWidth >= carrossel.scrollWidth - 10
+    ) {
+      carrossel.scrollTo({ left: 0, behavior: "smooth" });
+    } else {
+      carrossel.scrollBy({ left: carrossel.clientWidth, behavior: "smooth" });
+    }
+  };
+
+  prevBtn.onclick = () => {
+    if (carrossel.scrollLeft <= 10) {
+      carrossel.scrollTo({ left: carrossel.scrollWidth, behavior: "smooth" });
+    } else {
+      carrossel.scrollBy({ left: -carrossel.clientWidth, behavior: "smooth" });
+    }
+  };
+
+
 }
 
 function esconderDetalhes() {
@@ -171,9 +187,9 @@ document.querySelector("#overlayDetalhes").addEventListener("click", () => {
 
 function scrollEfect() {
 
-  window.sr = ScrollReveal({ reset: true });
+  window.sr = ScrollReveal({ reset: false });
   // sr.reveal("section:not(#landing-page)", { distance: "100px", origin: "bottom", duration: 3500 });
   sr.reveal(".leftSr", { distance: "200px", origin: "left", duration: 2000 });
   sr.reveal(".rightSr", { distance: "200px", origin: "right", duration: 2000 });
-  sr.reveal(".bottomSr", { distance: "200px", origin: "bottom", duration: 3000, reset: false});
+  sr.reveal(".bottomSr", { distance: "200px", origin: "bottom", duration: 3000 });
 }

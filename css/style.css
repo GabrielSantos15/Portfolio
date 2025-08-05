@@ -644,7 +644,7 @@ main h2:not(#landing-page h2) {
 #detalhesProjeto #containerFotosDetalhe figure {
     height: 100%;
     display: flex;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     border-radius: 5px;
