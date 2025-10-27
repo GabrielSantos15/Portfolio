@@ -15,6 +15,13 @@ const tecnologias = [
 
 const projetos = [
   {
+    nome: "SendPro",
+    imagens: ["imagens/projetos/SendPro/home.png","imagens/projetos/SendPro/gerador.png","imagens/projetos/SendPro/email.png"],
+    descricao: "O SendPro é uma plataforma desenvolvida para criar, personalizar e enviar e-mails marketing com eficiência e estilo. Seja para campanhas internas, newsletters ou divulgações comerciais. Além disso, a plataforma possibilita disparar e-mails automaticamente via Nodemailer e baixar o HTML para usar em outras campanhas.",
+    tecnologias: ["React", "Node.js", "HTML", "CSS", "JS"],
+    linkRepositorio: "https://github.com/GabrielSantos15/gerador_de_email_marketing",
+  },
+  {
     nome: "Calculadora",
     imagens: ["imagens/projetos/calculadora/calculadora.png","imagens/projetos/calculadora/calculadoraMobile.png"],
     descricao: "Projeto simples e funcional desenvolvido com React. A calculadora realiza operações básicas (adição, subtração, multiplicação e divisão) com uma interface responsiva e intuitiva. O foco foi aplicar conceitos como componentes reutilizáveis, estados (useState) e manipulação de eventos no React.",
