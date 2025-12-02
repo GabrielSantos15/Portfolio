@@ -1,0 +1,67 @@
+#AboutSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    min-height: 100dvh;
+}
+
+#AboutSection figure{
+    width: min(700px,100%);
+    position: relative;
+}
+
+#AboutSection figure img{
+    max-width: 100%;
+    filter: drop-shadow(0 -20px 20px #ffffff);
+}
+
+#AboutSection figure::before{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 10%;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1;
+    background-image: linear-gradient(transparent,var(--corFundo));
+}
+
+#AboutSection article{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: min(700px,100%);
+}
+#AboutSection h1{
+    font-family: var(--fontTitulo);
+    font-size: clamp(2rem, 3.5vw, 5rem);
+}
+#AboutSection p{
+    font-size: 1.2em;
+}
+
+#AboutSection a{
+    width: fit-content;
+    text-decoration: none;
+}
+
+#downloadCv{
+    all: unset;
+    color: #000;
+    background-color: #fff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 25px;
+    font-family: var(--fontTitulo);
+    background-image: linear-gradient(45deg,#eee,#919191,#eee);
+    background-size: 300%;
+    transition: .5s ;
+    font-size: 1.2em;
+}
+#downloadCv:hover{
+    background-position: -100%;
+}
