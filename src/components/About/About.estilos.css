@@ -14,7 +14,6 @@
 
 #AboutSection figure img{
     max-width: 100%;
-    filter: drop-shadow(0 -20px 20px #ffffff);
 }
 
 #AboutSection figure::before{
@@ -28,6 +27,10 @@
     background-color: transparent;
     z-index: 1;
     background-image: linear-gradient(transparent,var(--corFundo));
+}
+.dark #AboutSection figure::before{
+    background-image: linear-gradient(transparent,var(--corFundoDark));
+
 }
 
 #AboutSection article{
