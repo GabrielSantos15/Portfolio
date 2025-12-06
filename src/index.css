@@ -13,30 +13,36 @@
   --corFundoDark: #2d2d2d;
   --corCardDark: #1f1b24;
 
-  --corTema: #7460e7;
+  --corTema: #FC0200;
   --corTemaDark: #9286fc;
 
   --fontTitulo: 'Orbitron', serif;
   --fontPadrao: 'Montserrat', sans-serif;
 }
 
+::selection {
+  background-color: var(--corTema);
+  color: #fff;
+}
+
 body {
   font-family: var(--fontPadrao);
   background-color: var(--corFundo);
+  transition: .5s;
 }
 
-body.dark{
+body.dark {
   background-color: var(--corFundoDark);
   color: #fff;
 }
 
 
 @keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(0);
+  }
 
-    100% {
-        transform: translateX(-50%);
-    }
+  100% {
+    transform: translateX(-50%);
+  }
 }

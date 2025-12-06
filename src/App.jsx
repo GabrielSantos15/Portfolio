@@ -5,6 +5,7 @@ import './App.css'
 import Home from './components/Home'
 import About from './components/About'
 import Skills from './components/skills'
+import Projects from './components/Projects'
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -41,6 +42,7 @@ function App() {
       <Home></Home>
       <About></About>
       <Skills></Skills>
+      <Projects></Projects>
     </main>
   )
 }
