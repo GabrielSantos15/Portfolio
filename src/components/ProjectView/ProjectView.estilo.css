@@ -1,7 +1,7 @@
 #project-view-container {
   display: flex;
   flex-wrap: wrap-reverse;
-  justify-content: space-around;
+  justify-content: center;
   align-content: center;
   align-items: center;
   gap: 2em;
@@ -49,6 +49,47 @@
 }
 
 /* A imagem do projeto */
+.tv-screen img,.tv-screen video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  animation: fade-in 1s ease-in;
+}
+
+.tv-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  perspective: 1000px;
+}
+
+/* Moldura (Bezel) */
+.tv-bezel {
+  background-color: #111;
+  padding: 8px 8px 16px 8px;
+  border-radius: 6px;
+  box-shadow:
+    0 0 0 1px #333,
+    0 20px 50px #0000002c;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+/*  Tela*/
+.tv-screen {
+  background-color: #000;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+/* imagem do projeto */
 .tv-screen img {
   width: 100%;
   height: 100%;
@@ -57,165 +98,166 @@
   animation: fade-in 1s ease-in;
 }
 
+.tv-glare {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  background: #000;
+  animation: tvOn 1s ease-out forwards;
+}
 
-  .tv-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 900px;
-    perspective: 1000px;
+@keyframes fade-in {
+  0% {
+    filter: brightness(0);
   }
 
-  /* Moldura (Bezel) */
-  .tv-bezel {
-    background-color: #111;
-    padding: 8px 8px 16px 8px;
-    border-radius: 6px;
-    box-shadow:
-      0 0 0 1px #333,
-      0 20px 50px #0000002c;
-    width: 100%;
-    position: relative;
-    z-index: 10;
+  100% {
+    filter: brightness(1);
+  }
+}
+
+/* Ruído animado */
+@keyframes tvNoise {
+
+  0%,
+  100% {
+    opacity: 0.2;
   }
 
-  /*  Tela*/
-  .tv-screen {
-    background-color: #000;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    position: relative;
-    overflow: hidden;
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+  50% {
+    opacity: 0.5;
   }
+}
 
-  /* imagem do projeto */
-  .tv-screen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    animation: fade-in 1s ease-in;
-  }
-
-  .tv-glare {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 2;
+/* Efeito TV ligando */
+@keyframes tvOn {
+  0% {
+    opacity: 1;
     background: #000;
-    animation: tvOn 1s ease-out forwards;
+    transform: scaleY(0);
   }
 
-  @keyframes fade-in {
-    0% {
-      filter: brightness(0);
-    }
-
-    100% {
-      filter: brightness(1);
-    }
+  20% {
+    opacity: 1;
+    transform: scaleY(0.05);
+    background: white;
   }
 
-  /* Ruído animado */
-  @keyframes tvNoise {
-
-    0%,
-    100% {
-      opacity: 0.2;
-    }
-
-    50% {
-      opacity: 0.5;
-    }
+  40% {
+    transform: scaleY(1.2);
+    background: #000;
   }
 
-  /* Efeito TV ligando */
-  @keyframes tvOn {
-    0% {
-      opacity: 1;
-      background: #000;
-      transform: scaleY(0);
-    }
-
-    20% {
-      opacity: 1;
-      transform: scaleY(0.05);
-      background: white;
-    }
-
-    40% {
-      transform: scaleY(1.2);
-      background: #000;
-    }
-
-    60% {
-      opacity: 0.8;
-      background: repeating-linear-gradient(0deg,
-          #fff 0px,
-          #fff 1px,
-          #000 2px);
-      animation: tvNoise 0.1s infinite;
-    }
-
-    100% {
-      opacity: 0;
-      transform: scaleY(1);
-    }
+  60% {
+    opacity: 0.8;
+    background: repeating-linear-gradient(0deg,
+        #fff 0px,
+        #fff 1px,
+        #000 2px);
+    animation: tvNoise 0.1s infinite;
   }
 
-
-  /* LOGO */
-  .tv-logo {
-    position: absolute;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    height: 4px;
-    background-color: #333;
-    border-radius: 50%;
-    /* Led desligado */
-    box-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
+  100% {
+    opacity: 0;
+    transform: scaleY(1);
   }
+}
+
+
+/* LOGO */
+.tv-logo {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background-color: #333;
+  border-radius: 50%;
+  /* Led desligado */
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.tv-wrapper:hover .tv-logo {
+  /* Led ligado */
+  background-color: var(--corTema);
+}
+
+/* O Pescoço do suporte */
+.tv-neck {
+  width: 15%;
+  height: 15px;
+  background-color: #050505;
+  margin-top: -2px;
+  /* Conecta na TV */
+  z-index: 5;
+  position: relative;
+}
+
+/* Base Prateada */
+.tv-stand {
+  width: 60%;
+  height: 8px;
+  background: linear-gradient(90deg,
+      #5a5a5a 0%,
+      #d1d1d1 20%,
+      #f2f2f2 50%,
+      #d1d1d1 80%,
+      #5a5a5a 100%);
+  border-radius: 0 0 4px 4px;
+
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.3),
+    0 8px 16px rgba(0, 0, 0, 0.4);
+
+  position: relative;
+  z-index: 5;
+}
+
+.tv-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-top: 2em;
+  background-color: #000000;
+  border-radius: 0.7rem;
+}
+
+.tv-controls button, .tv-controls span {
+  font-size: 17px;
+  padding: 10px 25px;
+  border: 2px solid #000000;
+  border-bottom: 5px solid #000000;
   
-  .tv-wrapper:hover .tv-logo {
-    /* Led ligado */
-    background-color: var(--corTema);
-  }
+  transform: translate(0, -3px);
+  cursor: pointer;
+  transition: 0.2s;
+  transition-timing-function: linear;
+}
 
-  /* O Pescoço do suporte */
-  .tv-neck {
-    width: 15%;
-    height: 15px;
-    background-color: #050505;
-    margin-top: -2px;
-    /* Conecta na TV */
-    z-index: 5;
-    position: relative;
-  }
+.tv-controls button:first-child {
+  border-radius: 0.7rem 0 0 0.7rem;
+}
 
-  /* Base Prateada */
-  .tv-stand {
-    width: 60%;
-    height: 8px;
-    background: linear-gradient(90deg,
-        #5a5a5a 0%,
-        #d1d1d1 20%,
-        #f2f2f2 50%,
-        #d1d1d1 80%,
-        #5a5a5a 100%
-      );
-    border-radius: 0 0 4px 4px;
+.tv-controls button:last-child {
+  border-radius: 0 0.7rem 0.7rem 0;
+}
 
-    box-shadow:
-      0 1px 2px rgba(0, 0, 0, 0.3),
-      0 8px 16px rgba(0, 0, 0, 0.4);
 
-    position: relative;
-    z-index: 5;
-  }
+.tv-controls button:active {
+  transform: translate(0, 0);
+  border-bottom: 2px solid rgb(50, 50, 50);
+}
+
+.tv-controls span{
+  color: var(--corTema);
+  font-family: var(--fontTitulo);
+  font-weight: bold;
+  background-color: #fff;
+  text-align: center;
+  min-width: 100px;
+}
