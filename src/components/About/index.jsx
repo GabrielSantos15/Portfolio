@@ -10,7 +10,7 @@ export default function About() {
       </figure>
       <article>
         <h1>Gabriel dos Santos</h1>
-        <p>
+        <p >
           Minha atuação vai além da estética: foco na engenharia por trás da
           interface, priorizando <strong> acessibilidade, SEO e performance</strong> para garantir
           que o produto não seja apenas bonito, mas funcional e escalável. Busco
@@ -19,7 +19,7 @@ export default function About() {
           negócios
         </p>
         <a href={Curriculo} download>
-          <button id="downloadCv">Download CV</button>
+          <button id="downloadCv" className="silver-reflection-bg">Download CV</button>
           </a>
       </article>
     </section>

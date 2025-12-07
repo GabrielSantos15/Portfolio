@@ -1,17 +1,22 @@
+import { useState } from "react";
 import { projects } from "../../data/projetos";
+import ProjectView from "../projectView";
 import "./Projects.estilos.css";
 
 const Projects = () => {
+  const [viewProject,setViewProject] = useState(null)
+
   return (
     <section className="projetosSection">
       <h2>Projetos</h2>
+      {viewProject ? <ProjectView projeto={viewProject} key={viewProject.id}></ProjectView> : null }
       {/* <p>
         Ideias que viraram código, telas que ganham vida e experiências que
         funcionam de verdade
       </p> */}
       <div className="projetosContainer">
         {projects.map((projeto) => (
-          <article className="projeto">
+          <article className="projeto" onClick={()=>{setViewProject(projeto)}}>
             <h4 className="numberProjeto">0{projeto.id}</h4>
             <figure>
               <img src={projeto.imagens[0]} alt={`Projeto ${projeto.nome}`} />

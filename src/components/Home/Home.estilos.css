@@ -20,6 +20,7 @@
     font-family: var(--fontTitulo);
     position: relative;
     z-index: 1;
+    pointer-events: none;
 }
 
 #homeSection h2 {
@@ -27,6 +28,7 @@
     position: relative;
     z-index: 1;
     text-align: center;
+    pointer-events: none;
 }
 
 #homeSection canvas {
