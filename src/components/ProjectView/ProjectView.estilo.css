@@ -48,15 +48,6 @@
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
-/* A imagem do projeto */
-.tv-screen img,.tv-screen video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  animation: fade-in 1s ease-in;
-}
-
 .tv-wrapper {
   display: flex;
   flex-direction: column;
@@ -90,13 +81,14 @@
 }
 
 /* imagem do projeto */
-.tv-screen img {
+.tv-screen img,.tv-screen video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  animation: fade-in 1s ease-in;
+  animation: fade-in .5s ease-in;
 }
+
 
 .tv-glare {
   position: absolute;

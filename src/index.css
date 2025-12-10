@@ -7,7 +7,7 @@
 }
 
 :root {
-  --corFundo: #e0e0e0;
+  --corFundo: #E5E5E5;
   --corCard: #f5f5f5;
 
   --corFundoDark: #2d2d2d;
@@ -28,6 +28,7 @@
 body {
   font-family: var(--fontPadrao);
   background-color: var(--corFundo);
+  background-image: linear-gradient(--corFundo,);
   transition: .5s;
 }
 

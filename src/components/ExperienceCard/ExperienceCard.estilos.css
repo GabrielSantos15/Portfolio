@@ -1,0 +1,39 @@
+.logoIcon {
+    width: min(75px, 10vw);
+    border-radius: 10%;
+    border: 5px solid #fff;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.dark .logoIcon{
+    border: 5px solid var(--corFundoDark);
+}
+
+.trajectory-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    width: min(90vw, 700px);
+    background-color: var(--corCard);
+    padding: 1em;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px #00000048;
+}
+
+.dark .trajectory-element{
+    background-color: var(--corCardDark);
+}
+
+.trajectory-element-titulo{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+}
+
+.trajectory-element img{ 
+    max-width: 100%;
+}
