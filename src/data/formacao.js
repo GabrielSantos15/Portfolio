@@ -28,7 +28,7 @@ export const formacao = [
         curso: "Técnico em Redes de Computadores",
         trajetoria: [
             {
-                img: "../../src/assets/trajetoria/ifsp_boituva.jpg",
+                img: "../../src/assets/trajetoria/ifsp_boituva.png",
                 titulo: "A Base Técnica",
                 descrição: "A infraestrutura por trás do código. Domínio de redes, servidores e segurança para desenvolver aplicações web mais robustas e otimizadas."
             },

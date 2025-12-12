@@ -16,8 +16,14 @@ export default function ExperienceCard({ item }) {
     );
   };
 
+  const figure = ({src,alt})=>{
+    return(
+      <img src={src} alt={alt} />
+    )
+  }
+
   return (
-    <article className="trajectory-element">
+    <article className="trajectory-element" >
       <span className="trajectory-element-titulo">
         <img src={item.logo} alt={item.instituicao} className="logoIcon" />
         <span>
@@ -33,7 +39,7 @@ export default function ExperienceCard({ item }) {
 
       <div className="slide-content-wrapper">
         <article
-          key={item.trajetoria[slideCurrent].id}
+          key={slideCurrent}
           className="slide-content animated-fade-in"
         >
           <figure>

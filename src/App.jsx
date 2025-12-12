@@ -46,6 +46,7 @@ function App() {
       <Skills></Skills>
       <Projects></Projects>
       <Timeline titulo={"Formação"} data={formacao}></Timeline>
+      <section style={{height:900}}></section>
     </main>
   )
 }
