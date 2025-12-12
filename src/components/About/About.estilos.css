@@ -1,4 +1,4 @@
-#AboutSection{
+#AboutSection {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,56 +8,93 @@
     min-height: 100dvh;
 }
 
-#AboutSection figure{
-    width: min(700px,100%);
+#AboutSection figure {
+    width: min(700px, 100%);
     position: relative;
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%)
 }
 
-#AboutSection figure img{
+#AboutSection figure img {
     max-width: 100%;
+    filter: drop-shadow(2px 2px 5px #00000052);
 }
 
-#AboutSection figure::before{
-    content: "";
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 10%;
-    width: 100%;
-    background-color: transparent;
-    z-index: 1;
-    background-image: linear-gradient(transparent,var(--corFundo));
-}
-.dark #AboutSection figure::before{
-    background-image: linear-gradient(transparent,var(--corFundoDark));
-
-}
-
-#AboutSection article{
+#AboutSection article {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    width: min(700px,100%);
+    width: min(700px, 100%);
 }
-#AboutSection h1{
+
+#AboutSection h1 {
     font-family: var(--fontTitulo);
     font-size: clamp(2rem, 3.5vw, 5rem);
 }
-#AboutSection p{
+
+#AboutSection p {
     font-size: 1.2em;
 }
 
-#AboutSection a{
+#AboutSection a {
     width: fit-content;
     text-decoration: none;
 }
 
-#downloadCv{
+#downloadCv {
     border: none;
     color: #fff;
     padding: 10px;
     border-radius: 25px;
     font-family: var(--fontTitulo);
     font-size: 1.2em;
+}
+
+.card-about {
+    position: absolute;
+
+    font-size: 1.2rem;
+
+    padding: 8px 14px;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: bolder;
+    white-space: nowrap;
+    animation: float 3s ease-in-out infinite;
+}
+
+.card-about:nth-of-type(1) {
+    bottom: 40%;
+    left: 0%;
+    z-index: -1;
+    scale: 1;
+    animation-delay: 0s;
+}
+
+.card-about:nth-of-type(2) {
+    bottom: 25%;
+    right: 0%;
+    font-size: 1.2rem;
+    animation-delay: 0.5s;
+}
+
+.card-about:nth-of-type(3) {
+    bottom: 10%;
+    left: 25%;
+    font-size: 1.5rem;
+    animation-delay: 0.8s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }

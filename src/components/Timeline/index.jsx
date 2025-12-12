@@ -94,7 +94,7 @@ export default function Timeline({ titulo, data }) {
           start: "top 60%",
           end: "bottom bottom",
           scrub: 2,
-          markers: true,
+          // markers: true,
         },
       });
 
