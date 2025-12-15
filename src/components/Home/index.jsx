@@ -106,7 +106,10 @@ export default function Home() {
 
     return () => {
       cancelAnimationFrame(animationId);
-      canvas.removeEventListener("mousemove", handleMouseMove);
+      if (window.matchMedia("(pointer: fine)").matches) {
+        canvas.addEventListener("mousemove", handleMouseMove);
+      }
+
       window.removeEventListener("resize", handleResize);
     };
   }, []);
@@ -144,7 +147,6 @@ export default function Home() {
 
   return (
     <section id="homeSection">
-      <header></header>
       <article>
         <h1>portfolio</h1>
         <h2>Front end Developer</h2>

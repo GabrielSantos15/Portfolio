@@ -7,21 +7,21 @@ const Projects = () => {
   const [viewProject, setViewProject] = useState(null);
 
   return (
-    <section className="projetosSection">
+    <section id="projetosSection">
       <h2>Projetos</h2>
-      {viewProject ? (
-        <ProjectView
-          projeto={viewProject}
-          key={viewProject.id}
-        ></ProjectView>
-      ) : null}
-      {/* <p>
+      <p>
         Ideias que viraram código, telas que ganham vida e experiências que
         funcionam de verdade
-      </p> */}
+      </p>
+
+      {viewProject ? (
+        <ProjectView projeto={viewProject} key={viewProject.id}></ProjectView>
+      ) : null}
+
       <div className="projetosContainer">
         {projects.map((projeto) => (
           <article
+            key={projeto.id}
             className="projeto"
             onClick={() => {
               setViewProject(projeto);

@@ -1,7 +1,8 @@
 import { useState } from "react";
-import "./ExperienceCard.estilos.css"
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import "./ExperienceCard.estilos.css";
 
-export default function ExperienceCard({ item }) {
+export default function ExperienceCard({ item , key}) {
   const [slideCurrent, SetSlideCurrent] = useState(0);
 
   const handlePrev = () => {
@@ -16,18 +17,16 @@ export default function ExperienceCard({ item }) {
     );
   };
 
-  const figure = ({src,alt})=>{
-    return(
-      <img src={src} alt={alt} />
-    )
-  }
+  const figure = ({ src, alt }) => {
+    return <img src={src} alt={alt} />;
+  };
 
   return (
-    <article className="trajectory-element" >
+    <article key={key} className="trajectory-element">
       <span className="trajectory-element-titulo">
         <img src={item.logo} alt={item.instituicao} className="logoIcon" />
         <span>
-          <h3>{item.curso}</h3>
+          <h3>{item.titulo}</h3>
           <h4>
             {item.instituicao} •{" "}
             <small>
@@ -38,30 +37,38 @@ export default function ExperienceCard({ item }) {
       </span>
 
       <div className="slide-content-wrapper">
-        <article
-          key={slideCurrent}
-          className="slide-content animated-fade-in"
-        >
+        <article key={slideCurrent} className="slide-content animated-fade-in">
           <figure>
+            <div>
+              <h4>{item.trajetoria[slideCurrent].titulo}</h4>
+            </div>
             <img
-              src={item.trajetoria[slideCurrent].img}
-              alt="Foto da trajetória"
+            width={700}
+            src={item.trajetoria[slideCurrent].img}
+            alt="Foto da trajetória"
             />
-          </figure>
-          <div>
-            <h4>{item.trajetoria[slideCurrent].titulo}</h4>
             <p>{item.trajetoria[slideCurrent].descrição}</p>
-          </div>
+          </figure>
         </article>
       </div>
-
+      <div className="skills-experience">
+        {item.skills.map((skill) => (
+          <span className="tec-projeto">{skill}</span>
+        ))}
+      </div>
       {/* BOTÕES */}
       <div className="slide-controls">
-        <button onClick={handlePrev}>Voltar</button>
         <span>
           {slideCurrent + 1} / {item.trajetoria.length}
         </span>
-        <button onClick={handleNext}>IR</button>
+        <div>
+          <button onClick={handlePrev} className="silver-reflection-bg">
+            <FaChevronLeft />
+          </button>
+          <button onClick={handleNext} className="silver-reflection-bg">
+            <FaChevronRight />
+          </button>
+        </div>
       </div>
     </article>
   );

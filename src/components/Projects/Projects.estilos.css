@@ -1,12 +1,17 @@
-.projetosSection {
+#projetosSection {
     min-height: 100vh;
 }
 
-.projetosSection > h2 {
+#projetosSection > h2 {
     text-align: center;
     font-size: clamp(1.2rem, 4vw, 4rem);
     text-transform: uppercase;
     font-family: var(--fontTitulo);
+    margin: .5em 0;
+}
+#projetosSection > p {
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 1.3rem);
     margin: .5em 0;
 }
 
@@ -36,11 +41,6 @@
     scale: 1;
     transform: translate(-.5em, -.5em);
     box-shadow: .5em .5em 0 #00000011, .5em .5em 5px #00000027, inset 5px 5px 10px #fff;
-}
-
-.dark .projeto,
-.dark .projetosContainer {
-    background-color: var(--corCardDark);
 }
 
 .dark .projeto:hover {

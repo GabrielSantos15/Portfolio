@@ -1,17 +1,22 @@
 #homeSection {
     background-color: #eee;
-    background-image: var(--noise),linear-gradient(118deg, #81868C, #A2A5AC);
+    background-image: var(--noise), linear-gradient(118deg, #81868C, #A2A5AC);
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-rows: 1fr auto;
     align-items: center;
     position: relative;
     color: #fff;
 }
 
-.dark #homeSection{
-        background-image: var(--noise),linear-gradient(118deg, #2d2d2d,#000000);
+#homeSection article {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.dark #homeSection {
+    background-image: var(--noise), linear-gradient(118deg, #2d2d2d, #000000);
 }
 
 #homeSection h1 {
@@ -117,7 +122,7 @@
     justify-content: space-around;
 }
 
-#redesSociais a{
+#redesSociais a {
     color: #fff;
     font-size: clamp(2rem, 3vw, 3rem);
 }
