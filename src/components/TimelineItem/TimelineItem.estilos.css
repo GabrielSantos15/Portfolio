@@ -1,0 +1,55 @@
+.timeline-item {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-areas: "descricao data titulo";
+    align-items: center;
+    text-align: center;
+}
+
+.timeline-item:nth-child(even) {
+    grid-template-areas: "titulo data descricao";
+}
+
+.timeline-item-titulo {
+    grid-area: titulo;
+}
+
+.timeline-item-data {
+    grid-area: data;
+}
+
+.timeline-item-descricao {
+    grid-area: descricao;
+}
+
+
+.timeline-item-data {
+    position: relative;
+    height: 100%;
+    align-content: center;
+}
+
+.timeline-item-data {
+    position: relative;
+    height: 100%;
+    align-content: center;
+}
+
+.timeline-item-data {
+    height: fit-content;
+    background-color: var(--corTema);
+    background-image: linear-gradient(-45deg, #9025CB, #F350C2, #fff);
+    color: #fff;
+    font-weight: bold;
+    width: fit-content;
+    padding: 8px 16px;
+    filter: grayscale(1);
+    scale: .8;
+    border-radius: 15px;
+}
+
+.timeline-item-titulo .logoIcon {
+    width: min(120px, 60%);
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+}

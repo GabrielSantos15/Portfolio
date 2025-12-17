@@ -8,7 +8,6 @@ import {
 } from "react-icons/fa6";
 import "./ProjectView.estilo.css";
 import { useEffect, useRef, useState } from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function ProjectView({ projeto }) {
 
@@ -23,7 +22,6 @@ export default function ProjectView({ projeto }) {
       sectionRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
     SetCurrentScreen(0);
-    ScrollTrigger.refresh()
   }, [projeto]);
 
   if (!projeto) return null;

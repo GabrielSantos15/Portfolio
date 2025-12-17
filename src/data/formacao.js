@@ -23,7 +23,7 @@ export const formacao = [
     {
         id: 1,
         dataInicio: 2025,
-        dataFim: "Atualmente",
+        dataFim: 2025,
         instituicao: "SENAI",
         logo: "../../src/assets/logos/senai.jpg",
         titulo: "Assistente Administrativo",

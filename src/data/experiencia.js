@@ -2,7 +2,7 @@ export const experiencia = [
   {
     id: 0,
     dataInicio: 2025,
-    dataFim: "Atualmente",
+    dataFim: 2025,
     instituicao: "Grupo Petrópolis",
     logo: "../../src/assets/logos/grupo_petropolis.jpg",
     titulo: "Aprendiz de Governança de TI",

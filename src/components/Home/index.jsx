@@ -83,7 +83,7 @@ export default function Home() {
         particles.push(
           new Particle({
             position: { x, y },
-            color: "#d1daffff",
+            color: "#9025CB",
             vel: {
               x: Math.cos(angle) * speed + dx * 0.1,
               y: Math.sin(angle) * speed + dy * 0.1,

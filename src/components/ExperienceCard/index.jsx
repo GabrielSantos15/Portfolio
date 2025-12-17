@@ -29,9 +29,6 @@ export default function ExperienceCard({ item , key}) {
           <h3>{item.titulo}</h3>
           <h4>
             {item.instituicao} •{" "}
-            <small>
-              {item.dataInicio} - {item.dataFim}
-            </small>
           </h4>
         </span>
       </span>

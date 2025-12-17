@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     width: fit-content;
-    width: min(100%, 700px);
+    width: min(100%, 450px);
     background-color: var(--corCard);
     padding: 1em;
     gap: .5em;
