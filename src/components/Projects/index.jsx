@@ -8,11 +8,13 @@ const Projects = () => {
 
   return (
     <section id="projetosSection">
-      <h2>Projetos</h2>
-      <p>
-        Ideias que viraram código, telas que ganham vida e experiências que
-        funcionam de verdade
-      </p>
+      <header className="section-header">
+        <h2>Projetos</h2>
+        <p>
+          Ideias que viraram código, telas que ganham vida e experiências que
+          funcionam de verdade
+        </p>
+      </header>
 
       {viewProject ? (
         <ProjectView projeto={viewProject} key={viewProject.id}></ProjectView>

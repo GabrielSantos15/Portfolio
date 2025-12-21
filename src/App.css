@@ -1,0 +1,17 @@
+.section-header{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin: 2em 0;
+}
+
+.section-header h2 {
+    text-align: center;
+    font-size: clamp(2.2rem, 3vw, 4rem);
+    text-transform: uppercase;
+    font-family: var(--fontTitulo);
+}
+.section-header p {
+    text-align: center;
+    font-size: clamp(1rem, 2vw, 1.3rem);
+}

@@ -1,28 +1,32 @@
 import { useEffect, useRef, useState } from "react";
+import {
+  FaGlobe,
+  FaLinkedin,
+  FaChevronLeft,
+  FaChevronRight,
+  FaDiamond,
+} from "react-icons/fa6";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import "./TimelineItem.estilos.css";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function TimelineItem({ item }) {
   const [slideCurrent, setSlideCurrent] = useState(0);
   const itemRef = useRef(null);
+  const dataRef = useRef(null);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
     const ctx = gsap.context(() => {
-      gsap.to(".timeline-item-data", {
-        boxShadow: "0 0 10px #ffffff7c, 0 0 15px #F350C2, 0 0 20px #9025CB",
-        duration: 0.6,
-        filter: "grayscale(0)",
-        scale: 1,
+      gsap.from(dataRef.current, {
+        width: 0,
+        opacity: 0,
         scrollTrigger: {
-          trigger: ".timeline-item-data",
+          trigger: dataRef.current,
           start: "top 80%",
           end: "top 50%",
-          scrub: true,
-          markers: true,
+          scrub: 0.6,
         },
       });
     }, itemRef);
@@ -44,15 +48,31 @@ export default function TimelineItem({ item }) {
 
   return (
     <article ref={itemRef} className="timeline-item">
-      <div className="timeline-item-titulo">
-        <img src={item.logo} alt={item.instituicao} className="logoIcon" />
-
-        <span>
-          <h3>{item.titulo}</h3>
-          <h4>{item.instituicao}</h4>
-        </span>
-
-        <div className="skills-experience">
+      <div className="timeline-item-instituicao">
+        <div className="timeline-item-titulo ">
+          <img src={item.logo} alt={item.instituicao} className="logoIcon" />
+          <span>
+            <h3>{item.titulo}</h3>
+            <nav>
+              {item.site ? (
+                <a href={item.site} rel="noopener noreferrer" target="blank">
+                  <FaGlobe />
+                </a>
+              ) : null}
+              {item.linkedin ? (
+                <a
+                  href={item.linkedin}
+                  rel="noopener noreferrer"
+                  target="blank"
+                >
+                  <FaLinkedin />
+                </a>
+              ) : null}
+            </nav>
+          </span>
+        </div>
+        <p>{item.fraseImpacto}</p>
+        <div className="skills-timeline">
           {item.skills.map((skill, i) => (
             <span key={i} className="tec-projeto">
               {skill}
@@ -61,45 +81,43 @@ export default function TimelineItem({ item }) {
         </div>
       </div>
 
-      <span className="timeline-item-data">
-        {item.dataInicio} - {item.dataFim}
-      </span>
+      <div ref={dataRef} className="timeline-item-period">
+        <span className="period-bullet"></span>
+        <span className="period-date">
+          {item.dataInicio} - {item.dataFim}
+        </span>
+      </div>
 
-      <div className="timeline-item-descricao">
-        <div className="slide-content-wrapper">
-          <article
-            key={slideCurrent}
-            className="slide-content animated-fade-in"
-          >
-            <figure>
-              <img
-                width={700}
-                src={item.trajetoria[slideCurrent].img}
-                alt="Foto da trajetória"
-              />
-            </figure>
+      <div className="timeline-item-cards">
+        <article
+          key={slideCurrent}
+          className="slide-content-wrapper slide-content animated-fade-in"
+        >
+          <figure>
+            <img
+              width={700}
+              src={item.trajetoria[slideCurrent].img}
+              alt="Foto da trajetória"
+            />
+          </figure>
 
-            <div>
-              <h4>{item.trajetoria[slideCurrent].titulo}</h4>
-              <p>{item.trajetoria[slideCurrent].descrição}</p>
-            </div>
-          </article>
-        </div>
+          <div>
+            <h4>{item.trajetoria[slideCurrent].titulo}</h4>
+            <p>{item.trajetoria[slideCurrent].descricao}</p>
+          </div>
+        </article>
 
         <div className="slide-controls">
+          <button onClick={handlePrev}>
+            <FaChevronLeft />
+          </button>
           <span>
             {slideCurrent + 1} / {item.trajetoria.length}
           </span>
 
-          <div>
-            <button onClick={handlePrev} className="silver-reflection-bg">
-              <FaChevronLeft />
-            </button>
-
-            <button onClick={handleNext} className="silver-reflection-bg">
-              <FaChevronRight />
-            </button>
-          </div>
+          <button onClick={handleNext}>
+            <FaChevronRight />
+          </button>
         </div>
       </div>
     </article>

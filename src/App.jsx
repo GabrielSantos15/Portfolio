@@ -18,8 +18,11 @@ function App() {
         <About></About>
         <Skills></Skills>
         <Projects></Projects>
-        <Timeline titulo={"Experiencia"} data={experiencia}></Timeline>
-        <Timeline titulo={"Formação"} data={formacao}></Timeline>
+        <Timeline titulo={"Experiência"} subtitulo={`Vivência corporativa que converte aprendizado em resultados, construindo sistemas eficientes através de colaboração e inovação.`}  data={experiencia}></Timeline>
+        <Timeline titulo={"Formação"} subtitulo={`
+          Formação que conecta conhecimento, prática e visão de futuro para
+          criar tecnologia com propósito.
+       `} data={formacao}></Timeline>
         <section style={{ height: 900 }}></section>
       </main>
     </>

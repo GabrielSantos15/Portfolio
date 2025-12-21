@@ -4,7 +4,7 @@ import "./Timeline.estilos.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-export default function Timeline({ titulo, data }) {
+export default function Timeline({ titulo, subtitulo, data }) {
   const timelineRef = useRef(null);
 
   useEffect(() => {
@@ -18,8 +18,8 @@ export default function Timeline({ titulo, data }) {
           scaleY: 1,
           scrollTrigger: {
             trigger: ".trajectory-container",
-            start: "top 80%",
-            end: "bottom 40%",
+            start: "top 60%",
+            end: "bottom 0%",
             scrub: true
           },
         }
@@ -35,7 +35,10 @@ export default function Timeline({ titulo, data }) {
       id={titulo + "Section"}
       className="trajectory-section"
     >
-      <h2>{titulo}</h2>
+      <header className="section-header">
+        <h2>{titulo}</h2>
+        <p>{subtitulo} </p>
+      </header>
       <div className="trajectory-container">
         <div className="timeline-central-line"></div>
         {data.map((item) => (

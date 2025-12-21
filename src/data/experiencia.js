@@ -4,36 +4,43 @@ export const experiencia = [
     dataInicio: 2025,
     dataFim: 2025,
     instituicao: "Grupo Petrópolis",
+    titulo: "Aprendiz em Governança de TI",
+    site: "https://www.grupopetropolis.com.br/",
+    linkedin:
+      "https://www.linkedin.com/company/grupopetropolis/posts/?feedView=all",
+    fraseImpacto:
+      "Um dos maiores grupos cervejeiros do Brasil, com atuação nacional e forte estrutura corporativa.",
     logo: "../../src/assets/logos/grupo_petropolis.jpg",
-    titulo: "Aprendiz de Governança de TI",
+
     trajetoria: [
       {
         img: "../../src/assets/trajetoria/grupo_petropolis.png",
-        titulo: "Primeira experiência corporativa",
-        descrição:
-          "Atuação em governança de TI, com foco em dashboards, automações e padronização de processos..",
+        titulo: "Automação e Governança de TI",
+        descricao:
+          "Atuação em Governança de TI com foco na criação de dashboards, automações e padronização de processos, apoiando a tomada de decisão baseada em dados.",
       },
       {
-        img: "../../src/assets/trajetoria/fiap-next.png",
-        titulo: "Inovação",
-        descrição:
-          "Projeto reconhecido entre os Top 5 de inovação entre os aprendizes, com foco em melhoria de processos e uso estratégico da tecnologia para gerar eficiência operacional.",
+        img: "../../src/assets/trajetoria/inova-gp.png",
+        titulo: "Inovação e melhoria de processos",
+        descricao:
+          "Projeto reconhecido entre os Top 5 de inovação entre os aprendizes, com proposta voltada à otimização do controle dos normativos.",
       },
       {
-        img: "../../src/assets/trajetoria/fiap-next.png",
-        titulo: "Ferramentas corporativas",
-        descrição:
-          "Vivência prática com ferramentas amplamente utilizadas no mercado, como ServiceNow, SAP e SoftExpert, aplicadas ao gerenciamento de processos, serviços e governança de TI.",
+        img: "../../src/assets/trajetoria/ferramentas_gp.png",
+        titulo: "Ferramentas e práticas corporativas",
+        descricao:
+          "Experiência com ferramentas amplamente utilizadas no mercado, como ServiceNow, SAP e SoftExpert, aplicadas à gestão de serviços, processos e governança de TI.",
       },
     ],
 
     skills: [
       "Power BI",
+      "Power Automate",
       "Banco de Dados",
       "ITIL",
-      "Power Automate",
       "ServiceNow",
       "SAP",
+      "SoftExpert",
     ],
   },
 ];

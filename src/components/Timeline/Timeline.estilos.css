@@ -1,15 +1,13 @@
-.trajectory-section h2 {
-    font-family: var(--fontTitulo);
-    font-size: clamp(2rem, 3.5vw, 5rem);
-    text-align: center;
+.trajectory-section {
+    min-height: 100dvh;
+    padding: 1em;
 }
-
 
 .trajectory-container {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 1em;
+    width: fit-content;
 }
 
 .timeline-central-line {
@@ -18,12 +16,18 @@
     display: block;
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%) scaleY(0);
+    left: 0;
     transform-origin: top;
+    transform: translateX(-50%) scaleY(0);
 
     width: 5px;
     height: 100%;
-    background-image: linear-gradient(transparent,#9025CB, #F350C2, #9025CB,transparent);
-    z-index: -1;
+    background-image: linear-gradient(transparent, #9025CB, #F350C2, #9025CB, transparent);
+    z-index: 0;
+}
+
+@media (min-width: 1600px) {
+    .timeline-central-line {
+        left: 50%;
+    }
 }
