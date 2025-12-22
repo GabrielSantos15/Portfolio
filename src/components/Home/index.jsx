@@ -83,7 +83,7 @@ export default function Home() {
         particles.push(
           new Particle({
             position: { x, y },
-            color: "#9025CB",
+            color: "#eb0014",
             vel: {
               x: Math.cos(angle) * speed + dx * 0.1,
               y: Math.sin(angle) * speed + dy * 0.1,
@@ -183,7 +183,7 @@ export default function Home() {
         </div>
 
         <div id="contatoItem">
-          <a href="mailto:gs303291@gmail.com">
+          <a href="mailto:gabriel.santos.tech256@gmail.com">
             <span className=" icon-contato">
               <FaRegEnvelope className="fa-light fa-envelope"></FaRegEnvelope>
             </span>
@@ -198,7 +198,6 @@ export default function Home() {
 
           <a
             href="https://www.linkedin.com/in/gabriel-santos-9217112a2"
-            target="_blank"
           >
             <FaLinkedin className="fa-brands fa-linkedin"></FaLinkedin>
           </a>

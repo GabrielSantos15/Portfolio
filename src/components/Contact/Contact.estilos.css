@@ -1,0 +1,172 @@
+#contactSection {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 2rem;
+    padding: 2em;
+    max-width: 1700px;
+    margin: 0 auto;
+}
+
+#contactSection h3 {
+    position: relative;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    width: fit-content;
+    margin-bottom: .5em;
+}
+
+#contactSection h3::before {
+    content: "";
+    height: 5px;
+    width: 100%;
+    background-image: linear-gradient(90deg, var(--corTema), transparent);
+    position: absolute;
+    top: 100%;
+}
+
+#contactSection p {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+}
+
+#contactSection .section-header {
+    flex: 1 1 100%;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#contactSection article {
+    flex: 1 1 400px;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.forms-container {
+    box-shadow: 5px 5px 10px #0000001f;
+    height: fit-content;
+}
+
+#contactSection form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: var(--corCard);
+    padding: 1em;
+    border-radius: 2px;
+}
+
+
+#contactSection form input,
+textarea,
+select {
+    border: none;
+    outline: none;
+    color: color-mix(in srgb, currentColor 60%, transparent);
+    padding: 0.5rem;
+    font-family: var(--fontPadrao);
+    width: 100%;
+    background-color: var(--corFundo);
+    font-size: 1.1rem;
+    resize: vertical;
+    border-radius: 3px;
+
+}
+
+#contactSection form input:focus,
+#contactSection form textarea:focus,
+select:focus {
+    color: inherit;
+    outline: 1px solid var(--corTema);
+}
+
+#contactSection form label {
+    opacity: .7;
+    margin-bottom: .5rem;
+}
+
+#contactSection form span:has(input:required) label::after ,#contactSection form span:has(textarea:required) label::after {
+    content: " *";
+    font-weight: bold;
+    color: var(--corTema);
+}
+
+#contactSection form fieldset {
+    border: none;
+}
+
+#contactSection form fieldset span {
+    display: flex;
+    flex-direction: column;
+}
+
+.sender-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+
+.email-container {
+    display: flex;
+    gap: .5em;
+    font-size: 1.2rem;
+    opacity: .7;
+}
+
+.email-container svg {
+    font-size: 1.2rem;
+}
+
+.email-container a {
+    color: inherit;
+}
+
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    border: 1.5px solid #25D366;
+    color: #25D366;
+
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.whatsapp-btn:hover {
+    filter: brightness(0.9);
+    background-color: rgba(37, 211, 102, 0.1);
+}
+
+.whatsapp-btn svg {
+    font-size: 2rem;
+}
+
+.redesSociais {
+    display: flex;
+    gap: 1em;
+}
+
+.redesSociais a {
+    color: inherit;
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.contato-container {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    margin-top: 1em;
+}

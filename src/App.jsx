@@ -8,6 +8,7 @@ import Timeline from "./components/Timeline/INDEX.JSX";
 import { formacao } from "./data/formacao";
 import { experiencia } from "./data/experiencia";
 import Header from "./components/Header";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
           Formação que conecta conhecimento, prática e visão de futuro para
           criar tecnologia com propósito.
        `} data={formacao}></Timeline>
-        <section style={{ height: 900 }}></section>
+        <Contact/>
       </main>
     </>
   );
