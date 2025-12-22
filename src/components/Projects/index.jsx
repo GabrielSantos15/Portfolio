@@ -17,7 +17,7 @@ const Projects = () => {
       </header>
 
       {viewProject ? (
-        <ProjectView projeto={viewProject} key={viewProject.id}></ProjectView>
+        <ProjectView projeto={viewProject} onClose={() => setViewProject(null)} key={viewProject.id}></ProjectView>
       ) : null}
 
       <div className="projetosContainer">

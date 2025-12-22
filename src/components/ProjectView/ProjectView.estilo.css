@@ -1,20 +1,68 @@
+.overlay:has(#project-view-container) {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 #project-view-container {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--corFundo);
+  padding: 1em;
+  gap: 1em;
+  height: 100%;
+}
+
+.project-content {
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: center;
-  align-content: center;
   align-items: center;
   gap: 2em;
-  padding: 1em;
-  min-height: 100dvh;
+
+  height: 100%;
+  overflow-y: auto;
+  border-radius: 3px;
+}
+
+.close-modal-btn {
+  width: fit-content;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+
+  background: var(--corFundo);
+  border: none;
+  cursor: pointer;
+
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.7;
 
 }
 
+.close-modal-btn:hover {
+  opacity: 1;
+}
+
+.project-content>* {
+  flex: 1 1 600px;
+  width: 100%;
+}
+
 #project-view-container article {
+  max-width: 700px;
   display: flex;
   flex-direction: column;
   gap: 1em;
-  width: min(700px, 100%);
 }
 
 #project-view-container h2 {
@@ -81,7 +129,8 @@
 }
 
 /* imagem do projeto */
-.tv-screen img,.tv-screen video {
+.tv-screen img,
+.tv-screen video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -171,26 +220,24 @@
   background-color: #333;
   border-radius: 50%;
   /* Led desligado */
-  box-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 2px #ffffff33;
 }
 
 .tv-wrapper:hover .tv-logo {
-  /* Led ligado */
   background-color: var(--corTema);
+
+  box-shadow: 0 0 10px var(--corTema);
 }
 
-/* O Pescoço do suporte */
 .tv-neck {
   width: 15%;
   height: 15px;
   background-color: #050505;
   margin-top: -2px;
-  /* Conecta na TV */
   z-index: 5;
   position: relative;
 }
 
-/* Base Prateada */
 .tv-stand {
   width: 60%;
   height: 8px;
@@ -213,43 +260,59 @@
 .tv-controls {
   display: flex;
   justify-content: center;
-  gap: 0;
+  align-items: center;
+  gap: .5em;
   margin-top: 2em;
-  background-color: #000000;
+
   border-radius: 0.7rem;
 }
 
-.tv-controls button, .tv-controls span {
-  font-size: 17px;
-  padding: 10px 25px;
-  border: 2px solid #000000;
-  border-bottom: 5px solid #000000;
-  
-  transform: translate(0, -3px);
+
+.tv-controls button {
+  font-size: 1.4rem;
+  padding: 5px;
+  display: grid;
+  place-content: center;
+  color: #b4b4b4;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  border: 2px solid transparent;
+
   cursor: pointer;
-  transition: 0.2s;
-  transition-timing-function: linear;
 }
 
-.tv-controls button:first-child {
-  border-radius: 0.7rem 0 0 0.7rem;
-}
+.tv-controls button:hover {
+  border: 2px solid #b4b4b4;
 
-.tv-controls button:last-child {
-  border-radius: 0 0.7rem 0.7rem 0;
 }
-
 
 .tv-controls button:active {
   transform: translate(0, 0);
-  border-bottom: 2px solid rgb(50, 50, 50);
 }
 
-.tv-controls span{
-  color: var(--corTema);
-  font-family: var(--fontTitulo);
-  font-weight: bold;
-  background-color: #fff;
-  text-align: center;
-  min-width: 100px;
+.dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #b4b4b4;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dot.active {
+  background-color: var(--corTema);
+  transform: scale(1.2);
+}
+
+@media (min-width: 1024px) {
+  #project-view-container {
+    height: 95%;
+    width: 95%;
+    margin: auto;
+  }
 }

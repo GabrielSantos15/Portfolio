@@ -1,13 +1,7 @@
 #projetosSection {
-    background-color: #dbdee0;
     min-height: 100vh;
     padding: 2em 0;
 }
-
-.dark #projetosSection {
-    background-color: #000000;
-}
-
 
 #projetosSection>h2 {
     text-align: center;

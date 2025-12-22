@@ -4,15 +4,11 @@ import emailjs from "@emailjs/browser";
 import {
   FaCheck,
   FaCopy,
-  FaDiagramSuccessor,
   FaGithub,
   FaInstagram,
   FaLinkedin,
-  FaSkullCrossbones,
   FaWhatsapp,
 } from "react-icons/fa6";
-
-
 
 export default function Contact() {
   const [name, setName] = useState("");
@@ -134,7 +130,7 @@ export default function Contact() {
             <span>
               <label htmlFor="nameInput">Nome</label>
               <input
-              id="nameInput"
+                id="nameInput"
                 type="text"
                 placeholder="Digite seu nome"
                 onChange={(e) => setName(e.target.value)}
@@ -145,7 +141,7 @@ export default function Contact() {
             <span>
               <label htmlFor="emailInput">Email</label>
               <input
-              id="emailInput"
+                id="emailInput"
                 type="email"
                 placeholder="Digite seu Email"
                 value={email}
@@ -156,10 +152,19 @@ export default function Contact() {
               />
             </span>
           </fieldset>
-          <fieldset className="message-container" >
+          <fieldset className="message-container">
             <span>
               <label htmlFor="categorySelect">Categoria</label>
-              <select id="categorySelect" name="categorySelect" className="select-input" required value={category} onChange={(e)=>{setCategory(e.target.value)}}>
+              <select
+                id="categorySelect"
+                name="categorySelect"
+                className="select-input"
+                required
+                value={category}
+                onChange={(e) => {
+                  setCategory(e.target.value);
+                }}
+              >
                 <option value="recruitment">Recrutamento / Vaga</option>
                 <option value="freelance">Projeto Freelance</option>
                 <option value="networking">Networking</option>
@@ -167,9 +172,7 @@ export default function Contact() {
               </select>
             </span>
             <span>
-              <label htmlFor="assuntoInput">
-                Assunto
-              </label>
+              <label htmlFor="assuntoInput">Assunto</label>
               <input
                 id="assuntoInput"
                 type="text"
@@ -182,11 +185,9 @@ export default function Contact() {
               />
             </span>
             <span>
-              <label htmlFor="messageInput">
-                Mensagem
-              </label>
+              <label htmlFor="messageInput">Mensagem</label>
               <textarea
-              id="messageInput"
+                id="messageInput"
                 required
                 onChange={(e) => {
                   setMessage(e.target.value);
