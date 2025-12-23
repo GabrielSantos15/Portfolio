@@ -1,12 +1,12 @@
 import Foto from "../../assets/Gabriel_foto.png";
 import "./About.estilos.css";
-import Curriculo from "../../assets/Currículo_Gabriel.pdf";
+import Curriculo from "../../assets/Currículo - Gabriel dos Santos .pdf";
 
 export default function About() {
   return (
     <section id="AboutSection">
       <figure>
-        <img src={Foto} width={700} alt="" />
+        <img src={Foto} width={700} alt="Foto do Gabriel" />
         <span className="liquid-glass card-about">UX Eficiente</span>
         <span className="liquid-glass card-about">SEO & Performance</span>
         <span className="liquid-glass card-about">Experiência com Valor</span>

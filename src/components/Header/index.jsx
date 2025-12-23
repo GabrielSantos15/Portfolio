@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaMoon, FaCircle } from "react-icons/fa6";
+import { FaMoon, FaCircle, FaCode} from "react-icons/fa6";
 import "./Header.estilos.css";
 
 export default function Header() {
@@ -55,13 +55,15 @@ export default function Header() {
         menuOpen ? "open" : ""
       }`}
     >
-      <figure className="logo">Logo</figure>
+      <figure className="logo">
+        <FaCode/>
+      </figure>
 
       <div className={menuOpen ? "overlay" : ""} onClick={closeMenu}>
         <div className="menu" onClick={(e) => e.stopPropagation()}>
           <nav className="nav">
             <a href="#homeSection" onClick={closeMenu}>
-              Home
+              Início
             </a>
             <a href="#AboutSection" onClick={closeMenu}>
               Sobre
@@ -69,10 +71,13 @@ export default function Header() {
             <a href="#projetosSection" onClick={closeMenu}>
               Projetos
             </a>
-            <a href="#experience" onClick={closeMenu}>
+            <a href="#ExperiênciaSection" onClick={closeMenu}>
               Experiência
             </a>
-            <a href="#contact" onClick={closeMenu}>
+            <a href="#FormaçãoSection" onClick={closeMenu}>
+              Formação
+            </a>
+            <a href="#contactSection" onClick={closeMenu}>
               Contato
             </a>
             <button
