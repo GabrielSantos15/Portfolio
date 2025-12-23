@@ -1,7 +1,7 @@
 import "./App.css";
 import Home from "./components/Home";
 import About from "./components/About";
-import Skills from "./components/Skills";
+
 import Projects from "./components/Projects";
 import Timeline from "./components/Timeline";
 
@@ -9,6 +9,7 @@ import { formacao } from "./data/formacao";
 import { experiencia } from "./data/experiencia";
 import Header from "./components/Header";
 import Contact from "./components/Contact";
+import Skills from "./components/Skills";
 
 function App() {
   return (
