@@ -3,7 +3,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-import Timeline from "./components/Timeline/INDEX.JSX";
+import Timeline from "./components/Timeline";
 
 import { formacao } from "./data/formacao";
 import { experiencia } from "./data/experiencia";
