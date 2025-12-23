@@ -196,7 +196,7 @@ export default function Contact() {
               ></textarea>
             </span>
           </fieldset>
-          <small class="form-hint">Campos obrigatórios marcados com *</small>
+          <small className="form-hint">Campos obrigatórios marcados com *</small>
           <input className="silver-reflection-bg" type="submit" />
         </form>
       </article>

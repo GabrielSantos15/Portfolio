@@ -88,7 +88,7 @@ export default function ProjectView({ projeto, onClose }) {
               <div className="tv-screen">
                 <div className="tv-glare"></div>
                 {projeto.assets[currentScreen] && (
-                  <ScreenAsset path={projeto.assets[currentScreen]} />
+                  <ScreenAsset path={projeto.assets[currentScreen]} key={currentScreen}/>
                 )}
               </div>
               <div className="tv-logo"></div>

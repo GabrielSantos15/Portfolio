@@ -100,6 +100,12 @@ select:focus {
     flex-direction: column;
 }
 
+#contactSection form input[type="submit"]{
+    color: #fff;
+    font-family: var(--fontTitulo);
+}
+
+
 .sender-info {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -133,9 +139,9 @@ select:focus {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background-color: transparent;
+    background-color: #25D366;
     border: 1.5px solid #25D366;
-    color: #25D366;
+    color: #fff;
 
     text-decoration: none;
     padding: 8px 16px;
@@ -146,6 +152,14 @@ select:focus {
 
 .whatsapp-btn:hover {
     filter: brightness(0.9);
+}
+
+.dark .whatsapp-btn{
+    background-color: transparent;
+    color: #25D366;
+}
+
+.dark .whatsapp-btn:hover{
     background-color: rgba(37, 211, 102, 0.1);
 }
 

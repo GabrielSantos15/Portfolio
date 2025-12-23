@@ -7,14 +7,15 @@
   align-items: center;
   justify-content: space-between;
   padding: .5rem 1rem;
-  color:#fff;
-  text-shadow: 2px 2px 2px #0000009f;
+  color: #fff;
+  text-shadow: 2px 2px 2px #3636364b;
 }
 
 .logo {
   font-weight: bold;
   font-size: 1.5rem;
 }
+
 .site-header {
   background: transparent;
   transition: all 0.3s;
@@ -22,12 +23,13 @@
 
 body.scrolled .site-header {
   backdrop-filter: blur(15px);
-  background-image: linear-gradient( #d4d4d43a, #94949442);
+  background-image: linear-gradient(#d4d4d43a, #94949442);
   border-bottom: 2px solid #fff;
 }
+
 body.scrolled.dark .site-header {
   backdrop-filter: blur(15px);
-  background-image: linear-gradient( #0000003a, #00000042);
+  background-image: linear-gradient(#0000003a, #00000042);
   border-bottom: 2px solid #fff;
 }
 
@@ -46,7 +48,7 @@ body.scrolled.dark .site-header {
   transform: translateY(0);
 }
 
-/* --- MOBILE (Padrão) --- */
+/* --- MOBILE  --- */
 
 .menu {
   position: fixed;
@@ -59,11 +61,16 @@ body.scrolled.dark .site-header {
   flex-direction: column;
   padding-top: 5rem;
   transition: right 0.3s ease-in-out;
-  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: -5px 0 15px #0000003d;
 }
 
 .site-header.open .menu {
   right: 0;
+  color: #2d2d2d;
+}
+
+.dark .site-header.open .menu {
+  color: inherit;
 }
 
 .nav {
@@ -75,6 +82,7 @@ body.scrolled.dark .site-header {
 }
 
 .nav a {
+  position: relative;
   text-decoration: none;
   color: var(--corTexto);
   font-size: 1.2rem;
@@ -82,13 +90,26 @@ body.scrolled.dark .site-header {
   border-bottom: 1px solid #ffffff57;
 }
 
-/* Botões Gerais */
+.nav a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  display: grid;
+  width: 0%;
+  height: 3px;
+  background-image: linear-gradient(90deg ,var(--corTema), transparent);
+  transition: all ease-out .3s;
+}
+
+.nav a:hover::before {
+  width: 110%;
+}
+
 .header-actions {
   display: flex;
   align-items: center;
   gap: 1rem;
   z-index: 1001;
-  /* Garante que fique acima do menu deslizante */
 }
 
 button {
@@ -107,10 +128,15 @@ button {
   margin-top: 1rem;
 }
 
+
+
 .desktop-theme-btn {
   display: none;
 }
 
+.theme-toggle:hover,.menu-toggle:hover{
+  color: var(--corTema);
+}
 
 /* --- DESKTOP --- */
 @media (min-width: 768px) {
@@ -147,4 +173,13 @@ button {
     display: block;
     font-size: 1.5rem;
   }
+
+  .site-header .overlay {
+    all: unset;
+  }
+
+  .site-header.open .menu {
+    color: inherit;
+  }
+
 }
