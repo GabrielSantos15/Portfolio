@@ -9,7 +9,7 @@ import { experiencia } from "./data/experiencia";
 import Header from "./components/Header";
 import Contact from "./components/Contact";
 import SkillsMarquee from "./components/SkillsMarquee";
-import Timeline from "./components/Timeline/INDEX.JSX";
+import Timeline from "./components/Timeline";
 import ServiceCards from "./components/ServiceCards";
 
 function App() {

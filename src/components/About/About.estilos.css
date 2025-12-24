@@ -20,6 +20,31 @@
     filter: drop-shadow(2px 2px 5px #00000052);
 }
 
+.tech-ring {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    z-index: -1;
+
+    filter: drop-shadow(0 0 8px var(--corTema));
+
+    animation: spin-ring 10s linear infinite;
+}
+
+/* Animação */
+@keyframes spin-ring {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg) ;
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg) ;
+    }
+}
+
 #AboutSection article {
     display: flex;
     flex-direction: column;
