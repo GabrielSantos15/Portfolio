@@ -12,49 +12,49 @@ export default function SkillsMarquee() {
   };
 
   const skills = [
-    { nome: "HTML", cor: "#e34c26", icon: "../../src/assets/skills/HTML.png" },
-    { nome: "CSS", cor: "#264de4", icon: "../../src/assets/skills/CSS.png" },
+    { nome: "HTML", cor: "#e34c26", icon: "/assets/skills/HTML.png" },
+    { nome: "CSS", cor: "#264de4", icon: "/assets/skills/CSS.png" },
     {
       nome: "JS",
       cor: "#f0db4f",
-      icon: "../../src/assets/skills/JavaScript.png",
+      icon: "/assets/skills/JavaScript.png",
     },
-    { nome: "GIT", cor: "#f05032", icon: "../../src/assets/skills/GIT.png" },
+    { nome: "GIT", cor: "#f05032", icon: "/assets/skills/GIT.png" },
     {
       nome: "React",
       cor: "#61dafb",
-      icon: "../../src/assets/skills/React.png",
+      icon: "/assets/skills/React.png",
     },
     {
       nome: "Bootstrap",
       cor: "#6d0bc2ff",
-      icon: "../../src/assets/skills/Bootstrap.png",
+      icon: "/assets/skills/Bootstrap.png",
     },
     {
       nome: "Power Bi",
       cor: "#f2c811",
-      icon: "../../src/assets/skills/powerBi.webp",
+      icon: "/assets/skills/powerBi.webp",
     },
     {
       nome: "Power Automate",
       cor: "#0066ff",
-      icon: "../../src/assets/skills/PowerAutomate.png",
+      icon: "/assets/skills/PowerAutomate.png",
     },
-    { nome: "PHP", cor: "#6548c2ff", icon: "../../src/assets/skills/php.png" },
+    { nome: "PHP", cor: "#6548c2ff", icon: "/assets/skills/php.png" },
     {
       nome: "MySql",
       cor: "#0f6dcbff",
-      icon: "../../src/assets/skills/mysql.png",
+      icon: "/assets/skills/mysql.png",
     },
     {
       nome: "Figma",
       cor: "#B659FF",
-      icon: "../../src/assets/skills/figma.png",
+      icon: "/assets/skills/figma.png",
     },
     {
       nome: "Pacote Office",
       cor: "#ea3e23",
-      icon: "../../src/assets/skills/Office.png",
+      icon: "/assets/skills/Office.png",
     },
   ];
 

@@ -10,23 +10,23 @@ export const experiencia = [
       "https://www.linkedin.com/company/grupopetropolis/posts/?feedView=all",
     fraseImpacto:
       "Um dos maiores grupos cervejeiros do Brasil, com atuação nacional e forte estrutura corporativa.",
-    logo: "../../src/assets/logos/grupo_petropolis.jpg",
+    logo: "/assets/logos/grupo_petropolis.jpg",
 
     trajetoria: [
       {
-        img: "../../src/assets/trajetoria/grupo_petropolis.png",
+        img: "/assets/trajetoria/grupo_petropolis.png",
         titulo: "Automação e Governança de TI",
         descricao:
           "Atuação em Governança de TI com foco na criação de dashboards, automações e padronização de processos, apoiando a tomada de decisão baseada em dados.",
       },
       {
-        img: "../../src/assets/trajetoria/inova-gp.png",
+        img: "/assets/trajetoria/inova-gp.png",
         titulo: "Inovação e melhoria de processos",
         descricao:
           "Projeto reconhecido entre os Top 5 de inovação entre os aprendizes, com proposta voltada à otimização do controle dos normativos.",
       },
       {
-        img: "../../src/assets/trajetoria/ferramentas_gp.png",
+        img: "/assets/trajetoria/ferramentas_gp.png",
         titulo: "Ferramentas e práticas corporativas",
         descricao:
           "Experiência com ferramentas amplamente utilizadas no mercado, como ServiceNow, SAP e SoftExpert, aplicadas à gestão de serviços, processos e governança de TI.",

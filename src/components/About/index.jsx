@@ -1,6 +1,5 @@
 import Foto from "../../assets/Gabriel_foto.png";
 import "./About.estilos.css";
-import Curriculo from "../../assets/Currículo - Gabriel dos Santos .pdf";
 
 export default function About() {
   return (
@@ -43,7 +42,7 @@ export default function About() {
           modernas como React para resolver problemas reais de usuários e
           negócios
         </p>
-        <a href={Curriculo} download>
+        <a href="Currículo - Gabriel dos Santos.pdf" download>
           <button id="downloadCv" className="silver-reflection-bg">
             Download CV
           </button>
