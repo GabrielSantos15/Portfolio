@@ -1,5 +1,5 @@
-import "./Skills.estilos.css";
-export default function Skills() {
+import "./SkillsMarquee.estilos.css";
+export default function SkillsMarquee() {
   const Skill = ({ icon, nome, cor, className }) => {
     return (
       <span className={className} style={{ "--corSkill": cor }}>

@@ -7,8 +7,9 @@
 }
 
 :root {
-  --corFundo: #F2F5F8;
+  --corFundo: #eef3f7;
   --corCard: #FFFFFF;
+  --corFundo2: #A2A5AC;
 
   --corTema: #eb0014;
 
@@ -19,8 +20,9 @@
 }
 
 .dark {
-  --corFundo: #121212;
-  --corCard: #333b3c;
+  --corFundo: #2a2a2c;
+  --corCard: #222222;
+  --corFundo2: #101115;
 }
 
 ::selection {
@@ -41,13 +43,12 @@ body {
 
   font-family: var(--fontPadrao);
   background-color: var(--corFundo);
-  background-image: linear-gradient(var(--corFundo), #A2A5AC);
+  background-image: linear-gradient(var(--corFundo),var(--corFundo2));
   background-attachment: fixed;
   transition: .5s;
 }
 
 body.dark {
-  background-image: linear-gradient(45deg, var(--corFundo), #2d2d2d);
   color: #fff;
 }
 

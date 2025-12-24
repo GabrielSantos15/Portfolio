@@ -1,11 +1,7 @@
 .trajectory-section {
     min-height: 100dvh;
     padding: 1em;
-    background-color: #dbdee0;
-}
-
-.dark .trajectory-section {
-    background-color: #000;
+    background-color: var(--corFundo2);
 }
 
 .trajectory-container {

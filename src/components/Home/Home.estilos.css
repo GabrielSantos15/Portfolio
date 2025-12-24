@@ -17,7 +17,7 @@
 }
 
 .dark #homeSection {
-    background-image: var(--noise), linear-gradient(118deg, #2d2d2d, #000000);
+    background-image: var(--noise), linear-gradient(118deg, #37393a, #000000);
 }
 
 #homeSection h1 {
