@@ -211,7 +211,7 @@
     .timeline-item-period {
         justify-content: center;
         background-color: var(--corTema);
-        background-image: linear-gradient(-45deg, #ff0062, #f35050, #fff);
+        background-image: linear-gradient(-45deg, var(--corTema), #f35050, #fff);
         color: #fff;
         box-shadow: 0 0 10px #ffffff7c, 0 0 15px #f35050, 0 0 20px #cb2525;
         padding: 8px 16px;

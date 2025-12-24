@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import TimelineItem from "../TimelineItem";
 import "./Timeline.estilos.css";
 import gsap from "gsap";
@@ -6,18 +6,20 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 export default function Timeline({ titulo, subtitulo, data }) {
   const timelineRef = useRef(null);
+  const timelineCentraLineRef = useRef(null);
+  const timelineContainerRef = useRef(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     const ctx = gsap.context(() => {
       gsap.fromTo(
-        ".timeline-central-line",
+        timelineCentraLineRef.current,
         { scaleY: 0 },
         {
           scaleY: 1,
           scrollTrigger: {
-            trigger: ".trajectory-container",
+            trigger: timelineContainerRef.current,
             start: "top 60%",
             end: "bottom 0%",
             scrub: true
@@ -39,8 +41,8 @@ export default function Timeline({ titulo, subtitulo, data }) {
         <h2>{titulo}</h2>
         <p>{subtitulo} </p>
       </header>
-      <div className="trajectory-container">
-        <div className="timeline-central-line"></div>
+      <div ref={timelineContainerRef} className="trajectory-container">
+        <div ref={timelineCentraLineRef} className="timeline-central-line"></div>
         {data.map((item) => (
           <TimelineItem key={item.id} item={item} />
         ))}

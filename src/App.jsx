@@ -11,6 +11,7 @@ import Contact from "./components/Contact";
 import SkillsMarquee from "./components/SkillsMarquee";
 import Timeline from "./components/Timeline";
 import ServiceCards from "./components/ServiceCards";
+import GsapMarquee from "./components/GsapMarquee";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <About></About>
         <SkillsMarquee></SkillsMarquee>
         <ServiceCards></ServiceCards>
+        <GsapMarquee></GsapMarquee>
         <Projects></Projects>
         <Timeline titulo={"Experiência"} subtitulo={`Vivência corporativa que converte aprendizado em resultados, construindo sistemas eficientes através de colaboração e inovação.`}  data={experiencia}></Timeline>
         <Timeline titulo={"Formação"} subtitulo={`

@@ -11,7 +11,6 @@ export default function About() {
         <span className="liquid-glass card-about">Experiência com Valor</span>
         <svg className="tech-ring" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      {/* Gradiente para dar efeito de movimento/velocidade */}
       <linearGradient id="tech-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" stopColor="var(--corTema)" stopOpacity="0" />
         <stop offset="100%" stopColor="var(--corTema)" stopOpacity="1" />
@@ -27,7 +26,7 @@ export default function About() {
       stroke="url(#tech-gradient)" 
       strokeWidth="2"
       strokeLinecap="round" 
-      strokeDasharray="200 300" /* Isso cria o "gap" (círculo aberto) */
+      strokeDasharray="200 300" 
     />
   </svg>
       </figure>
