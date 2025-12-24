@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { projects } from "../../data/projetos";
-import ProjectView from "../projectView";
+import ProjectView from "../ProjectView";
 import "./Projects.estilos.css";
 
 const Projects = () => {
