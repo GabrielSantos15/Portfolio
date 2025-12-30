@@ -2,15 +2,8 @@ import { useEffect, useState } from "react";
 import { FaMoon, FaCircle, FaCode} from "react-icons/fa6";
 import "./Header.estilos.css";
 
-export default function Header() {
-  const [darkMode, setDarkMode] = useState(() => {
-    if (typeof window !== "undefined") {
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme) return savedTheme === "dark";
-      return window.matchMedia("(prefers-color-scheme: dark)").matches;
-    }
-    return false;
-  });
+export default function Header({setDarkMode,darkMode}) {
+
   useEffect(() => {
     const onScroll = () => {
       document.body.classList.toggle("scrolled", window.scrollY > 10);
@@ -21,10 +14,6 @@ export default function Header() {
 
   const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    document.body.classList.toggle("dark", darkMode);
-    localStorage.setItem("theme", darkMode ? "dark" : "light");
-  }, [darkMode]);
 
   const [visible, setVisible] = useState(true);
   const [lastScroll, setLastScroll] = useState(0);

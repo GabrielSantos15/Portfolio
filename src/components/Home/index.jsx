@@ -6,7 +6,7 @@ import {
   FaInstagram,
   FaLinkedin,
 } from "react-icons/fa6";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import "./Home.estilos.css";
 
 // logica das particulas
@@ -39,10 +39,10 @@ class Particle {
   }
 }
 
-export default function Home() {
+export default function Home({ darkMode }) {
   const canvasRef = useRef(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -83,7 +83,7 @@ export default function Home() {
         particles.push(
           new Particle({
             position: { x, y },
-            color: "#eb0014",
+            color: "rgb(178, 68, 241)",
             vel: {
               x: Math.cos(angle) * speed + dx * 0.1,
               y: Math.sin(angle) * speed + dy * 0.1,
@@ -112,7 +112,7 @@ export default function Home() {
 
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, darkMode);
 
   const [stats, setStats] = useState({
     repos: 0,
@@ -196,9 +196,7 @@ export default function Home() {
             <FaGithub className="fa-brands fa-github"></FaGithub>
           </a>
 
-          <a
-            href="https://www.linkedin.com/in/gabriel-santos-9217112a2"
-          >
+          <a href="https://www.linkedin.com/in/gabriel-santos-9217112a2">
             <FaLinkedin className="fa-brands fa-linkedin"></FaLinkedin>
           </a>
 

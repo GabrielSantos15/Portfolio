@@ -12,13 +12,29 @@ import SkillsMarquee from "./components/SkillsMarquee";
 import Timeline from "./components/Timeline";
 import ServiceCards from "./components/ServiceCards";
 import GsapMarquee from "./components/GsapMarquee";
+import { useEffect, useState } from "react";
 
 function App() {
+
+  const [darkMode, setDarkMode] = useState(() => {
+    if (typeof window !== "undefined") {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) return savedTheme === "dark";
+      return window.matchMedia("(prefers-color-scheme: dark)").matches;
+    }
+    return false;
+  });
+
+    useEffect(() => {
+      document.body.classList.toggle("dark", darkMode);
+      localStorage.setItem("theme", darkMode ? "dark" : "light");
+    }, [darkMode]);
+
   return (
     <>
-      <Header />
+      <Header darkMode={darkMode} setDarkMode={setDarkMode} />
       <main>
-        <Home></Home>
+        <Home darkMode={darkMode}></Home>
         <About></About>
         <SkillsMarquee></SkillsMarquee>
         <ServiceCards></ServiceCards>

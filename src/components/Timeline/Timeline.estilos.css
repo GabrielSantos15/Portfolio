@@ -23,7 +23,8 @@
 
     width: 5px;
     height: 100%;
-    background-image: linear-gradient(transparent, #cb2525, #ff0000, #cb2525, transparent);
+    --corTema50 :  color-mix(in srgb, var(--corTema) 70%, transparent);
+    background-image: linear-gradient(transparent,var(--corTema50), var(--corTema),var(--corTema50), transparent);
     z-index: 0;
 }
 

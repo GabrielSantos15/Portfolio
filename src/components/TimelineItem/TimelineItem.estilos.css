@@ -192,14 +192,12 @@
     }
 
     .timeline-item-instituicao {
-          clip-path: polygon(
-    0 0,
-    100% 0,
-    100% calc(100% - 10px),
-    calc(100% - 10px) 100%,
-    0 100%
-  );
-  border-radius: 0;
+        clip-path: polygon(0 0,
+                100% 0,
+                100% calc(100% - 10px),
+                calc(100% - 10px) 100%,
+                0 100%);
+        border-radius: 0;
         background-color: var(--corCard);
     }
 
@@ -211,10 +209,15 @@
     .timeline-item-period {
         justify-content: center;
         background-color: var(--corTema);
-        background-image: linear-gradient(-45deg, var(--corTema), #f35050, #fff);
+        background-image: linear-gradient(-45deg, color-mix(in srgb, var(--corTema) 70%, #000), var(--corTema), #fff);
         color: #fff;
-        box-shadow: 0 0 10px #ffffff7c, 0 0 15px #f35050, 0 0 20px #cb2525;
+        box-shadow: 0 0 5px color-mix(in srgb, var(--corTema) 70%, #ffffff),
+            0 0 10px color-mix(in srgb, var(--corTema) 70%, #ffffffda),
+            0 0 20px color-mix(in srgb, var(--corTema) 70%, #ffffff93),
+            0 0 40px color-mix(in srgb, var(--corTema) 70%, #ffffff5d);
+        ;
         padding: 8px 16px;
+        
         scale: 1;
         border-radius: 15px;
     }
@@ -235,7 +238,7 @@
         background-image: linear-gradient(45deg, #ffffff15, #24242415);
         border: .5px solid #fff;
         box-shadow: inset -5px 0 10px #ffffffa2;
-        
+
     }
 
 

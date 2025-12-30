@@ -30,6 +30,10 @@ export default function TimelineItem({ item }) {
       });
     }, itemRef);
 
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 1000);
+
     return () => ctx.revert();
   }, []);
 

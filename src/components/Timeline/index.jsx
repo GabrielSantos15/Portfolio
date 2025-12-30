@@ -28,6 +28,10 @@ export default function Timeline({ titulo, subtitulo, data }) {
       );
     }, timelineRef);
 
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 500);
+
     return () => ctx.revert();
   }, []);
 

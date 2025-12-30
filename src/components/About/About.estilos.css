@@ -63,7 +63,7 @@
 }
 
 #AboutSection p {
-    font-size: 1.2em;
+    font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 #AboutSection a {
@@ -105,14 +105,14 @@
 .card-about:nth-of-type(2) {
     bottom: 25%;
     right: 0%;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     animation-delay: 0.5s;
 }
 
 .card-about:nth-of-type(3) {
     bottom: 10%;
     left: 25%;
-    font-size: 1.5rem;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
     animation-delay: 0.8s;
 }
 
