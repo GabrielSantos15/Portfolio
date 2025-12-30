@@ -79,9 +79,10 @@
 
     display: flex;
     align-items: center;
-
+    
     height: fit-content;
-    width: fit-content;
+    width: 126px;
+
     text-wrap: nowrap;
 
     transform: translateY(-50%);
