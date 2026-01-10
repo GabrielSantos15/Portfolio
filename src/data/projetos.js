@@ -31,8 +31,8 @@ export const projects = [
       "Simulação robusta de um e-commerce de arte urbana. O destaque técnico é o sistema de carrinho de compras com persistência de dados via LocalStorage, garantindo que o usuário não perca seus itens ao recarregar a página. Conta com fluxo simulado de checkout e design responsivo focado em conversão.",
     tecnologias: ["Javascript", "LocalStorage", "HTML5", "CSS3"],
     linkRepositorio:
-      "https://github.com/GabrielSantos15/DesenvolvimentoProjeto",
-    linkProjeto: "https://gabrielsantos15.github.io/DesenvolvimentoProjeto/",
+      "https://github.com/GabrielSantos15/UrbanFlow",
+    linkProjeto: "https://gabrielsantos15.github.io/UrbanFlow/",
   },
   {
     id: 3,
