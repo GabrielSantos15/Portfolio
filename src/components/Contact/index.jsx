@@ -55,7 +55,7 @@ export default function Contact() {
   }
 
   const [copied, setCopied] = useState(false);
-  const emailDev = ["gabriel.contato", "@", "email.com"].join("");
+  const emailDev = ["gabriel.santos.tech256", "@", "gmail.com"].join("");
 
   const handleCopy = () => {
     navigator.clipboard.writeText(emailDev);
