@@ -41,7 +41,7 @@ export default function About() {
           modernas como React para resolver problemas reais de usuários e
           negócios
         </p>
-        <a href="Currículo - Gabriel dos Santos.pdf" download>
+        <a href="Gabriel dos Santos - Desenvolvedor de Software.pdf" download>
           <button id="downloadCv" className="silver-reflection-bg">
             Download CV
           </button>

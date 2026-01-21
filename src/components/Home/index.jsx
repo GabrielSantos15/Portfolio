@@ -122,13 +122,13 @@ export default function Home({ darkMode }) {
   useEffect(() => {
     async function getUserData() {
       try {
-        // 1. Busca APENAS para pegar a contagem de repositórios
+        // 1. Busca para pegar a contagem de repositórios
         const response = await fetch(
           "https://api.github.com/users/gabrielsantos15"
         );
         const data = await response.json();
 
-        const startCareer = 2021;
+        const startCareer = 2022;
         const currentYear = new Date().getFullYear();
 
         const yearsActive = currentYear - startCareer;
