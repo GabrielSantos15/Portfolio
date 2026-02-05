@@ -25,17 +25,39 @@ export const projects = [
     assets: [
       "/assets/projetos/UrbanFlow/urbanFlow.png",
       "/assets/projetos/UrbanFlow/urbanFlowProdutos.png",
-      "/assets/projetos/UrbanFlow/urbanFlowSobre.png",
+      "/assets/projetos/UrbanFlow/urbanFlowProduct.png",
+      "/assets/projetos/UrbanFlow/UrbanFlow.mp4",
     ],
     descricao:
       "Simulação robusta de um e-commerce de arte urbana. O destaque técnico é o sistema de carrinho de compras com persistência de dados via LocalStorage, garantindo que o usuário não perca seus itens ao recarregar a página. Conta com fluxo simulado de checkout e design responsivo focado em conversão.",
-    tecnologias: ["Javascript", "LocalStorage", "HTML5", "CSS3"],
-    linkRepositorio:
-      "https://github.com/GabrielSantos15/UrbanFlow",
-    linkProjeto: "https://gabrielsantos15.github.io/UrbanFlow/",
+    tecnologias: ["ReactJS", "Componentização", "LocalStorage"],
+    linkRepositorio: "https://github.com/GabrielSantos15/UrbanFlow",
+    linkProjeto: "https://urban-flow-kappa.vercel.app/",
   },
+
   {
     id: 3,
+    nome: "Cine Analytics",
+    tipo: "Data Analytics / BI",
+    assets: [
+      "/assets/projetos/dashboard-filmes/capa.png",
+      "/assets/projetos/dashboard-filmes/Tendencias.png",
+      "/assets/projetos/dashboard-filmes/Faturamento.png",
+      "/assets/projetos/dashboard-filmes/AtoresRank.png",
+      "/assets/projetos/dashboard-filmes/Filme.png",
+      "/assets/projetos/dashboard-filmes/Faturamento.png",
+      "/assets/projetos/dashboard-filmes/apresentacao.mp4",
+    ],
+    descricao:
+      "Dashboard analítico dos Top 500 filmes (API TMDB), com coleta automatizada em Python, modelagem DAX avançada e parâmetros dinâmicos para analisar tendências, ROI e faturamento, priorizando UX e clareza visual para apoiar decisões estratégicas.",
+    tecnologias: ["Power BI", "DAX", "Python", "API", "UX/UI", "Storytelling"],
+
+    linkRepositorio:
+      "https://github.com/GabrielSantos15/powerbi-portfolio-movies",
+  },
+
+  {
+    id: 4,
     nome: "Calculadora React",
     tipo: "App",
     assets: [
@@ -49,7 +71,7 @@ export const projects = [
     linkProjeto: "https://calculadora-react-db34e.web.app/",
   },
   {
-    id: 4,
+    id: 5,
     nome: "GitHub User Finder",
     tipo: "Integração API",
     assets: [
@@ -63,7 +85,7 @@ export const projects = [
     linkProjeto: "https://gabrielsantos15.github.io/GitHub-API/",
   },
   {
-    id: 5,
+    id: 6,
     nome: "Santos Wine",
     tipo: "Landing Page",
     assets: [
@@ -77,7 +99,7 @@ export const projects = [
     linkProjeto: "https://gabrielsantos15.github.io/Santos-Wine/",
   },
   {
-    id: 6,
+    id: 7,
     nome: "Tech Quiz",
     tipo: "Game",
     assets: [
@@ -92,7 +114,7 @@ export const projects = [
     linkProjeto: "https://gabrielsantos15.github.io/Quiz/",
   },
   {
-    id: 7,
+    id: 8,
     nome: "Task Manager",
     tipo: "Produtividade",
     assets: [
@@ -105,33 +127,6 @@ export const projects = [
     linkRepositorio: "https://github.com/GabrielSantos15/lista-de-tarefas",
     linkProjeto: "https://gabrielsantos15.github.io/lista-de-tarefas/",
   },
-  {
-    id: 8,
-    nome: "Cine Analytics",
-    tipo: "Data Analytics / BI",
-    assets: [
-      "/assets/projetos/dashboard-filmes/capa.png",
-      "/assets/projetos/dashboard-filmes/Tendencias.png",
-      "/assets/projetos/dashboard-filmes/Faturamento.png",
-      "/assets/projetos/dashboard-filmes/AtoresRank.png",
-      "/assets/projetos/dashboard-filmes/Filme.png",
-      "/assets/projetos/dashboard-filmes/Faturamento.png",
-      "/assets/projetos/dashboard-filmes/apresentacao.mp4",
-    ],
-    descricao:
-      "Dashboard analítico dos Top 500 filmes (API TMDB), com coleta automatizada em Python, modelagem DAX avançada e parâmetros dinâmicos para analisar tendências, ROI e faturamento, priorizando UX e clareza visual para apoiar decisões estratégicas.",
-tecnologias: [
-  "Power BI",
-  "DAX",
-  "Python",
-  "API",
-  "UX/UI",
-  "Storytelling"
-],
-
-    linkRepositorio: "https://github.com/GabrielSantos15/powerbi-portfolio-movies",
-  },
-
   {
     id: 9,
     nome: "Arcade JS",
