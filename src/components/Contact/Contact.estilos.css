@@ -4,7 +4,7 @@
     flex-wrap: wrap;
 
     gap: 2rem;
-    padding: 2em;
+    padding: 1em;
     max-width: 1700px;
     margin: 0 auto;
 }
@@ -85,7 +85,8 @@ select:focus {
     margin-bottom: .5rem;
 }
 
-#contactSection form span:has(input:required) label::after ,#contactSection form span:has(textarea:required) label::after {
+#contactSection form span:has(input:required) label::after,
+#contactSection form span:has(textarea:required) label::after {
     content: " *";
     font-weight: bold;
     color: var(--corTema);
@@ -100,7 +101,7 @@ select:focus {
     flex-direction: column;
 }
 
-#contactSection form input[type="submit"]{
+#contactSection form input[type="submit"] {
     color: #fff;
     font-family: var(--fontTitulo);
 }
@@ -115,14 +116,16 @@ select:focus {
 .message-container {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: .5em;
 }
 
 
 .email-container {
     display: flex;
+    flex-wrap: wrap;
     gap: .5em;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     opacity: .7;
 }
 
@@ -154,12 +157,12 @@ select:focus {
     filter: brightness(0.9);
 }
 
-.dark .whatsapp-btn{
+.dark .whatsapp-btn {
     background-color: transparent;
     color: #25D366;
 }
 
-.dark .whatsapp-btn:hover{
+.dark .whatsapp-btn:hover {
     background-color: rgba(37, 211, 102, 0.1);
 }
 
@@ -181,6 +184,6 @@ select:focus {
 .contato-container {
     display: flex;
     flex-direction: column;
-    gap: .5em;
+    gap: 1em;
     margin-top: 1em;
 }

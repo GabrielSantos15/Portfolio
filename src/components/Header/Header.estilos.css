@@ -22,8 +22,8 @@
 }
 
 body.scrolled .site-header {
-  backdrop-filter: blur(15px);
-  background-image: linear-gradient(#d4d4d43a, #94949442);
+  backdrop-filter: blur(25px);
+  background-image: linear-gradient(#9494947e, #68686844);
   border-bottom: 2px solid #fff;
 }
 

@@ -20,9 +20,15 @@
     background-image: var(--noise), linear-gradient(118deg, #37393a, #000000);
 }
 
+#homeSection .homeTitle {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 #homeSection h1 {
     text-transform: uppercase;
-    font-size: clamp(3rem, 13vw, 15rem);
+    font-size: clamp(5rem, 13vw, 15rem);
     font-family: var(--fontTitulo);
     position: relative;
     z-index: 1;
@@ -31,7 +37,7 @@
 }
 
 #homeSection h2 {
-    font-size: clamp(1.2rem, 4vw, 4rem);
+    font-size: clamp(1.5rem, 4vw, 4rem);
     position: relative;
     z-index: 1;
     text-align: center;
@@ -46,7 +52,6 @@
     height: 100dvh;
     z-index: 0;
 }
-
 #homeFooter {
     z-index: 1;
     width: 100%;
@@ -75,6 +80,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#homeFooter .stat-item {
+    display: none;
 }
 
 #homeFooter .stat-item dd {
@@ -135,6 +144,14 @@
         grid-template-rows: 1fr auto;
     }
 
+    #homeSection .homeTitle {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+
     #homeFooter {
         grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     }
@@ -142,6 +159,10 @@
     #contatoItem {
         grid-column: auto;
         grid-row: auto;
+    }
+
+    #homeFooter .stat-item {
+        display: flex;
     }
 
     #homeFooter span {

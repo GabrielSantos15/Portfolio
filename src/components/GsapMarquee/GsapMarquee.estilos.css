@@ -21,11 +21,14 @@
     gap: 10px;
     width: 200dvw;
     flex-wrap: nowrap;
-    color: #fff;
     font-size: 1.2rem;
     width: 200%;
-     will-change: transform;
-     text-shadow: 1px 1px 2px #00000096;
+    will-change: transform;
+    color: #303030;
+}
+
+.dark .gsap-marquee div {
+    color: #fff;
 }
 
 .gsap-marquee div span{

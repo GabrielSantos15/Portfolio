@@ -83,13 +83,13 @@ export default function Home({ darkMode }) {
         particles.push(
           new Particle({
             position: { x, y },
-            color: "rgb(178, 68, 241)",
+            color: "rgb(148, 51, 204)",
             vel: {
               x: Math.cos(angle) * speed + dx * 0.1,
               y: Math.sin(angle) * speed + dy * 0.1,
             },
             size: Math.random() * 20 + 5,
-          })
+          }),
         );
       }
 
@@ -124,7 +124,7 @@ export default function Home({ darkMode }) {
       try {
         // 1. Busca para pegar a contagem de repositórios
         const response = await fetch(
-          "https://api.github.com/users/gabrielsantos15"
+          "https://api.github.com/users/gabrielsantos15",
         );
         const data = await response.json();
 
@@ -148,7 +148,10 @@ export default function Home({ darkMode }) {
   return (
     <section id="homeSection">
       <article>
-        <h1>portfolio</h1>
+        <div className="homeTitle">
+          <h1>port</h1>
+          <h1>folio</h1>
+        </div>
         <h2>Front end Developer</h2>
       </article>
       <footer id="homeFooter">
