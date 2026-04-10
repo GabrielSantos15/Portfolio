@@ -37,6 +37,24 @@ export const projects = [
 
   {
     id: 3,
+    nome: "Brazilian Market Analytics",
+    tipo: "Data Analytics / BI",
+    assets: [
+      "/assets/projetos/marketAnalytics/macro.png",
+      "/assets/projetos/marketAnalytics/acoes.png",
+      "/assets/projetos/marketAnalytics/fundos.png",
+      "/assets/projetos/marketAnalytics/ativo.png",
+      "/assets/projetos/marketAnalytics/apresentacao.mp4",
+    ],
+    descricao:
+      "Terminal interativo do mercado financeiro integrando análise de risco e retorno. Conta com pipeline de dados em Python (yfinance) automatizado via CI/CD, modelagem em Star Schema e customização de front-end injetada com HTML/CSS.",
+    tecnologias: ["Power BI", "DAX", "Python", "GitHub Actions"],
+
+    linkRepositorio:
+      "https://github.com/GabrielSantos15/powerbi-portfolio-movies",
+  },
+  {
+    id: 4,
     nome: "Cine Analytics",
     tipo: "Data Analytics / BI",
     assets: [
@@ -55,23 +73,24 @@ export const projects = [
     linkRepositorio:
       "https://github.com/GabrielSantos15/powerbi-portfolio-movies",
   },
-
-  {
-    id: 4,
-    nome: "Calculadora React",
-    tipo: "App",
-    assets: [
-      "/assets/projetos/calculadora/calculadora.png",
-      "/assets/projetos/calculadora/calculadoraMobile.png",
-    ],
-    descricao:
-      "Aplicação SPA (Single Page Application) que explora os fundamentos do React. Utiliza o hook useState para gerenciamento de memória de cálculo e manipulação de eventos em tempo real. Interface projetada com foco em UX mobile-first.",
-    tecnologias: ["React", "Firebase Hosting", "CSS3"],
-    linkRepositorio: "https://github.com/GabrielSantos15/Calculadora-React",
-    linkProjeto: "https://calculadora-react-db34e.web.app/",
-  },
   {
     id: 5,
+    nome: "Arcade JS",
+    tipo: "Game",
+    assets: [
+      "/assets/projetos/Jogos/Games.png",
+      "/assets/projetos/Jogos/portasAbertas.png",
+      "/assets/projetos/Jogos/portasAbertas2.png",
+    ],
+    descricao:
+      "Coletânea de jogos desenvolvidos com Canvas API para o evento IFSP Portas Abertas. Demonstra lógica complexa de colisão, renderização de gráficos 2D e loops de jogo (Game Loop), provando o poder do Javascript puro para multimídia.",
+    tecnologias: ["Canvas API", "Javascript", "HTML"],
+    linkRepositorio: "https://github.com/GabrielSantos15/Jogos-Menu/",
+    linkProjeto: "https://gabrielsantos15.github.io/Jogos-Menu/",
+  },
+
+  {
+    id: 6,
     nome: "GitHub User Finder",
     tipo: "Integração API",
     assets: [
@@ -85,21 +104,21 @@ export const projects = [
     linkProjeto: "https://gabrielsantos15.github.io/GitHub-API/",
   },
   {
-    id: 6,
-    nome: "Santos Wine",
-    tipo: "Landing Page",
+    id: 7,
+    nome: "Calculadora React",
+    tipo: "App",
     assets: [
-      "/assets/projetos/SantosWine/SantosWine.png",
-      "/assets/projetos/SantosWine/SantosWineMobile.png",
+      "/assets/projetos/calculadora/calculadora.png",
+      "/assets/projetos/calculadora/calculadoraMobile.png",
     ],
     descricao:
-      "Landing Page institucional criada para uma vinícola fictícia. O projeto foca inteiramente na fidelidade do Design System, tipografia e hierarquia visual, servindo como demonstração de capacidade de transformar protótipos em código pixel-perfect.",
-    tecnologias: ["HTML", "CSS3", "Javascript"],
-    linkRepositorio: "https://github.com/GabrielSantos15/Santos-Wine",
-    linkProjeto: "https://gabrielsantos15.github.io/Santos-Wine/",
+      "Aplicação SPA (Single Page Application) que explora os fundamentos do React. Utiliza o hook useState para gerenciamento de memória de cálculo e manipulação de eventos em tempo real. Interface projetada com foco em UX mobile-first.",
+    tecnologias: ["React", "Firebase Hosting", "CSS3"],
+    linkRepositorio: "https://github.com/GabrielSantos15/Calculadora-React",
+    linkProjeto: "https://calculadora-react-db34e.web.app/",
   },
   {
-    id: 7,
+    id: 8,
     nome: "Tech Quiz",
     tipo: "Game",
     assets: [
@@ -114,7 +133,7 @@ export const projects = [
     linkProjeto: "https://gabrielsantos15.github.io/Quiz/",
   },
   {
-    id: 8,
+    id: 9,
     nome: "Task Manager",
     tipo: "Produtividade",
     assets: [
@@ -126,20 +145,5 @@ export const projects = [
     tecnologias: ["Javascript", "LocalStorage", "CSS", "HTML"],
     linkRepositorio: "https://github.com/GabrielSantos15/lista-de-tarefas",
     linkProjeto: "https://gabrielsantos15.github.io/lista-de-tarefas/",
-  },
-  {
-    id: 9,
-    nome: "Arcade JS",
-    tipo: "Game",
-    assets: [
-      "/assets/projetos/Jogos/Games.png",
-      "/assets/projetos/Jogos/portasAbertas.png",
-      "/assets/projetos/Jogos/portasAbertas2.png",
-    ],
-    descricao:
-      "Coletânea de jogos desenvolvidos com Canvas API para o evento IFSP Portas Abertas. Demonstra lógica complexa de colisão, renderização de gráficos 2D e loops de jogo (Game Loop), provando o poder do Javascript puro para multimídia.",
-    tecnologias: ["Canvas API", "Javascript", "HTML"],
-    linkRepositorio: "https://github.com/GabrielSantos15/Jogos-Menu/",
-    linkProjeto: "https://gabrielsantos15.github.io/Jogos-Menu/",
   },
 ];
