@@ -7,7 +7,11 @@ import {
   FaLinkedin,
 } from "react-icons/fa6";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
-import "./Home.estilos.css";
+import styles from "./Home.module.css";
+
+const GITHUB_USER = "gabrielsantos15";
+const START_CAREER_YEAR = 2022;
+const PARTICLE_COLOR = "rgb(43, 255, 15)";
 
 // logica das particulas
 class Particle {
@@ -83,7 +87,7 @@ export default function Home({ darkMode }) {
         particles.push(
           new Particle({
             position: { x, y },
-            color: "rgb(148, 51, 204)",
+            color: PARTICLE_COLOR,
             vel: {
               x: Math.cos(angle) * speed + dx * 0.1,
               y: Math.sin(angle) * speed + dy * 0.1,
@@ -107,12 +111,12 @@ export default function Home({ darkMode }) {
     return () => {
       cancelAnimationFrame(animationId);
       if (window.matchMedia("(pointer: fine)").matches) {
-        canvas.addEventListener("mousemove", handleMouseMove);
+        canvas.removeEventListener("mousemove", handleMouseMove);
       }
 
       window.removeEventListener("resize", handleResize);
     };
-  }, darkMode);
+  }, []);
 
   const [stats, setStats] = useState({
     repos: 0,
@@ -120,92 +124,120 @@ export default function Home({ darkMode }) {
   });
 
   useEffect(() => {
+    const controller = new AbortController();
+
     async function getUserData() {
       try {
-        // 1. Busca para pegar a contagem de repositórios
-        const response = await fetch(
-          "https://api.github.com/users/gabrielsantos15",
-        );
+        const response = await fetch(`https://api.github.com/users/${GITHUB_USER}`, {
+          signal: controller.signal,
+        });
+
+        if (!response.ok) {
+          throw new Error(`Erro HTTP: ${response.status}`);
+        }
+
         const data = await response.json();
-
-        const startCareer = 2022;
         const currentYear = new Date().getFullYear();
-
-        const yearsActive = currentYear - startCareer;
+        const yearsActive = currentYear - START_CAREER_YEAR;
 
         setStats({
           repos: data.public_repos,
           years: yearsActive,
         });
       } catch (error) {
-        console.error("Erro ao buscar dados:", error);
+        if (error.name !== "AbortError") {
+          console.error("Erro ao buscar dados:", error);
+        }
       }
     }
 
     getUserData();
+
+    return () => controller.abort();
   }, []);
 
+  const statItems = [
+    {
+      icon: FaCodeBranch,
+      value: stats.repos > 0 ? stats.repos : "--",
+      label: "Projetos Públicos",
+    },
+    {
+      icon: FaGithub,
+      value: "200+",
+      label: "Contribuições (ano)",
+    },
+    {
+      icon: FaRegCalendarCheck,
+      value: stats.years > 0 ? stats.years : "--",
+      label: "Anos de Jornada",
+    },
+  ];
+
+  const socialLinks = [
+    {
+      href: "https://github.com/GabrielSantos15",
+      icon: FaGithub,
+      label: "GitHub",
+      external: true,
+    },
+    {
+      href: "https://www.linkedin.com/in/gabriel-santos-9217112a2",
+      icon: FaLinkedin,
+      label: "LinkedIn",
+      external: true,
+    },
+    {
+      href: "https://www.instagram.com/gabrieldos5689",
+      icon: FaInstagram,
+      label: "Instagram",
+      external: true,
+    },
+  ];
+
   return (
-    <section id="homeSection">
+    <section className={styles.homeSection}>
       <article>
-        <div className="homeTitle">
+        <div className={styles.homeTitle}>
           <h1>port</h1>
           <h1>folio</h1>
         </div>
         <h2>Front end Developer</h2>
       </article>
-      <footer id="homeFooter">
-        <div className="stat-item">
-          <span className="icon-box">
-            <FaCodeBranch />
-          </span>
-          <span>
-            <dd>{stats.repos > 0 ? stats.repos : "--"}</dd>
-            <dt>Projetos Públicos</dt>
-          </span>
-        </div>
+      <footer className={styles.homeFooter}>
+        {statItems.map(({ icon: Icon, value, label }) => (
+          <div className={styles.statItem} key={label}>
+            <span className={styles.iconBox}>
+              <Icon />
+            </span>
+            <span className={styles.itemContent}>
+              <dd>{value}</dd>
+              <dt>{label}</dt>
+            </span>
+          </div>
+        ))}
 
-        <div className="stat-item">
-          <span className="icon-box">
-            <FaGithub className="fa-brands fa-github" />
-          </span>
-          <span>
-            <dd>200+</dd>
-            <dt>Contribuições (ano)</dt>
-          </span>
-        </div>
-
-        <div className="stat-item">
-          <span className="icon-box">
-            <FaRegCalendarCheck />
-          </span>
-          <span>
-            <dd>{stats.years > 0 ? stats.years : "--"}</dd>
-            <dt>Anos de Jornada</dt>
-          </span>
-        </div>
-
-        <div id="contatoItem">
+        <div className={styles.contatoItem}>
           <a href="mailto:gabriel.santos.tech256@gmail.com">
-            <span className=" icon-contato">
-              <FaRegEnvelope className="fa-light fa-envelope"></FaRegEnvelope>
+            <span className={styles.iconContato}>
+              <FaRegEnvelope />
             </span>
             <h4>Contato</h4>
           </a>
         </div>
 
-        <div id="redesSociais">
-          <a href="https://github.com/GabrielSantos15" target="_blank">
-            <FaGithub className="fa-brands fa-github"></FaGithub>
-          </a>
-
-          <a href="https://www.linkedin.com/in/gabriel-santos-9217112a2">
-            <FaLinkedin className="fa-brands fa-linkedin"></FaLinkedin>
-          </a>
-
-          <a href="https://www.instagram.com/gabrieldos5689" target="_blank">
-            <FaInstagram className="fa-brands fa-instagram"></FaInstagram>
-          </a>
+        <div className={styles.redesSociais}>
+          {socialLinks.map(({ href, icon: Icon, label, external }) => (
+            <a
+              href={href}
+              key={label}
+              target={external ? "_blank" : undefined}
+              rel={external ? "noopener noreferrer" : undefined}
+              aria-label={label}
+            >
+              <Icon />
+            </a>
+          ))}
         </div>
       </footer>
       <canvas ref={canvasRef}></canvas>

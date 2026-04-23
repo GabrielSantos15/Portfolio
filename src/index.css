@@ -11,7 +11,7 @@
   --corCard: #FFFFFF;
   --corFundo2: #b0b3bd;
   
-  --corTema: #ab30f3;
+  --corTema: rgb(255, 15, 87);
   
   --fontTitulo: 'Orbitron', serif;
   --fontPadrao: 'Montserrat', sans-serif;
@@ -23,7 +23,7 @@
   --corFundo: #2a2a2c;
   --corCard: #222222;
   --corFundo2: #101115;
-  --corTema: #b244f1;
+ --corTema: rgb(111, 255, 15);
 }
 
 ::selection {

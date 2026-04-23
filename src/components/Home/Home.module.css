@@ -1,6 +1,6 @@
-#homeSection {
+.homeSection {
     background-color: #eee;
-    background-image: var(--noise), linear-gradient(118deg, #81868C, #A2A5AC);
+    background-image: var(--noise), linear-gradient(118deg, #81868C, #A2A5AC); 
     min-height: 100vh;
     display: grid;
     grid-template-rows: 100dvh auto;
@@ -9,26 +9,27 @@
     color: #fff;
 }
 
-#homeSection article {
+.homeSection article {
     display: grid;
     place-items: center;
     text-align: center;
     grid-row: span 2;
 }
 
-.dark #homeSection {
+:global(.dark) .homeSection {
     background-image: var(--noise), linear-gradient(118deg, #37393a, #000000);
 }
 
-#homeSection .homeTitle {
+.homeSection .homeTitle {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-#homeSection h1 {
+.homeSection h1 {
     text-transform: uppercase;
-    font-size: clamp(5rem, 13vw, 15rem);
+    font-size: clamp(5.5rem, 13vw, 15rem);
+    line-height: 95%;
     font-family: var(--fontTitulo);
     position: relative;
     z-index: 1;
@@ -36,8 +37,9 @@
     text-shadow: 5px 5px 10px #00000050;
 }
 
-#homeSection h2 {
-    font-size: clamp(1.5rem, 4vw, 4rem);
+.homeSection h2 {
+    margin-top: .5rem;
+    font-size: clamp(1.7rem, 6vw, 4rem);
     position: relative;
     z-index: 1;
     text-align: center;
@@ -45,14 +47,16 @@
     text-shadow: 5px 5px 10px #00000050;
 }
 
-#homeSection canvas {
+.homeSection canvas {
     position: absolute;
     top: 0;
     width: 100%;
     height: 100dvh;
     z-index: 0;
+    touch-action: pan-y;
 }
-#homeFooter {
+
+.homeFooter {
     z-index: 1;
     width: 100%;
     display: grid;
@@ -66,7 +70,7 @@
     row-gap: 15px;
 }
 
-#homeFooter div {
+.homeFooter div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,33 +79,28 @@
     gap: 15px;
 }
 
-#homeFooter span {
+.homeFooter .itemContent {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#homeFooter .stat-item {
-    display: none;
-}
-
-#homeFooter .stat-item dd {
+.statItem dd {
     font-family: var(--fontTitulo);
     font-size: clamp(2rem, 3vw, 2.5rem);
 }
 
-#homeFooter .stat-item .icon-box {
-    display: none;
+.iconBox {
     font-size: clamp(2.5rem, 5vw, 3rem);
 }
 
-#contatoItem {
+.contatoItem {
     grid-column: span 2;
     grid-row: -2 / -1;
 }
 
-#contatoItem a {
+.contatoItem a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -112,13 +111,13 @@
     color: #fff;
 }
 
-#contatoItem a h4 {
+.contatoItem a h4 {
     all: unset;
     font-family: var(--fontTitulo);
     font-size: 2.5em;
 }
 
-#contatoItem .icon-contato {
+.contatoItem .iconContato {
     display: block;
     border: 2px solid #fff;
     font-size: clamp(1.5rem, 3vw, 2rem);
@@ -128,53 +127,62 @@
     aspect-ratio: 1/1;
 }
 
-#redesSociais {
+.redesSociais {
     display: flex;
     width: 100%;
     justify-content: space-around;
 }
 
-#redesSociais a {
+.redesSociais a {
     color: #fff;
-    font-size: clamp(2rem, 3vw, 3rem);
+    font-size: clamp(2rem, 10vw, 3rem);
 }
 
-@media (min-width: 1420px) {
-    #homeSection {
+.homeFooter .statItem,
+.homeFooter .contatoItem
+ {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .homeSection {
         grid-template-rows: 1fr auto;
     }
 
-    #homeSection .homeTitle {
+    .homeSection .homeTitle {
         display: flex;
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
     }
 
-
-    #homeFooter {
+    .homeFooter {
         grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     }
 
-    #contatoItem {
+    .contatoItem {
         grid-column: auto;
         grid-row: auto;
     }
 
-    #homeFooter .stat-item {
-        display: flex;
-    }
-
-    #homeFooter span {
+    .homeFooter .itemContent {
         align-items: start;
     }
 
-    #homeFooter div:not(:last-child) {
+    .homeFooter div:not(:last-child) {
         border-right: 2px solid #fff;
     }
 
-    #homeFooter .stat-item .icon-box {
-        display: block;
-
+    
+    .homeFooter .contatoItem  {
+        display: flex;
     }
+
+}
+
+@media (min-width: 1420px) {
+    .homeFooter .statItem{
+        display: flex;
+    }
+
 }
