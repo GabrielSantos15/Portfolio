@@ -1,5 +1,5 @@
 import "./App.css";
-import Home from "./components/Home";
+import Hero from "./components/Hero";
 import About from "./components/About";
 
 import Projects from "./components/Projects";
@@ -12,28 +12,16 @@ import SkillsMarquee from "./components/SkillsMarquee";
 import Timeline from "./components/Timeline";
 import ServiceCards from "./components/ServiceCards";
 import GsapMarquee from "./components/GsapMarquee";
-import { useEffect, useState } from "react";
+import { useDarkMode } from "./hooks/useDarkMode";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(() => {
-    if (typeof window !== "undefined") {
-      const savedTheme = localStorage.getItem("theme");
-      if (savedTheme) return savedTheme === "dark";
-      return window.matchMedia("(prefers-color-scheme: dark)").matches;
-    }
-    return false;
-  });
-
-  useEffect(() => {
-    document.body.classList.toggle("dark", darkMode);
-    localStorage.setItem("theme", darkMode ? "dark" : "light");
-  }, [darkMode]);
+  const { darkMode, setDarkMode } = useDarkMode();
 
   return (
     <>
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
       <main>
-        <Home />
+        <Hero darkMode={darkMode} />
         <About />
         <SkillsMarquee />
         <ServiceCards />

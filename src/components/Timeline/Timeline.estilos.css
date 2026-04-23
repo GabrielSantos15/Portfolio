@@ -20,7 +20,7 @@
     left: 0;
     transform-origin: top;
     transform: translateX(-50%) scaleY(0);
-
+    
     width: 5px;
     height: 100%;
     --corTema50 :  color-mix(in srgb, var(--corTema) 70%, transparent);
