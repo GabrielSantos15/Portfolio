@@ -7,9 +7,9 @@
 }
 
 :root {
-  --corFundo: #eef3f7;
+  --corFundo: #E8E7EC;
   --corCard: #FFFFFF;
-  --corFundo2: #b0b3bd;
+  --corFundo2: #B4B3B8;
   
   --corTema: #ab30f3;
   
@@ -41,10 +41,9 @@ html {
 }
 
 body {
-
   font-family: var(--fontPadrao);
   background-color: var(--corFundo);
-  background-image: linear-gradient(var(--corFundo),var(--corFundo2));
+  background-image: linear-gradient(var(--corFundo2),var(--corFundo));
   background-attachment: fixed;
   transition: .5s;
 }

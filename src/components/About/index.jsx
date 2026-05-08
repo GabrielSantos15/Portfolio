@@ -1,15 +1,15 @@
 import Foto from "../../assets/Gabriel_foto.png";
-import "./About.estilos.css";
+import styles from "./About.module.css";
 
 export default function About() {
   return (
-    <section id="AboutSection">
-      <figure>
+    <section className={styles.aboutSection}>
+      <figure className={styles.figure}>
         <img src={Foto} width={700} alt="Foto do Gabriel" />
-        <span className="liquid-glass card-about">UX Eficiente</span>
-        <span className="liquid-glass card-about">SEO & Performance</span>
-        <span className="liquid-glass card-about">Experiência com Valor</span>
-        <svg className="tech-ring" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <span className={`liquid-glass ${styles.cardAbout}`}>UX Eficiente</span>
+        <span className={`liquid-glass ${styles.cardAbout}`}>SEO & Performance</span>
+        <span className={`liquid-glass ${styles.cardAbout}`}>Experiência com Valor</span>
+        <svg className={styles.techRing} viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="tech-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" stopColor="var(--corTema)" stopOpacity="0" />
@@ -30,7 +30,7 @@ export default function About() {
     />
   </svg>
       </figure>
-      <article>
+      <article className={styles.article}>
         <h1>Gabriel dos Santos</h1>
         <p>
           Minha atuação vai além da estética: foco na engenharia por trás da
@@ -42,7 +42,7 @@ export default function About() {
           negócios
         </p>
         <a href="Gabriel dos Santos - Desenvolvedor de Software.pdf" download>
-          <button id="downloadCv" className="silver-reflection-bg">
+          <button className={`${styles.downloadCv} silver-reflection-bg`}>
             Download CV
           </button>
         </a>

@@ -12,7 +12,7 @@ import styles from "./Hero.module.css";
 const GITHUB_USER = "gabrielsantos15";
 const START_CAREER_YEAR = 2022;
 
-const LIGHT_COLOR = "rgb(171, 48, 243)";
+const LIGHT_COLOR = "rgb(250, 216, 255)";
 const DARK_COLOR = "rgb(178, 68, 241)" ;
 // const DARK_COLOR = "rgb(0, 255, 170)" ;
 
