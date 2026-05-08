@@ -1,0 +1,21 @@
+export const skills = [
+  { nome: "HTML", cor: "#e34c26", icon: "/assets/skills/HTML.png" },
+  { nome: "CSS", cor: "#264de4", icon: "/assets/skills/CSS.png" },
+  { nome: "JS", cor: "#f0db4f", icon: "/assets/skills/JavaScript.png" },
+  { nome: "GIT", cor: "#f05032", icon: "/assets/skills/GIT.png" },
+  { nome: "React", cor: "#61dafb", icon: "/assets/skills/React.png" },
+  { nome: "Bootstrap", cor: "#6d0bc2ff", icon: "/assets/skills/Bootstrap.png" },
+  { nome: "Power Bi", cor: "#f2c811", icon: "/assets/skills/powerBi.webp" },
+  {
+    nome: "Power Automate",
+    cor: "#0066ff",
+    icon: "/assets/skills/PowerAutomate.png",
+  },
+  { nome: "Java", cor: "#5382A1", icon: "/assets/skills/java.svg" },
+  { nome: "Python", cor: "#3e92d6", icon: "/assets/skills/python.svg" },
+  { nome: "Node.js", cor: "#49cf20", icon: "/assets/skills/nodejs.svg" },
+  { nome: "Oracle SQL", cor: "#EF0F14", icon: "/assets/skills/oracle.svg" },
+  { nome: "MySql", cor: "#0f6dcbff", icon: "/assets/skills/mysql.png" },
+  { nome: "Figma", cor: "#B659FF", icon: "/assets/skills/figma.png" },
+  { nome: "Pacote Office", cor: "#ea3e23", icon: "/assets/skills/Office.png" },
+];
