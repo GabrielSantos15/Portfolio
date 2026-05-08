@@ -16,6 +16,10 @@
     overflow: hidden;
 }
 
+.figure * {
+    user-select: none
+}
+
 .figure img {
     max-width: 100%;
     filter: drop-shadow(2px 2px 5px #00000052);
@@ -32,11 +36,11 @@
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
-    height: 90%;
+    width: 120%;
+    height: 120%;
     z-index: 1;
 
-    filter: drop-shadow(0 0 8px var(--corTema));
+    filter: drop-shadow(0 0 8px #fff);
 
     animation: spinRing 10s linear infinite;
 }
@@ -107,6 +111,7 @@
     right: 0%;
     font-size: clamp(1rem, 2vw, 1.2rem);
     animation-delay: 0.5s;
+    z-index: 2;
 }
 
 .cardAbout:nth-of-type(3) {
@@ -114,6 +119,7 @@
     left: 25%;
     font-size: clamp(1.1rem, 2vw, 1.5rem);
     animation-delay: 0.8s;
+    z-index: 3;
 }
 
 @keyframes float {
