@@ -12,7 +12,7 @@ import styles from "./Hero.module.css";
 const GITHUB_USER = "gabrielsantos15";
 const START_CAREER_YEAR = 2022;
 
-const LIGHT_COLOR = "rgb(250, 216, 255)";
+const LIGHT_COLOR = "rgb(171, 48, 243)" ;
 const DARK_COLOR = "rgb(178, 68, 241)" ;
 // const DARK_COLOR = "rgb(0, 255, 170)" ;
 
@@ -61,7 +61,7 @@ function getPointFromEvent(canvas, event) {
 export default function Hero({ darkMode }) {
   const canvasRef = useRef(null);
 
-  // 🔥 cor dinâmica SEM recriar canvas
+  // cor dinâmica SEM recriar canvas
   const colorRef = useRef(DARK_COLOR);
 
   useEffect(() => {
@@ -208,7 +208,7 @@ export default function Hero({ darkMode }) {
           <h1>port</h1>
           <h1>folio</h1>
         </div>
-        <h2>Front end Developer</h2>
+        <h2>Software Developer</h2>
       </article>
 
       <footer className={styles.homeFooter}>

@@ -51,13 +51,10 @@ export default function About() {
       <article className={styles.article}>
         <h1>Gabriel dos Santos</h1>
         <p>
-          Minha atuação vai além da estética: foco na engenharia por trás da
-          interface, priorizando
-          <strong> acessibilidade, SEO e performance</strong> para garantir que
-          o produto não seja apenas bonito, mas funcional e escalável. Busco
-          oportunidades onde possa aplicar conceitos de Clean Code e tecnologias
-          modernas como React para resolver problemas reais de usuários e
-          negócios
+          Desenvolvedor focado em performance, UX e arquitetura escalável. Minha
+          atuação une <strong>desenvolvimento web, análise de dados e governança de TI</strong>.
+          O objetivo é integrar tecnologia e inteligência de negócios para criar
+          produtos modernos e resolver problemas reais.
         </p>
         <a href="Gabriel dos Santos - Desenvolvedor de Software.pdf" download>
           <button className={`${styles.downloadCv} silver-reflection-bg`}>
