@@ -14,9 +14,6 @@ export const projects = [
     descricao:
       "Plataforma completa de e-mail marketing desenvolvida para otimizar campanhas corporativas. Permite a criação visual de templates HTML, personalização dinâmica e disparo automático via Nodemailer. Foca na autonomia do usuário para baixar assets ou integrar diretamente com serviços de envio.",
     tecnologias: ["React", "Node.js", "Express", "Nodemailer", "CSS"],
-    linkRepositorio:
-      "https://github.com/GabrielSantos15/gerador_de_email_marketing",
-    linkProjeto: null,
   },
   {
     id: 2,

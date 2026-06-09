@@ -55,6 +55,9 @@ font-size: clamp(2.5rem, 5vw, 3rem);
     line-height: 1.6;
 }
 
+.card-content p {
+    max-width: 650px;
+}
 
 @media (min-width: 768px) {
     .bento-grid {
