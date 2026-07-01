@@ -8,8 +8,7 @@ export const experiencia = [
     site: "https://www.grupopetropolis.com.br/",
     linkedin:
       "https://www.linkedin.com/company/grupopetropolis/posts/?feedView=all",
-    fraseImpacto:
-      "Um dos maiores grupos cervejeiros do Brasil, com atuação nacional e forte estrutura corporativa.",
+    fraseImpacto: "Um dos maiores grupos cervejeiros do Brasil (dono de marcas como Itaipava, Petra e TNT), com atuação nacional e forte estrutura corporativa.",
     logo: "/assets/logos/grupo_petropolis.jpg",
 
     trajetoria: [

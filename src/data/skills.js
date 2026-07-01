@@ -10,6 +10,7 @@ export const skills = [
   {nome: "Power Automate", cor: "#0066ff",icon: "/assets/skills/PowerAutomate.png",},
   { nome: "Java", cor: "#5382A1", icon: "/assets/skills/java.svg" },
   { nome: "Python", cor: "#3e92d6", icon: "/assets/skills/python.svg" },
+  { nome: "Next.js", cor: "#ffffff", icon: "/assets/skills/nextjs.svg" },
   { nome: "Node.js", cor: "#49cf20", icon: "/assets/skills/nodejs.svg" },
   { nome: "Oracle SQL", cor: "#EF0F14", icon: "/assets/skills/oracle.svg" },
   { nome: "MySql", cor: "#0f6dcbff", icon: "/assets/skills/mysql.png" },
