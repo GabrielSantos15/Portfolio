@@ -95,20 +95,22 @@ export const projects = [
     linkRepositorio: "https://github.com/GabrielSantos15/UrbanFlow",
     linkProjeto: "https://urban-flow-kappa.vercel.app/",
   },
-  {
+{
     id: 6,
-    nome: "Arcade JS",
+    nome: "Atlas Arena",
     tipo: "Game",
     assets: [
-      "/assets/projetos/Jogos/Games.png",
-      "/assets/projetos/Jogos/portasAbertas.png",
-      "/assets/projetos/Jogos/portasAbertas2.png",
+      "/assets/projetos/Atlasquiz/QuizCover.png",
+      "/assets/projetos/Atlasquiz/QuizLobby.png",
+      "/assets/projetos/Atlasquiz/QuizGameplay.png",
+      "/assets/projetos/Atlasquiz/QuizPodio.png",
+      "/assets/projetos/Atlasquiz/Atlasquiz.mp4",
     ],
     descricao:
-      "Coletânea de jogos desenvolvidos com Canvas API para o evento IFSP Portas Abertas. Demonstra lógica complexa de colisão, renderização de gráficos 2D e loops de jogo (Game Loop), provando o poder do Javascript puro para multimídia.",
-    tecnologias: ["Canvas API", "Javascript", "HTML"],
-    linkRepositorio: "https://github.com/GabrielSantos15/Jogos-Menu/",
-    linkProjeto: "https://gabrielsantos15.github.io/Jogos-Menu/",
+      "Plataforma interativa de quiz multiplayer focada em comunicação em tempo real e sincronização de estado. Desenvolvida para suportar múltiplos usuários simultâneos, garantindo uma experiência competitiva fluida e de alta performance através de conexões bidirecionais e arquitetura moderna.",
+    tecnologias: ["React", "Node.js", "Socket.io", "CSS3"],
+    linkRepositorio: "https://github.com/GabrielSantos15/Atlas-Arena",
+    linkProjeto: "https://atlas-arena-quiz.vercel.app",
   },
 
   // {
