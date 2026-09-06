@@ -34,13 +34,12 @@ export const projects = [
     ],
     videoPoster: "/assets/projetos/SendPro/home.png",
     descricao:
-    "Plataforma completa de e-mail marketing desenvolvida para otimizar campanhas corporativas. Permite a criação visual de templates HTML, personalização dinâmica e disparo automático via Nodemailer. Foca na autonomia do usuário para baixar assets ou integrar diretamente com serviços de envio.",
+      "Plataforma completa de e-mail marketing desenvolvida para otimizar campanhas corporativas. Permite a criação visual de templates HTML, personalização dinâmica e disparo automático via Nodemailer. Foca na autonomia do usuário para baixar assets ou integrar diretamente com serviços de envio.",
     tecnologias: ["React", "Node.js", "Express", "Nodemailer", "CSS"],
     linkRepositorio:
-    "https://github.com/GabrielSantos15/gerador_de_email_marketing",
-    linkProjeto: null,
+      "https://github.com/GabrielSantos15/gerador_de_email_marketing",
   },
-  
+
   {
     id: 3,
     nome: "Brazilian Market Analytics",
@@ -53,31 +52,54 @@ export const projects = [
       "/assets/projetos/marketAnalytics/apresentacao.mp4",
     ],
     descricao:
-    "Terminal interativo do mercado financeiro integrando análise de risco e retorno. Conta com pipeline de dados em Python (yfinance) automatizado via CI/CD, modelagem em Star Schema e customização de front-end injetada com HTML/CSS.",
+      "Terminal interativo do mercado financeiro integrando análise de risco e retorno. Conta com pipeline de dados em Python (yfinance) automatizado via CI/CD, modelagem em Star Schema e customização de front-end injetada com HTML/CSS.",
     tecnologias: ["Power BI", "DAX", "Python", "GitHub Actions"],
-    
+
     linkRepositorio:
-    "https://github.com/GabrielSantos15/powerbi-portfolio-movies",
+      "https://github.com/GabrielSantos15/powerbi-portfolio-movies",
   },
+  // {
+  //   id: 4,
+  //   nome: "Cine Analytics",
+  //   tipo: "Data Analytics / BI",
+  //   assets: [
+  //     "/assets/projetos/dashboard-filmes/capa.png",
+  //     "/assets/projetos/dashboard-filmes/Tendencias.png",
+  //     "/assets/projetos/dashboard-filmes/Faturamento.png",
+  //     "/assets/projetos/dashboard-filmes/AtoresRank.png",
+  //     "/assets/projetos/dashboard-filmes/Filme.png",
+  //     "/assets/projetos/dashboard-filmes/Faturamento.png",
+  //     "/assets/projetos/dashboard-filmes/apresentacao.mp4",
+  //   ],
+  //   descricao:
+  //   "Dashboard analítico dos Top 500 filmes (API TMDB), com coleta automatizada em Python, modelagem DAX avançada e parâmetros dinâmicos para analisar tendências, ROI e faturamento, priorizando UX e clareza visual para apoiar decisões estratégicas.",
+  //   tecnologias: ["Power BI", "DAX", "Python", "API", "UX/UI", "Storytelling"],
+
+  //   linkRepositorio:
+  //   "https://github.com/GabrielSantos15/powerbi-portfolio-movies",
+  // },
   {
     id: 4,
-    nome: "Cine Analytics",
-    tipo: "Data Analytics / BI",
+    nome: "House Edge Simulator",
+    tipo: "Data Analytics / Python & BI",
     assets: [
-      "/assets/projetos/dashboard-filmes/capa.png",
-      "/assets/projetos/dashboard-filmes/Tendencias.png",
-      "/assets/projetos/dashboard-filmes/Faturamento.png",
-      "/assets/projetos/dashboard-filmes/AtoresRank.png",
-      "/assets/projetos/dashboard-filmes/Filme.png",
-      "/assets/projetos/dashboard-filmes/Faturamento.png",
-      "/assets/projetos/dashboard-filmes/apresentacao.mp4",
+      "/assets/projetos/house-edge/capa.png",
+      "/assets/projetos/house-edge/jogadores.png",
+      "/assets/projetos/house-edge/casa.png",
+      "/assets/projetos/house-edge/estrategias.png",
     ],
     descricao:
-    "Dashboard analítico dos Top 500 filmes (API TMDB), com coleta automatizada em Python, modelagem DAX avançada e parâmetros dinâmicos para analisar tendências, ROI e faturamento, priorizando UX e clareza visual para apoiar decisões estratégicas.",
-    tecnologias: ["Power BI", "DAX", "Python", "API", "UX/UI", "Storytelling"],
-    
-    linkRepositorio:
-    "https://github.com/GabrielSantos15/powerbi-portfolio-movies",
+      "Simulação em Python analisando a Lei dos Grandes Números aplicada a 4.000 jogadores de roleta, validando estatisticamente a vantagem da casa (House Edge). Os dados gerados foram integrados a um dashboard interativo no Power BI para visualização dos resultados.",
+    tecnologias: [
+      "Python",
+      "Power BI",
+      "DAX",
+      "Estatística",
+      "Simulação",
+      "Data Viz",
+    ],
+    linkRepositorio: "https://github.com/GabrielSantos15/house-edge-simulator",
+    linkProjeto: "https://lnkd.in/p/dah9BztG",
   },
   {
     id: 5,
@@ -95,7 +117,7 @@ export const projects = [
     linkRepositorio: "https://github.com/GabrielSantos15/UrbanFlow",
     linkProjeto: "https://urban-flow-kappa.vercel.app/",
   },
-{
+  {
     id: 6,
     nome: "Atlas Arena",
     tipo: "Game",
