@@ -1,0 +1,192 @@
+
+.aboutSection {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 1em;
+    min-height: 100dvh;
+}
+
+.figure {
+    width: min(700px, 100%);
+    position: relative;
+}
+
+.figure * {
+    user-select: none;
+}
+
+.imageMask {
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, rgba(0, 0, 0, 1) 95%, transparent 99%);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    
+    mask-image: linear-gradient(to bottom, black 70%, rgba(0, 0, 0, 0.1) 95%, transparent 99%);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+}
+
+.figure img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: 1;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+}
+
+.figure svg {
+    max-width: 100%;
+}
+
+.techRing {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    z-index: -1;
+    filter: drop-shadow(0 0 10px #ffffff);
+    animation: spinRing 10s linear infinite;
+}
+
+@keyframes spinRing {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: min(700px, 100%);
+}
+
+.aboutSection h1 {
+    font-family: var(--font-heading);
+    /* Atualizado para bater certo com o Hero */
+    font-size: clamp(2rem, 3.5vw, 5rem);
+    color: #111;
+    /* Editorial Light Mode */
+}
+
+.aboutSection p {
+    font-family: var(--font-base);
+    /* Adicionado para garantir a fonte correta */
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: #333;
+    /* Editorial Light Mode */
+    line-height: 1.6;
+}
+
+:global(.dark) .aboutSection h1,
+:global(.dark) .aboutSection p {
+    color: #fff;
+    /* Volta a ficar branco no Dark Mode */
+}
+
+.aboutSection a {
+    width: fit-content;
+    text-decoration: none;
+}
+
+/* Botão Clean no Light Mode */
+.downloadCv {
+    border: none;
+    background: #111;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-family: var(--font-heading);
+    /* Atualizado */
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Botão com Brilho no Dark Mode */
+:global(.dark) .downloadCv {
+    background: transparent;
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px #ffffff9c;
+    text-shadow: 1px 1px 2px #00000065;
+}
+
+.cardAbout {
+    position: absolute;
+    font-size: 1.2rem;
+    padding: 8px 14px;
+    border-radius: 12px;
+    color: #111;
+    font-family: var(--font-base);
+    font-weight: bolder;
+    white-space: nowrap;
+    animation: float 3s ease-in-out infinite;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    z-index: 5;
+}
+
+/* Cartões no Dark Mode */
+:global(.dark) .cardAbout {
+    color: #fff;
+    text-shadow: 1px 1px 2px #000000bb;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cardAbout:nth-of-type(1) {
+    bottom: 40%;
+    left: 0%;
+    scale: 1;
+    animation-delay: 0s;
+}
+
+.cardAbout:nth-of-type(2) {
+    bottom: 25%;
+    right: 0%;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    animation-delay: 0.5s;
+    z-index: 2;
+}
+
+.cardAbout:nth-of-type(3) {
+    bottom: 10%;
+    left: 25%;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    animation-delay: 0.8s;
+    z-index: 3;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    
+    50% {
+        transform: translateY(-7px);
+    }
+    
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 768px) {
+    .article {
+        align-items: center;
+        text-align: center;
+        /* Centraliza o texto no mobile para melhor leitura */
+    }
+}

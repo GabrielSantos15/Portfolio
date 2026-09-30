@@ -35,38 +35,74 @@ interface ParticleConfig {
 }
 
 class Particle {
-    position: Point;
-    vel: Point;
+    position: { x: number; y: number };
+    vel: { x: number; y: number };
     size: number;
-    maxSize: number;
+    angle: number;
+    spin: number;
+    swayPhase: number;
+    swaySpeed: number;
 
-    constructor({ position, vel, size }: ParticleConfig) {
-        this.position = position;
-        this.vel = vel;
+    constructor({ position, vel, size }: { position: Point; vel: Point; size: number }) {
+        this.position = { ...position };
+        this.vel = { ...vel };
         this.size = size;
-        this.maxSize = size;
+        
+        // Novas propriedades para a animação da pétala
+        this.angle = Math.random() * Math.PI * 2; // Rotação inicial
+        this.spin = (Math.random() - 0.5) * 0.15; // Velocidade do rodopio
+        this.swayPhase = Math.random() * Math.PI * 2; // Ponto inicial do balanço (seno)
+        this.swaySpeed = Math.random() * 0.05 + 0.02; // Velocidade com que balança
     }
 
-    update(): boolean {
-        this.size -= 0.4;
-        this.position.x += this.vel.x;
+    update() {
+        // Física: Atrito no ar (abranda a explosão inicial) e gravidade leve
+        this.vel.x *= 0.98; 
+        this.vel.y += 0.08; 
+
+        // Movimento: Adiciona o balanço suave do vento (Math.sin) ao eixo X
+        this.position.x += this.vel.x + Math.sin(this.swayPhase) * 1.5;
         this.position.y += this.vel.y;
-        return this.size > 0;
+
+        // Atualiza a rotação e a fase do balanço
+        this.angle += this.spin;
+        this.swayPhase += this.swaySpeed;
+
+        // As pétalas diminuem gradualmente até desaparecerem (efeito de profundidade/morte)
+        this.size *= 0.985;
+
+        // Retorna false quando fica muito pequena, para ser removida do array pelo seu loop
+        return this.size > 5;
     }
 
     draw(ctx: CanvasRenderingContext2D, color: string) {
-        const opacity = Math.max(this.size, 0) / this.maxSize;
+        ctx.save();
+        ctx.translate(this.position.x, this.position.y);
+        ctx.rotate(this.angle);
 
-        ctx.fillStyle = color
-            .replace("rgb", "rgba")
-            .replace(")", `, ${opacity})`);
-
+        // Desenho da Pétala (Sakura) com curvas de Bézier
         ctx.beginPath();
-        ctx.arc(this.position.x, this.position.y, this.size, 0, Math.PI * 2);
+        ctx.moveTo(0, -this.size);
+        
+        // Lado direito da pétala (mais gordinho)
+        ctx.bezierCurveTo(
+            this.size, -this.size * 0.5,
+            this.size, this.size,
+            0, this.size
+        );
+        
+        // Lado esquerdo da pétala (mais achatado, para criar assimetria natural)
+        ctx.bezierCurveTo(
+            -this.size * 0.5, this.size * 0.5,
+            -this.size * 0.5, -this.size * 0.5,
+            0, -this.size
+        );
+
+        ctx.fillStyle = color;
         ctx.fill();
+        ctx.restore();
     }
 }
-
 function getPointFromEvent(canvas: HTMLCanvasElement, event: Event): Point {
     const rect = canvas.getBoundingClientRect();
     const touchEvent = event as unknown as TouchEvent;

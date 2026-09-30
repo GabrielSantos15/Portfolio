@@ -108,7 +108,3 @@ body {
   border: 2px solid transparent;
   background-clip: padding-box;
 }
-
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, color-mix(in srgb, #fff 85%, rgb(0, 0, 0)), #000000);
-}

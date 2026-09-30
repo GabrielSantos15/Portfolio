@@ -1,0 +1,31 @@
+.dataWave {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    height: 24px;
+}
+
+.bar {
+    width: 3px;
+    background-color: #111;
+    border-radius: 2px;
+    animation: wave 1s infinite ease-in-out;
+    opacity: 0.5;
+}
+
+:global(.dark) .bar {
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.bar:nth-child(1) { height: 30%; animation-delay: 0.1s; }
+.bar:nth-child(2) { height: 60%; animation-delay: 0.2s; }
+.bar:nth-child(3) { height: 100%; animation-delay: 0.3s; }
+.bar:nth-child(4) { height: 50%; animation-delay: 0.4s; }
+.bar:nth-child(5) { height: 80%; animation-delay: 0.5s; }
+.bar:nth-child(6) { height: 40%; animation-delay: 0.6s; }
+
+@keyframes wave {
+    0%, 100% { transform: scaleY(0.5); opacity: 0.3; }
+    50% { transform: scaleY(1); opacity: 0.8; }
+}
