@@ -15,13 +15,15 @@ export default function About() {
                     </div>
 
                     <span className={`liquid-glass ${styles.cardAbout}`}>
-                        UX Eficiente
+                        Full Stack
                     </span>
+
                     <span className={`liquid-glass ${styles.cardAbout}`}>
-                        SEO & Performance
+                        Dados & BI
                     </span>
+
                     <span className={`liquid-glass ${styles.cardAbout}`}>
-                        Experiência com Valor
+                        Automação & APIs
                     </span>
                     <svg
                         className={styles.techRing}
@@ -58,11 +60,9 @@ export default function About() {
             <article className={styles.article}>
                 <h1>Gabriel dos Santos</h1>
                 <p>
-                    Desenvolvedor focado em performance, UX e arquitetura escalável. Minha
-                    atuação une <strong>desenvolvimento web, análise de dados e governança de TI</strong>.
-                    O objetivo é integrar tecnologia e inteligência de negócios para criar
-                    produtos modernos e resolver problemas reais.
+                    Desenvolvedor <strong>Full Stack</strong> e profissional de <strong>Dados & Business Intelligence</strong>, com experiência em desenvolvimento web, SQL, Power BI e automação de processos. Minha trajetória também inclui experiência corporativa em <strong>Governança de TI</strong>, conectando tecnologia, dados e necessidades de negócio para criar soluções que resolvem problemas reais.
                 </p>
+
                 {
                     !isWorkana &&
                     <a href="/Gabriel dos Santos - Desenvolvedor de Software.pdf" download>

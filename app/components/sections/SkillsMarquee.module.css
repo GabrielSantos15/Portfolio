@@ -1,0 +1,189 @@
+.section {
+  padding: 20px 0;
+}
+
+.fogEfect {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.8rem, 1.5vw, 1rem);
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 5%, #000 95%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 5%, #000 95%, transparent 100%);
+}
+
+/* ---------- Linha do marquee ---------- */
+
+.skillsRow {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: clamp(0.5em, 2vw, 1em);
+  min-width: 200vw;
+  padding: 0;
+  animation: marquee 40s linear infinite;
+}
+
+.reverse {
+  animation-direction: reverse;
+}
+
+.skillsRow:has(.skill:hover) {
+  animation-play-state: paused;
+}
+
+/* ---------- Skill ---------- */
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: clamp(3px, 2vw, 10px);
+
+  width: clamp(70px, 18vw, 100px);
+  min-width: 70px;
+
+  text-align: center;
+  border: none;
+  filter: grayscale(1) opacity(0.7);
+  transition: all 0.5s;
+}
+
+.skill:hover {
+  filter: grayscale(0) opacity(1);
+  scale: 1.1;
+}
+
+.iconWrapper {
+  width: 100%;
+  margin: 0;
+}
+
+.icon {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  object-position: center;
+  user-select: none;
+  transition: filter 0.5s;
+}
+
+.skill:hover .icon {
+  filter: drop-shadow(0 0 5px var(--corSkill));
+}
+
+.nome {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.skill:hover .nome {
+  opacity: 1;
+}
+
+.clone {
+  opacity: 0.95;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.mobileSectionTitle {
+  display: none;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 768px) {
+  .skillsRow {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    min-width: auto;
+    padding: 2rem;
+  }
+
+
+  .skillsRow .clone {
+    display: none;
+  }
+
+  .mobileSectionTitle {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--text-muted);
+    margin: 2.5rem 0 1.5rem 0;
+  }
+
+  .mobileSectionTitle::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 25px;
+    height: 1px;
+    background-color: var(--text-muted);
+    margin-right: 15px;
+  }
+
+  .mobileSectionTitle::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 25px;
+    height: 1px;
+    background-color: var(--text-muted);
+    margin-left: 15px;
+  }
+
+  .fogEfect .mobileSectionTitle:first-of-type {
+    margin-top: 0.5rem;
+  }
+
+  .skill {
+    width: clamp(50px, 15vw, 80px);
+    min-width: 0;
+  }
+
+  .skill h3 {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .skillsRow {
+    gap: 0.5em;
+    padding: 0 1em;
+  }
+
+  .skill {
+    width: clamp(45px, 18vw, 70px);
+  }
+
+  .nome {
+    font-size: clamp(0.6rem, 2vw, 0.8rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skillsRow {
+    animation: none;
+  }
+}
