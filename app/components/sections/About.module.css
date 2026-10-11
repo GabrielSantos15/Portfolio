@@ -50,7 +50,7 @@
     height: 95%;
     transform: translate(-50%, -50%);
     z-index: -1;
-    filter: drop-shadow(0 0 10px #fff);
+    filter: drop-shadow(0 0 10px var(--color-primary));
     animation: spinRing 10s linear infinite;
 }
 

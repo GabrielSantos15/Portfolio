@@ -38,8 +38,8 @@ export default function About() {
                                 x2="100%"
                                 y2="0%"
                             >
-                                <stop offset="0%" stopColor="#ffffff" stopOpacity="0" />
-                                <stop offset="100%" stopColor="#FFF" stopOpacity="1" />
+                                <stop offset="0%" stopColor="var(--color-primary)" stopOpacity="0" />
+                                <stop offset="100%" stopColor="var(--color-primary)" stopOpacity="1" />
                             </linearGradient>
                         </defs>
 

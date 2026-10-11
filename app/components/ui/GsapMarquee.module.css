@@ -1,0 +1,39 @@
+.gsapMarqueeContainer {
+    overflow: hidden;
+    padding-block: 3rem;
+}
+
+.gsapMarquee {
+    width: 100%;
+    background-color: var(--corCard);
+    background-image: linear-gradient(45deg, var(--bg-secondary), var(--bg-primary), var(--bg-secondary));
+    box-shadow: 5px 5px 10px #0000002d, inset 0px 2px 5px #ffffff28;
+    transform: rotate(-2deg);
+    padding: 1em;
+    z-index: 1;
+}
+
+.marqueeContent {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    gap: 10px;
+    width: 200%;
+    flex-wrap: nowrap;
+    font-size: 1.2rem;
+    will-change: transform;
+    color: #303030; /* Cor do texto no Light Mode */
+}
+
+/* Quando o site estiver no Dark Mode (usando a classe global .dark) */
+:global(.dark) .marqueeContent {
+    color: #ffffff;
+}
+
+.separatorItem {
+    text-wrap: nowrap;
+}
+
+.separator {
+    text-wrap: nowrap;
+}
